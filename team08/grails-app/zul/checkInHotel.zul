@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="team08.CheckInHotelComposer">
+ <hbox align="center">
+            <image src="${z.resource(dir:'images', file:'grails_logo.png')}"/>  GRAILS Hotel
+        </hbox>
+
+        <vbox id="scaffoldingBox"/>
+
+        <groupbox height="215px">
+        <hbox>
+            <groupbox width="670px" height ="200px">
+                <vbox>
+                    <label value="ข้อมูลลูกค้า"/>
+                    <separator/>
+                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสลูกค้า :"/><separator/><textbox id="customerId"/><button label="ค้นหา"/></hbox>
+                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชื่อ :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="customerName"/></hbox>
+                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="นามสกุล :"/><separator/><separator/><textbox id="customerLastname"/></hbox>
+                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="เลขบัตรประจำตัวประชาชน /หนังสือเดินทาง :"/><separator/><separator/><textbox id="passport"/></hbox>
+                </vbox>
+            </groupbox>
+                <separator/>
+            <groupbox width="670px" height ="200px">
+                <vbox>
+                    <label value="ข้อมูลการจองห้อง"/>
+                    <separator/>
+                    <hbox>
+                        <vbox>
+                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสพนักงาน :"/><separator/><textbox id="employId"/></hbox>
+                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชั้นที่ :" /><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="classRoom"/></hbox>
+                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ห้อง :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="room"/></hbox>
+                        </vbox>
+                        <vbox>
+                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="จำนวนผู้พัก :"/><separator/><textbox id="customerMany"/></hbox>
+                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="วันที่เข้าพัก :"/><separator/><textbox id="dayin"/></hbox>
+                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ถึงวันที่ :"/><separator/><separator/><separator/><separator/><textbox id="dayout"/></hbox>
+                        </vbox>
+                    </hbox>
+                    <hbox><button label="CheckIn"/><button label="แจ้งซ่อมห้อง"/><button label="clear"/></hbox>
+                </vbox>
+            </groupbox>
+            </hbox>
+        </groupbox>
+        <separator/><separator/>
+        <groupbox height="300px">
+        <label value="สถานะห้อง"/><textbox id="tsearch"/>
+            <combobox value ="จาก" width= "100px">
+                <comboitem label="สถานะ"/>
+                <comboitem label="เลขห้อง"/>
+                <comboitem label="ชั้น"/>
+            </combobox>
+        
+        <button label="Search"/>
+        <separator/>
+        
+        <listbox id="demoList" height="250px">
+            <listhead>
+                <listheader><label value="ชั้น"/></listheader>
+                <listheader><label value="ห้อง"/></listheader>
+                <listheader><label value="ผู้เช่า"/></listheader>
+                <listheader><label value="วันที่เช่า"/></listheader>
+                <listheader><label value="วันสุดท้ายที่เช่า"/></listheader>
+                <listheader><label value="สถานะห้อง"/></listheader>
+            </listhead>
+            <listitem>
+                <listcell><label value="1"/></listcell>
+                <listcell><label value="101"/></listcell>
+                <listcell><label value="C 60604"/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="30 มกราคม 2556"/></listcell>
+                <listcell><label value="เช่า"/></listcell>
+            </listitem>
+            <listitem>
+                <listcell><label value="1"/></listcell>
+                <listcell><label value="102"/></listcell>
+                <listcell><label value="VIP 64042"/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="35 มกราคม 2556"/></listcell>
+                <listcell><label value="เช่า"/></listcell>
+            </listitem>
+            <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="103"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="104"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="105"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="106"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="107"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="108"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="109"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="1 "/></listcell>
+                <listcell><label value="110"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="2 "/></listcell>
+                <listcell><label value="201"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="2 "/></listcell>
+                <listcell><label value="202"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+                <listitem>
+                <listcell><label value="2 "/></listcell>
+                <listcell><label value="203"/></listcell>
+                <listcell><label value=""/></listcell>
+                <listcell><label value="26 มกราคม 2556"/></listcell>
+                <listcell><label value="27 มกราคม 2556"/></listcell>
+                <listcell><label value="ซ่อมบำรุง"/></listcell>
+            </listitem>
+            
+        </listbox>
+        
+        </groupbox>
+        <label id="examp"/>
+
+    </window>
+
+</zk>
