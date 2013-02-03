@@ -33,7 +33,11 @@
                     <separator/>
                     <hbox>
                         <vbox>
+<<<<<<< HEAD
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ผู้รับจอง :"/><separator/><textbox id="employId"/></hbox>
+=======
+                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสพนักงาน :"/><separator/><textbox id="employeeName"/></hbox>
+>>>>>>> dev
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชั้นที่ :" /><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="classRoom"/></hbox>
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ห้อง :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="room"/></hbox>
                         </vbox>
