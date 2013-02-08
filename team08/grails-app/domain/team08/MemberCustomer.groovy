@@ -10,6 +10,9 @@ class MemberCustomer {
 	String idCityzen
 	String address
 	String emailAddreaa
+	String memberId
+	String memberType
+
 
     static constraints = {
     }
