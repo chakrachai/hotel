@@ -7,6 +7,7 @@ class Room {
 	String roomflore
 	String dayIn
 	String dayOut
+	String roomStatus
     static constraints = {
     }
 }
