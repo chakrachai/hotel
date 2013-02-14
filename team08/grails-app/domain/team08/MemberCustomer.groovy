@@ -9,7 +9,7 @@ class MemberCustomer {
 	String nationality
 	String idCityzen
 	String address
-	String emailAddreaa
+	String emailAddress
 	String memberId
 	String memberType
 
