@@ -1,7 +1,7 @@
 package team08
 
 class MonyService {
-	NonMemberCustomer customer
+	MemberCustomer customer
 	Employee employee
 	
 	String	priceroom

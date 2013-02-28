@@ -1,7 +1,7 @@
 package team08
 
 class TypeService {
-	NonMemberCustomer customer
+	MemberCustomer customer
 	Employee employee
 	String servId
 	String servName

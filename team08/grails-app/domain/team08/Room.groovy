@@ -1,7 +1,7 @@
 package team08
 
 class Room {
-	NonMemberCustomer customer
+	MemberCustomer customer
 	Employee employee
 	String roomNo
 	String roomflore

@@ -7,15 +7,121 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
 
-    <window apply="team08.RoomeventComposer">
-     <separator/>
-     <hbox>
-    <groupbox height="250px" width="100%">
-    <hbox width="70%">
-    </hbox>
-    </groupbox>
-    <groupbox height="250px" width="100%">
-    </groupbox>
+    <window apply="team08.RoomeventComposer" width="100%">
+    <image src="${z.resource(dir:'images', file:'grailshotel_logo.png')}"/>
+     
+     
+     <hbox width="100%">
+        <groupbox height="250px" width="950px">
+            <separator/>
+            <label value="ลูกค้า"/>
+            <separator/><separator/><separator/>
+            <groupbox height="180px"    >
+            <vbox>
+            <separator/>
+                <hbox>
+                <label value="ค้นหา Id ลูกค้า"/>
+                <separator/>
+                <textbox id="txtscid"/>
+               <button id="btnsearchid" height="25px" width="70px">Search</button>
+                <separator/><separator/>
+               <label value="ค้นหา ชื่อ ลูกค้า"/>
+                <separator/>
+                <textbox id="txtscname"/>
+               <button id="btnsearchn" height="25px" width="70px">Search</button>
+                </hbox>
+                <separator/><separator/>
+            <hbox>    
+                    <vbox width="500px">
+                        <hbox>
+                        <label value="ID :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="idcus" value="id0000"/>
+                        </hbox>
+                          <hbox>
+                        <label value="ชื่อ:"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="name" value="--------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="นามสกุล :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="lname" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="ชื่อกลาง/ชื่อเล่น :"/>
+                        <separator/>
+                        <label id="mname" value="---------"/>
+                        </hbox>
+                    </vbox>
+
+                    <vbox>
+                        <hbox>
+                        <label value="Telephone :"/>
+                        <separator/><separator/>
+                        <label id="1" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="Address :"/>
+                        <separator/><separator/><separator/><separator/>
+                        <label id="2" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="ประเทศ :"/>
+                        <separator/><separator/><separator/><separator/><separator/>
+                        <label id="3" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="E-mail :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="4" value="---------"/>
+                        </hbox>
+                    </vbox>
+
+               
+            </hbox>
+            </vbox>
+
+            </groupbox>
+   
+        </groupbox>
+        <groupbox height="250px" width="400px">
+            <separator/>
+            <label value="พนักงาน"/>
+            <separator/>
+            <separator/>
+            <separator/>
+            <groupbox height="180px">
+            <vbox>
+                <hbox>
+                <label value="ID :"/>
+                <separator/>
+                <label id="idrela" value="id0000"/>
+                </hbox>
+                <hbox>
+                <label value="Name :"/>
+                <separator/>
+                <label id="namerela" value="XYZ"/>
+                </hbox>
+                <hbox>
+                <label value="TelephoneNumber :"/>
+                <separator/>
+                <label id="telerela" value="080728xxxx"/>
+                </hbox>
+                <hbox>
+                <label value="Status :"/>
+                <separator/>
+                <label id="strela" value="AbNormal"/>
+                </hbox>
+                <hbox>
+                <label value="Class :"/>
+                <separator/>
+                <label id="csrela" value="Cashier"/>
+                </hbox>
+
+            </vbox>
+            </groupbox>
+        </groupbox>
     </hbox>
     <separator/>
     <groupbox height="25%" width="100%">
@@ -24,44 +130,42 @@
         <space/><space/>
         <button id="btnRefresh" height="30px" width="70px">Refresh</button>
   
-     <listbox id="listboxroom" width="100%">
+        <listbox id="listboxroom" width="1350px">
             <listhead>
                 <listheader label="RoomType" sort="auto"/>
                 <listheader label="Status" sort="auto"/>
                 <listheader label="Price" sort="auto"/>
-              
             </listhead>
             <listitem>
-           
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
             </listitem>    
-             <listitem>
+            <listitem>
          
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
             </listitem>    
-             <listitem>
+            <listitem>
           
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
             </listitem>    
-             <listitem>
+            <listitem>
           
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
             </listitem>    
-             <listitem>
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
-            <listcell label="Dance Room"/>
+            <listitem>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
+                <listcell label="Dance Room"/>
             </listitem>    
         </listbox>
-        </groupbox>
+    </groupbox>
 
     </window>
 

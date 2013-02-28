@@ -1,12 +1,12 @@
 package team08
 
 class MakeEvent {
-	NonMemberCustomer customer
+	MemberCustomer customer
 	Employee employee
-	String typere
-	String idre
-	String pricere
-	String statusre
+	String typere                  // TYPE OF ROOMEVENT
+	String idre                    //  ID OF ROOMEVENT
+	String pricere                 // Price Of ROOMEVENT
+	String statusre                //  Status Of ROOMEVENT
     static constraints = {
     	customer nullable:true
     	employee nullable:true
