@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="team08.ServeS1menuComposer">
+
+
+        <separator/>
+        <separator/>
+        <separator/>
+        <label value="GRAILS HOTEL"/>
+        <separator/>
+        <separator/>
+        <separator/>
+        <label value="รายการการบริการภายใน"/>
+        <separator/>
+        <separator/>
+        <separator/>
+        <listbox id="box" fixedLayout="true">
+        <listhead>
+            <listheader label="ลำดับที่" sort="auto" />
+            <listheader label="รายการ" sort="auto" />
+            <listheader label="ราคา" sort="auto" />
+            <listheader label="เลือก" sort="auto" />
+        </listhead>
+        <listitem>
+            <listcell label="1" />
+            <listcell label="ทำความสะอาดห้อง" />
+            <listcell label="1000" />
+            <listcell><checkbox></checkbox></listcell>
+        </listitem>
+        <listitem>
+            <listcell label="2" />
+            <listcell label="ซัก-รีด" />
+            <listcell label="500" />
+            <listcell><checkbox></checkbox></listcell>
+        </listitem>
+        <listitem>
+            <listcell label="3" />
+            <listcell label="รถรับ-ส่ง" />
+            <listcell label="750" />
+            <listcell><checkbox></checkbox></listcell>
+        </listitem>
+
+        </listbox>
+
+        <vbox id="scaffoldingBox"/>
+
+    </window>
+
+</zk>
