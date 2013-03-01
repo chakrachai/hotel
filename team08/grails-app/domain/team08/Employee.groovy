@@ -30,5 +30,6 @@ class Employee {
     	province nullable:true
     	nprovince nullable:true
     	idppem nullable:true
+        ageem nullable:true
     }
 }
