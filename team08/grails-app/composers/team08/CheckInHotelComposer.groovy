@@ -8,6 +8,20 @@ import org.zkoss.zk.ui.select.annotation.Listen
 class CheckInHotelComposer extends GrailsComposer {
 
     def afterCompose = { window ->
+
+    	$('#searchCustomer').on('click',{
+    		def datacustomer = $('#customerId')[0].text
+    		def customer = MemberCustomer.findByMemberId(datacustomer)
+    		if(customer == null){
+    			alert("ไม่พบข้อมูล")
+    		}else{
+
+    			$('#customerName')[0].text=customer.fName
+				$('#customerLastname')[0].text=customer.lName    			
+				$('#passport')[0].text=customer.idCityzen
+    		}
+    		
+    		})
         // initialize components here
     }
 }

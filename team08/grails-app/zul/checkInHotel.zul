@@ -20,7 +20,7 @@
                 <vbox>
                     <label value="ข้อมูลลูกค้า"/>
                     <separator/>
-                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสลูกค้า :"/><separator/><textbox id="customerId"/><button label="ค้นหา"/></hbox>
+                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสลูกค้า :"/><separator/><textbox id="customerId"/><button id="searchCustomer" label="ค้นหา"/></hbox>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชื่อ :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="customerName"/></hbox>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="นามสกุล :"/><separator/><separator/><textbox id="customerLastname"/></hbox>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="เลขบัตรประจำตัวประชาชน /หนังสือเดินทาง :"/><separator/><separator/><textbox id="passport"/></hbox>
