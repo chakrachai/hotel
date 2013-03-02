@@ -9,7 +9,7 @@
 
     <window apply="team08.CheckInHotelComposer">
  <hbox align="center">
-            <image src="${z.resource(dir:'images', file:'grails_logo.png')}"/>  GRAILS Hotel
+            <image src="${z.resource(dir:'images', file:'grailshotel_logo.png')}"/>  GRAILS Hotel
         </hbox>
 
         <vbox id="scaffoldingBox"/>
