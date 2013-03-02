@@ -147,18 +147,7 @@
                 <listcell label="On Room"/>
                 <listcell label="20000000"/>
             </listitem>    
-            <listitem>
-          
-                <listcell label="Bubble Room"/>
-                <listcell label="Off Room"/>
-                <listcell label="20000000"/>
-            </listitem>    
-            <listitem>
-          
-                <listcell label="Carnival Room"/>
-                <listcell label="Off Room"/>
-                <listcell label="20000000"/>
-            </listitem>    
+               
             <listitem>
                 <listcell label="Music Room"/>
                 <listcell label="On Room"/>
