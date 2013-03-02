@@ -8,6 +8,15 @@ import org.zkoss.zk.ui.select.annotation.Listen
 class RoomeventComposer extends GrailsComposer {
 
     def afterCompose = { window ->
-        // initialize components here
+
+    	$('#btnsearchid').on('click',{
+        	
+        	})
+    	$('#btnsearchn').on('click',{
+        	
+        	})
+        $('#btnRefresh').on('click',{
+
+        	})
     }
 }
