@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="team08.CheckoutComposer">
+
+        <hbox align="center">
+            <image src="${z.resource(dir:'images', file:'zkpowered_s.png')}"/>
+            <image src="${z.resource(dir:'images', file:'grails_logo.png')}"/>
+			Checkout
+        </hbox>
+		
+			<groupbox width="1024px" height= "120px">  
+			<hbox>
+				<vbox width ="300px">
+				<separator/><separator/>
+					<label value = "รหัสพนักงาน :  "/>
+					<label value = "ชื่อลูกค้า :  "/>
+					<label value = "email:  "/>
+					<label value = "ประเภทห้อง:  "/>
+			 	</vbox>
+				
+				<vbox width="300px">
+				<separator/><separator/>
+					<label value = "วันที่เข้าพัก: "/>
+					<label value = "โทร:  "/>
+					<label value = "หมายเลขห้อง:  "/>
+				</vbox>
+				
+				<vbox width="300px">
+				<separator/><separator/>
+					
+					<label value = "วันที่คืนห้อง: "/>
+				</vbox>
+			</hbox>
+			</groupbox>
+
+			<groupbox width="1024px" height= "400px">  
+			<hbox>
+				<listbox id="service" height="250px">
+					<listhead>
+						<listheader width="50px"><label value="ลำดับ"/></listheader>
+						<listheader width="80px"><label value="ห้อง"/></listheader>
+						<listheader width="500px"><label value="รายการบริการ"/></listheader>
+						<listheader width="100px"><label value="จำนวน"/></listheader>
+						<listheader width="100px"><label value="ราคา"/></listheader>
+						<listheader ><label value="ค่าบริการ"/></listheader>
+					</listhead>
+				</listbox>
+			</hbox>
+			
+			<hbox>                                      
+			<vbox width="80px">
+				<separator/>
+				<label value = "เงินสด:"/>
+				<separator/>
+				<label value = "หมายเลขบัตรเครดิต: "/>
+				</vbox>
+				
+				<vbox width="600px">
+				<separator/>
+				<textbox id="money"/>
+				<separator/>
+				<textbox id="cradit"/>
+				</vbox>
+				
+				<vbox>
+					<separator/><separator/>
+					<label value = "ยอดชำระ : " style="color:blue;font-size:20px"/>
+				</vbox>
+			</hbox>
+			
+			
+			
+			<hbox	align ="right">
+				<vbox width ="700px">
+				</vbox>
+				<vbox>
+				<separator/><separator/>
+					<button id="btnPrint">Print</button>
+				</vbox>
+				
+				<vbox>
+				<separator/><separator/>
+					<button id="btnExit">Exit</button>
+				</vbox>
+			</hbox>
+			
+			
+			</groupbox>
+    
+    </window>
+
+</zk>
