@@ -56,17 +56,17 @@ class IndexComposer extends GrailsComposer {
 	    })
 
 		$('#btnmoney').on('Click',{
-	    	Executions.sendRedirect("/checkInHotel.zul")
+	    	Executions.sendRedirect("/checkout.zul")
 	    	alert("ยินดีต้อนรับ")
 	    })
 
 		$('#btnroomevent').on('Click',{
-	    	Executions.sendRedirect("/checkInHotel.zul")
+	    	Executions.sendRedirect("/roomevent.zul")
 	    	alert("ยินดีต้อนรับ")
 	    })
 
 	    $('#btncustomer').on('Click',{
-	    	Executions.sendRedirect("/checkInHotel.zul")
+	    	Executions.sendRedirect("/regMember.zul")
 	    	alert("ยินดีต้อนรับ")
 	    })
 		$('#btncancle').on('Click',{
