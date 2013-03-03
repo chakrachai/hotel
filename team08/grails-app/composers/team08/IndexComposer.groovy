@@ -2,6 +2,7 @@ package team08
 import org.zkoss.zk.grails.composer.*
 import org.zkoss.zk.ui.Executions
 
+import org.*
 import org.zkoss.zk.ui.select.annotation.Wire
 import org.zkoss.zk.ui.select.annotation.Listen
 
@@ -46,12 +47,10 @@ class IndexComposer extends GrailsComposer {
 	    	}
 
 	    })
-			
 
 		$('#btncancle').on('Click',{
-
-	        alert("cancle")
-	    })
-        
+			$('#showlogin').setVisible(false)
+			$('#showmenu').setVisible(true)
+	    })  
     }
 }

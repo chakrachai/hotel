@@ -21,13 +21,18 @@
         <hbox>
             <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>                      
         <groupbox width="250px" height ="90px">
-            <vbox  align = "center">
-            <hbox><label value="Username:"/><textbox id="userid"/></hbox>
-            <hbox><label value="Password: "/><textbox id="passwordid"/></hbox>
-            <hbox><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
+            <vbox id="showlogin" align = "center" visible="true">
+                <hbox id= "databox1"><label value="Username:"/><textbox id="userid"/></hbox>
+                <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid"/></hbox>
+                <hbox id= "databox3"><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
+            </vbox>
+
+            <vbox id="showmenu" visible="false">
+                <hbox><button id= "btncancle" label="จองห้อง"/></hbox>
+                <hbox><button id= "btnsigin" label="คิดเงิน"/></hbox>
+                <hbox><button id= "btnsigin" label="จองห้องจัดงาน"/></hbox>
             </vbox>
         </groupbox>
     </hbox>
     </window>
-
 </zk>
