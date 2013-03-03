@@ -27,6 +27,10 @@ class CheckInHotelComposer extends GrailsComposer {
 //==================================================find and show dataCustomer==========================================================
         $('#btnsingout').on('click',{
             alert("Singout")
+<<<<<<< HEAD
+=======
+
+>>>>>>> iss-4224
         })
 
 
