@@ -10,44 +10,125 @@
     <window apply="team08.ServeS1menuComposer">
 
 
-        <separator/>
-        <separator/>
-        <separator/>
-        <label value="GRAILS HOTEL"/>
-        <separator/>
-        <separator/>
-        <separator/>
-        <label value="รายการการบริการภายใน"/>
-        <separator/>
-        <separator/>
-        <separator/>
-        <listbox id="box" fixedLayout="true">
-        <listhead>
-            <listheader label="ลำดับที่" sort="auto" />
-            <listheader label="รายการ" sort="auto" />
-            <listheader label="ราคา" sort="auto" />
-            <listheader label="เลือก" sort="auto" />
-        </listhead>
-        <listitem>
-            <listcell label="1" />
-            <listcell label="ทำความสะอาดห้อง" />
-            <listcell label="800" />
-            <listcell><checkbox></checkbox></listcell>
-        </listitem>
-        <listitem>
-            <listcell label="2" />
-            <listcell label="ซัก-รีด" />
-            <listcell label="500" />
-            <listcell><checkbox></checkbox></listcell>
-        </listitem>
-        <listitem>
-            <listcell label="3" />
-            <listcell label="รถรับ-ส่ง" />
-            <listcell label="750" />
-            <listcell><checkbox></checkbox></listcell>
-        </listitem>
+<image src="${z.resource(dir:'images', file:'grailshotel_logo.png')}"/>
+     <separator/><separator/>
+     <hbox width="100%">
+        <groupbox height="100px" width="515px">
+            <separator/>
+            <label value="CUSTOMER : ลูกค้า"/>
+            <separator/><separator/>
+            <groupbox>
+            <vbox>
+            <hbox>    
+                    <vbox width="250px">
+                        <hbox>
+                        <label value="ID :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="idcus" value="id0000"/>
+                        </hbox>
+                          <hbox>
+                        <label value="ชื่อ :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="name" value="--------"/>
+                        </hbox>
+                    </vbox>
+                    <vbox>
+                        <hbox>
+                        <label value="เลขห้อง :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="roomnum" value="--------"/>
+                        </hbox>
+                        <hbox>
+                        <label value="นามสกุล :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="lname" value="--------"/>
+                        </hbox>
 
+                    </vbox>
+            </hbox>
+            </vbox>
+            </groupbox>
+        </groupbox>
+    </hbox>
+    
+    <separator/><separator/><separator/>
+    
+    <groupbox height="25%" width="38%">
+        <separator/>
+        <label value="DINER SERVICE : บริการอาหาร"/>
+        <separator/><separator/>
+            <listbox id="lbs1" width="500px">
+            <listhead>
+                <listheader label="No." sort="auto"/>
+                <listheader label="Menu" sort="auto"/>
+                <listheader label="Price" sort="auto"/>
+                <listheader label="Select" sort="auto"/>
+            </listhead>
+            <listitem>
+                <listcell label="1"/>
+                <listcell label="Breakfast set"/>
+                <listcell label="500"/>
+                <listcell><checkbox id="sv11"/></listcell>
+            </listitem>    
+            <listitem>
+         
+                <listcell label="2"/>
+                <listcell label="Lunch Set"/>
+                <listcell label="750"/>
+                <listcell><checkbox id="sv12"/></listcell>
+            </listitem>    
+            <listitem>
+          
+                <listcell label="3"/>
+                <listcell label="Dinnet Set"/>
+                <listcell label="1000"/>
+                <listcell><checkbox id="sv13"/></listcell>
+            </listitem>    
+            <listitem>
+          
+                <listcell label="4"/>
+                <listcell label="Couple Set"/>
+                <listcell label="1500"/>
+                <listcell><checkbox id="sv14"/></listcell>
+            </listitem>    
+            <listitem>
+                <listcell label="5"/>
+                <listcell label="Group Set"/>
+                <listcell label="3250"/>
+                <listcell><checkbox id="sv15"/></listcell>
+            </listitem>    
+            <listitem>
+                <listcell label="6"/>
+                <listcell label="Platinum Set"/>
+                <listcell label="5000"/>
+                <listcell><checkbox id="sv16"/></listcell>
+            </listitem> 
         </listbox>
+        <separator/><separator/>
+        <vbox>
+        <hbox>
+         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+         <separator/><separator/><separator/><separator/><separator/>
+        <label value="รวมราคา Total :"/>
+         <separator/><separator/><separator/>
+        <label id="serveTotal" value="---------------"/>
+        <separator/><separator/><separator/>
+        <label value="฿"/>
+        </hbox>
+        <separator/>
+        <hbox>
+         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+        <button id="btnServeConfirm" height="25px" width="70px">Confirm</button>
+        <button id="btnServeCancel" height="25px" width="70px">Cancel</button>
+        </hbox>
+        </vbox>
+    </groupbox>
+
 
         <vbox id="scaffoldingBox"/>
 

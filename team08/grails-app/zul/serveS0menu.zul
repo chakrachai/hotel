@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="team08.ServeS0menuComposer">
+        
+            <vbox height="100%" align="center">
+            <separator/><separator/><separator/><separator/><separator/>
+            <image src="${z.resource(dir:'images', file:'grailshotel_logo.png')}"/>
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/>
+
+            
+            <hbox width="100%" height="100%" align="center">
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+            <separator/><separator/><separator/><separator/><separator/>
+
+            <button id="btnDS" label="DINER SERVICE" width="300px" height="100px"></button> 
+            <button id="btnRS" label="ROOM SERVICE" width="300px" height="100px"></button>
+            </hbox>
+            
+            </vbox>
+        <vbox id="scaffoldingBox"/>
+
+    </window>
+
+</zk>
