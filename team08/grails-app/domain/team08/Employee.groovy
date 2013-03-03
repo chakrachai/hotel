@@ -15,6 +15,7 @@ class Employee {
 	String nprovince		//รหัสจังหวัด
 	String idppem			//รหัสประชาชนพนักงาน
     String ageem            //อายุ
+    String passem           //รหัสพนักงาน
 	static hasMany=[typeService:TypeService, monyService :MonyService , room:Room ,makeEvent:MakeEvent, timeWork:TimeWork]
     static constraints = {
     	nameem nullable:true
@@ -31,5 +32,6 @@ class Employee {
     	nprovince nullable:true
     	idppem nullable:true
         ageem nullable:true
+        passem nullable:true
     }
 }

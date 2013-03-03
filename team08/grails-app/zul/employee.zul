@@ -12,14 +12,14 @@
         
 
         
-        <hbox id="mainpage" visible="false">
+        <hbox id="mainpage" >
             <groupbox width="500px" height ="200px">
                 <vbox>
                  <button id="btnEM" height="25px" width="70px">ผู้จัดการ</button>
                 </vbox>
             </groupbox>
         </hbox>
-        <hbox id="managerpage" width="100%">
+        <hbox id="managerpage" width="100%" visible="false">
             <groupbox height="25%" width="100%">
                 <vbox>
                     <listbox id="listmanager" width="800px">
@@ -31,22 +31,8 @@
                             <listheader label="เวลาออกทำงาน" width="180px"/>
                             <listheader label="สถานะ" width="10%"/>
                         </listhead>
-                    <listitem>
-                        <listcell label="B1424314"/>
-                        <listcell label="watsawat"/>
-                        <listcell label="Maneewan"/>
-                        <listcell label="12.30"/>
-                        <listcell label="15.00"/>
-                        <listcell label="ÍÂÙè"/>
-                    </listitem>
-                    <listitem>
-                        <listcell label="B765958605"/>
-                        <listcell label="watsawat"/>
-                        <listcell label="Maneewan"/>
-                        <listcell label="12.30"/>
-                        <listcell label="15.00"/>
-                        <listcell label="äÁèÍÂÙè"/>
-                    </listitem>
+                        
+                        
                     </listbox>            
                 </vbox>
             </groupbox>
@@ -61,12 +47,19 @@
                                 <button id="btnrefresh" height="25px" width="70px">Refresh</button>
                                 <button id="btnback" height="25px" width="70px">ย้อนกลับ</button>
                                 <button id="btnnext" height="25px" width="70px">ดูประวัติ</button>
-                                <button id="btnplus" height="25px" width="100px">เพิ่มพนักงาน</button>
                                 <button id="btndelete" height="25px" width="100px">ลบพนักงาน</button>
+                                <button id="btnplus" height="25px" width="100px">เพิ่มพนักงาน</button>
                             </vbox>
                         </hbox>
                     </vbox>
                 </groupbox>
+            </groupbox>
+        </hbox>
+        <hbox id="pluspage" visible="false">
+            <groupbox width="500px" height ="200px">
+                <vbox>
+                 <button id="btnEMe" height="25px" width="70px">ผู้จัดการ</button>
+                </vbox>
             </groupbox>
         </hbox>
 
