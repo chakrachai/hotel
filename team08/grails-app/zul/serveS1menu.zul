@@ -49,7 +49,7 @@
     
     <separator/><separator/><separator/>
     
-    <groupbox height="25%" width="38%">
+    <groupbox height="100%" width="515px">
         <separator/>
         <label value="DINER SERVICE : บริการอาหาร"/>
         <separator/><separator/>
