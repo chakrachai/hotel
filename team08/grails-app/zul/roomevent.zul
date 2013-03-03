@@ -12,6 +12,7 @@
      
      
      <hbox width="100%">
+
         <groupbox height="250px" width="950px">
             <separator/>
             <label value="ลูกค้า"/>
@@ -124,39 +125,68 @@
         </groupbox>
     </hbox>
     <separator/>
-    <groupbox height="25%" width="100%">
+    <groupbox height="25%" width="1350px">
 
         <label value="เช็คสถานะห้อง"/>
+        <space/><space/><space/><space/><space/><space/><space/><space/><space/><space/>
+        <listbox>
+            <listitem>
+            <listcell>
+            <listbox id="listcheckroomre" mold="select" hflex="3" >
+                        <listitem label="None Select" selected="true" id="none"/>
+                        <listitem label="Carnival" id="listcarnival"/>
+                        <listitem label="Seminar" id="listseminar"/>
+                        <listitem label="Meeting" id="listmeeting"/>
+                        <listitem label="Wedding" id="listwedding"/>
+            </listbox>
+            </listcell>
+            </listitem>
+             </listbox>
+       
+        <datebox id="datebox" cols="12" format="short " mold="rounded" />
         <space/><space/>
-        <button id="btnRefresh" height="30px" width="70px">Refresh</button>
+        <button id="btnCheck" height="30px" width="70px">Check</button>
   
         <listbox id="listboxroom" width="1350px">
             <listhead>
                 <listheader label="RoomType" sort="auto"/>
                 <listheader label="Status" sort="auto"/>
                 <listheader label="Price" sort="auto"/>
+                <listheader label="จอง" sort="auto"/>
             </listhead>
             <listitem>
-                <listcell label="Dance Room"/>
-                <listcell label="On Room"/>
+                <listcell label="Carnival Room"/>
+                <listcell id="CrS" label="On Room"/>
                 <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnCar" height="30px" width="70px">Choise</button>
+                </listcell>
             </listitem>    
             <listitem>
          
-                <listcell label="Living Room"/>
-                <listcell label="On Room"/>
+                <listcell label="Seminar Room"/>
+                <listcell id="SrS" label="On Room"/>
                 <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnSeminar" height="30px" width="70px">Choise</button>
+                </listcell>
             </listitem>    
                
             <listitem>
-                <listcell label="Music Room"/>
-                <listcell label="On Room"/>
+                <listcell label="Meeting Room"/>
+                <listcell id="MrS" label="On Room"/>
                 <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnMeet" height="30px" width="70px">Choise</button>
+                </listcell>
             </listitem>    
             <listitem>
                 <listcell label="Wedding Room"/>
-                <listcell label="Off Room"/>
+                <listcell id="WrS" label="Off Room"/>
                 <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnWedding" height="30px" width="70px">Choise</button>
+                </listcell>
             </listitem> 
         </listbox>
     </groupbox>
