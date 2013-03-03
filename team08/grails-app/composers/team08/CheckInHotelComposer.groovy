@@ -9,6 +9,11 @@ class CheckInHotelComposer extends GrailsComposer {
 
     def afterCompose = { window ->
 
+        def searchData = DataSignIn.get(2)
+        alert(searchData.datainput)
+        def employeedata = searchData.datainput
+        searchData.datainput = ""
+        searchData.save()
     	$('#searchCustomer').on('click',{
     		def datacustomer = $('#customerId')[0].text
     		def customer = MemberCustomer.findByMemberId(datacustomer)
@@ -22,11 +27,9 @@ class CheckInHotelComposer extends GrailsComposer {
                 $('#searchCustomer').detach()
     		}
     	})
-
-
 //==================================================find and show dataCustomer==========================================================
         $('#btnsingout').on('click',{
-            alert("Singout")
+            alert(employeedata)
         })
     }
 }

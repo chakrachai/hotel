@@ -26,7 +26,9 @@ class IndexComposer extends GrailsComposer {
 	        	else{
 	        		if(employee_data.classem == "Cashier"){
 	        			if($('#passwordid')[0].text == employee_data.passem){
-	        				def outdata = new DataSignIn(datainput:finddata).save()
+	        				def outdata = DataSignIn.findById("2")
+	        					outdata.datainput = $('#userid')[0].text
+	        					outdata.save()
 	        				Executions.sendRedirect("/checkInHotel.zul")
 	        				alert("ยินดีต้อนรับ")
 	        			}else{
