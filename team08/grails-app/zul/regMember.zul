@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="team08.RegMemberComposer">
+
+        <groupbox id="qua" open="true">
+            <div align="center"><vbox><div height="150px" width="100%"/>
+            <panel   height="300px" width="608px" style="margin-bottom:3px" border="normal">
+                    <panelchildren>
+                        <div align="center"><hbox><image src="${z.resource(dir:'images', file:'wel.png')}"/></hbox></div>
+                        <separator/><separator/><vbox height="30px" width="100%"/>
+                        <div align="center"><vbox>
+                            <hbox>
+                                <image src="${z.resource(dir:'images', file:'norm.png')}"/>
+                                <image src="${z.resource(dir:'images', file:'vip.png')}"/>
+                            </hbox>
+
+                        </vbox></div><vbox height="77px" width="100%"/>
+                         <div align="center"><hbox><image src="${z.resource(dir:'images', file:'cc.png')}"/></hbox></div>
+                    </panelchildren>
+                    
+            </panel><div height="200px" width="100%"/></vbox></div>
+        </groupbox>
+
+
+
+
+
+
+    <groupbox id="normal" open="false">
+            <div align="center"><vbox><div height="100px" width="100%"/>
+            <panel  height="378px" width="680px" style="margin-bottom:3px" border="normal">
+                    <panelchildren>
+                        <div align="center"><hbox><image src="${z.resource(dir:'images', file:'regn.png')}"/></hbox></div><separator/><separator/><separator/>
+                        <div align="center"><vbox>
+                            
+                            <hbox>
+                                <label value = "ชื่อ "/>
+                                <label value = "*"/><textbox id="fname"/> 
+                                <label value = "ชื่อกลาง "/>
+                                <textbox id="manme"/>
+                                <label value="นามสกุล "/>
+                                <label value = "*"/><textbox id="lname"/>
+                            </hbox><separator/>
+
+                            <hbox>
+                                <label value = "เพศ "/>
+                                <label value = "*"/><textbox id="sex"/>
+                                <label value = "วันเกิด "/>
+                                <label value = "*"/><datebox id="born"/>
+                                <label value = "อายุ "/>
+                                <label value = "*"/><textbox id="age"/>
+                                <label value = "ปี"/>
+                            </hbox><separator/>
+
+                            <hbox>
+                                <label value = "สัญชาติ "/>
+                                <label value = "*"/><textbox id="nationality"/>
+                                <label value = "รหัสประจำตัวประชาชน"/>
+                                <label value = "*"/><textbox id="idCityzen" width="210px"/>
+                                
+                                
+                                
+                            </hbox><separator/>
+                            <hbox>
+                                <label value = "ที่อยู่"/>
+                                <label value = "*"/><textbox id="address"/>
+                                <label value = "email-Address"/>
+                                <label value = "*"/><textbox id="emailAddress" width="255px"/>
+                            </hbox><separator/>
+                            
+                            
+                        </vbox></div>
+                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" /></div>
+                        <div align="center"><vbox>
+                            <vbox height="46px" width="100%"/>
+                            <image src="${z.resource(dir:'images', file:'regnd.png')}"/>
+                        </vbox></div>
+                    </panelchildren>
+                    
+            </panel><div height="150px" width="100%"/></vbox></div>
+    </groupbox>
+
+
+
+
+    <groupbox id="vip" open="false">
+            <div align="center"><vbox><div height="100px" width="100%"/>
+            <panel  height="378px" width="680px" style="margin-bottom:3px" border="normal">
+                    <panelchildren>
+                        <div align="center"><hbox><image src="${z.resource(dir:'images', file:'regv.png')}"/></hbox></div><separator/><separator/><separator/>
+                        <div align="center"><vbox>
+                            
+                            <hbox>
+                                <label value = "ชื่อ "/>
+                                <label value = "*"/><textbox id="fnamex"/> 
+                                <label value = "ชื่อกลาง "/>
+                                <textbox id="manmex"/>
+                                <label value="นามสกุล "/>
+                                <label value = "*"/><textbox id="lnamex"/>
+                            </hbox><separator/>
+
+                            <hbox>
+                                <label value = "เพศ "/>
+                                <label value = "*"/><textbox id="sexx"/>
+                                <label value = "วันเกิด "/>
+                                <label value = "*"/><datebox id="bornx"/>
+                                <label value = "อายุ "/>
+                                <label value = "*"/><textbox id="agex"/>
+                                <label value = "ปี"/>
+                            </hbox><separator/>
+
+                            <hbox>
+                                <label value = "สัญชาติ "/>
+                                <label value = "*"/><textbox id="nationalityx"/>
+                                <label value = "รหัสประจำตัวประชาชน"/>
+                                <label value = "*"/><textbox id="idCityzenx" width="210px"/>
+                                
+                                
+                                
+                            </hbox><separator/>
+                            <hbox>
+                                <label value = "ที่อยู่"/>
+                                <label value = "*"/><textbox id="addressx"/>
+                                <label value = "email-Address"/>
+                                <label value = "*"/><textbox id="emailAddressx" width="255px"/>
+                            </hbox><separator/>
+                            
+                            
+                        </vbox></div>
+                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" /></div>
+                        <div align="center"><vbox>
+                            <vbox height="46px" width="100%"/>
+                            <image src="${z.resource(dir:'images', file:'regvd.png')}"/>
+                        </vbox></div>
+                    </panelchildren>
+                    
+            </panel><div height="150px" width="100%"/></vbox></div>
+
+    </groupbox>
+            
+
+    </window>
+
+</zk>
