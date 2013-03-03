@@ -8,6 +8,11 @@ import org.zkoss.zk.ui.select.annotation.Listen
 class RoomeventComposer extends GrailsComposer {
 
     def afterCompose = { window ->
+        def  checkusern
+        def checkuserid
+        def scheckdate
+        def scchecklist
+        def employeere
         def keepid
         def searchData = DataSignIn.get(2)
         alert(searchData.datainput)
@@ -16,7 +21,7 @@ class RoomeventComposer extends GrailsComposer {
         Executions.sendRedirect("/index.zul")
         }else{
         keepid = searchData.datainput
-        def employeere = Employee.findByIdem(keepid)
+         employeere = Employee.findByIdem(keepid)
         $('#idrela').setValue(employeere.idem)
         $('#namerela').setValue(employeere.nameem+" "+employeere.lnameem)
         $('#telerela').setValue(employeere.tel)
@@ -32,7 +37,7 @@ class RoomeventComposer extends GrailsComposer {
 
      $('#btnsearchid').on('click',{
         def checkid = $('#txtscid').getText()
-        def checkuserid = MemberCustomer.findByMemberId(checkid)
+         checkuserid = MemberCustomer.findByMemberId(checkid)
         if(checkid.size() == 0){
             alert("พิมพ์ด้วยคราบ")
          }else{
@@ -56,34 +61,12 @@ class RoomeventComposer extends GrailsComposer {
             }
         
      })   
-     $('#btnsearchn').on('click',{
-        def checkn = $('#txtscname').getText()
-        def  checkusern = MemberCustomer.findByFName(checkn)
-       if(checkn.size() == 0){
-            alert("พิมพ์ด้วยคราบ")
-         }else{
-            if(checkusern == null){
-            
-            alert("ไม่เจออ๊ะ")
-          
-        }else{
-        $('#idcus').setValue(checkusern.memberId)
-        $('#name').setValue(checkusern.fName)
-        $('#lname').setValue(checkusern.lName)
-        $('#mname').setValue(checkusern.mName)
-        $('#tel').setValue(checkusern.age)
-        $('#add').setValue(checkusern.address)
-        $('#country').setValue(checkusern.nationality)
-        $('#email').setValue(checkusern.emailAddress)
-         }
-            }  
-        })
 
      $('#btnCheck').on('click',{
-            def scchecklist=$('#listcheckroomre').getSelectedItem().getLabel()
+             scchecklist=$('#listcheckroomre').getSelectedItem().getLabel()
             
             checkDate=$('#datebox').getText()
-            def scheckdate = MakeEvent.findAllByTypere(scchecklist)
+             scheckdate = MakeEvent.findAllByTypere(scchecklist)
             def rubkar
             for(checkloop in scheckdate){
                 //alert(""+checkloop.datere)
@@ -151,15 +134,55 @@ class RoomeventComposer extends GrailsComposer {
             })
             
             $('#btnCar').on('click',{
+                 String typeCar = "Carnival"
+                String priceCar = "200000"
+                def mkevent = new MakeEvent(
+                    customer : checkuserid,
+                    employee : employeere,
+                    typere : typeCar,
+                    pricere : priceCar,
+                    datere : checkDate
+                    )
+                mkevent.save()
                 alert("save")
                 })
             $('#btnSeminar').on('click',{
+                  String typeCar = "Seminar"
+                String priceCar = "160000"
+                def mkevent = new MakeEvent(
+                    customer : checkuserid,
+                    employee : employeere,
+                    typere : typeCar,
+                    pricere : priceCar,
+                    datere : checkDate
+                    )
+                mkevent.save()
                   alert("save")
                 })
             $('#btnMeet').on('click',{
+                  String typeCar = "Meeting"
+                String priceCar = "100000"
+                def mkevent = new MakeEvent(
+                    customer : checkuserid,
+                    employee : employeere,
+                    typere : typeCar,
+                    pricere : priceCar,
+                    datere : checkDate
+                    )
+                mkevent.save()
                   alert("save")
                 })
             $('#btnWedding').on('click',{
+                  String typeCar = "Wedding"
+                String priceCar = "280000"
+                def mkevent = new MakeEvent(
+                    customer : checkuserid,
+                    employee : employeere,
+                    typere : typeCar,
+                    pricere : priceCar,
+                    datere : checkDate
+                    )
+                mkevent.save()
                   alert("save")
                 })
     }
