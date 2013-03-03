@@ -48,7 +48,7 @@
     
     <separator/><separator/><separator/>
     
-    <groupbox height="25%" width="38%">
+    <groupbox height="100%" width="515px">
         <separator/>
         <label value="ROOM SERVICE : บริการภายใน"/>
         <separator/><separator/>
