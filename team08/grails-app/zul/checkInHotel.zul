@@ -8,11 +8,28 @@
     xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
 
     <window apply="team08.CheckInHotelComposer">
+
+<style>
+            body {background-color: #EBEBEB;}
+            .bg{background-color: #FFFFFF}
+            .msize {color: red; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
+            .psize {color: green; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
+            .cen {background-color: #990000; color: #ffffff; font-size: 1em}
+ </style>
+
  <hbox align="center">
             <image src="${z.resource(dir:'images', file:'grailshotel_logo.png')}"/>  GRAILS Hotel
         </hbox>
 
         <vbox id="scaffoldingBox"/>
+
+            <separator/>
+                <hbox>
+                    <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                    <label value="พนักงานผู้ใช้ : "/><label id= "employeeid"/><button id="btnsingout" label= "Singout"/>
+                </hbox>
+            <separator/>
+
 
         <groupbox height="215px">
         <hbox>
@@ -33,12 +50,9 @@
                     <separator/>
                     <hbox>
                         <vbox>
-                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ผู้รับจอง :"/><separator/><textbox id="employId"/></hbox>
-                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสพนักงาน :"/><separator/><textbox id="employeeName"/></hbox>
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชั้นที่ :" /><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="classRoom"/></hbox>
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ห้อง :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="room"/></hbox>
-                        </vbox>
-                        <vbox>
+                        
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="จำนวนผู้พัก :"/><separator/><textbox id="customerMany"/></hbox>
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="วันที่เข้าพัก :"/><separator/><textbox id="dayin"/></hbox>
                             <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ถึงวันที่ :"/><separator/><separator/><separator/><separator/><textbox id="dayout"/></hbox>
@@ -174,12 +188,8 @@
                 <listcell><label value="27 มกราคม 2556"/></listcell>
                 <listcell><label value="ซ่อมบำรุง"/></listcell>
             </listitem>
-            
-        </listbox>
-        
+        </listbox>        
         </groupbox>
-        <label id="examp"/>
-
     </window>
 
 </zk>
