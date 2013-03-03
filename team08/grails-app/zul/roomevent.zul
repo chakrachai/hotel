@@ -37,7 +37,7 @@
                         <hbox>
                         <label value="ID :"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="idcus" value="id0000"/>
+                        <label id="idcus" value="------"/>
                         </hbox>
                           <hbox>
                         <label value="ชื่อ:"/>
@@ -60,22 +60,22 @@
                         <hbox>
                         <label value="Telephone :"/>
                         <separator/><separator/>
-                        <label id="1" value="---------"/>
+                        <label id="tel" value="---------"/>
                         </hbox>
                           <hbox>
                         <label value="Address :"/>
                         <separator/><separator/><separator/><separator/>
-                        <label id="2" value="---------"/>
+                        <label id="add" value="---------"/>
                         </hbox>
                           <hbox>
                         <label value="ประเทศ :"/>
                         <separator/><separator/><separator/><separator/><separator/>
-                        <label id="3" value="---------"/>
+                        <label id="country" value="---------"/>
                         </hbox>
                           <hbox>
                         <label value="E-mail :"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="4" value="---------"/>
+                        <label id="email" value="---------"/>
                         </hbox>
                     </vbox>
 
@@ -156,7 +156,7 @@
             </listhead>
             <listitem>
                 <listcell label="Carnival Room"/>
-                <listcell id="CrS" label="On Room"/>
+                <listcell id="CrS" label="On"/>
                 <listcell label="20000000"/>
                 <listcell> 
                     <button id="btnCar" height="30px" width="70px">Choise</button>
@@ -165,7 +165,7 @@
             <listitem>
          
                 <listcell label="Seminar Room"/>
-                <listcell id="SrS" label="On Room"/>
+                <listcell id="SrS" label="On"/>
                 <listcell label="20000000"/>
                 <listcell> 
                     <button id="btnSeminar" height="30px" width="70px">Choise</button>
@@ -174,7 +174,7 @@
                
             <listitem>
                 <listcell label="Meeting Room"/>
-                <listcell id="MrS" label="On Room"/>
+                <listcell id="MrS" label="On"/>
                 <listcell label="20000000"/>
                 <listcell> 
                     <button id="btnMeet" height="30px" width="70px">Choise</button>
@@ -182,7 +182,7 @@
             </listitem>    
             <listitem>
                 <listcell label="Wedding Room"/>
-                <listcell id="WrS" label="Off Room"/>
+                <listcell id="WrS" label="On"/>
                 <listcell label="20000000"/>
                 <listcell> 
                     <button id="btnWedding" height="30px" width="70px">Choise</button>

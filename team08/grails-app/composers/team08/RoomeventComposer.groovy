@@ -9,6 +9,56 @@ class RoomeventComposer extends GrailsComposer {
 
     def afterCompose = { window ->
         String checkDate=""
+
+     $('#btnsearchid').on('click',{
+        def checkid = $('#txtscid').getText()
+        def checkuserid = MemberCustomer.findByMemberId(checkid)
+        if(checkid.size() == 0){
+            alert("พิมพ์ด้วยคราบ")
+         }else{
+            if(checkuserid == null){
+            
+            alert("ไม่เห็นเว้ยเห้ย")
+          
+        }else{
+          
+         
+         // alert(checkuserid.memberId)
+           $('#idcus').setValue(checkuserid.memberId)
+           $('#name').setValue(checkuserid.fName)
+           $('#lname').setValue(checkuserid.lName)
+            $('#mname').setValue(checkuserid.mName)
+            $('#tel').setValue(checkuserid.age)
+            $('#add').setValue(checkuserid.address)
+            $('#country').setValue(checkuserid.nationality)
+            $('#email').setValue(checkuserid.emailAddress)
+             }
+            }
+        
+     })   
+     $('#btnsearchn').on('click',{
+        def checkn = $('#txtscname').getText()
+        def  checkusern = MemberCustomer.findByFName(checkn)
+       if(checkn.size() == 0){
+            alert("พิมพ์ด้วยคราบ")
+         }else{
+            if(checkusern == null){
+            
+            alert("ไม่เจออ๊ะ")
+          
+        }else{
+        $('#idcus').setValue(checkusern.memberId)
+        $('#name').setValue(checkusern.fName)
+        $('#lname').setValue(checkusern.lName)
+        $('#mname').setValue(checkusern.mName)
+        $('#tel').setValue(checkusern.age)
+        $('#add').setValue(checkusern.address)
+        $('#country').setValue(checkusern.nationality)
+        $('#email').setValue(checkusern.emailAddress)
+         }
+            }  
+        })
+
      $('#btnCheck').on('click',{
             def scchecklist=$('#listcheckroomre').getSelectedItem().getLabel()
             
@@ -50,6 +100,33 @@ class RoomeventComposer extends GrailsComposer {
                     $('#SrS').setLabel("On")
                     }
                 }
+
+                if($('#CrS').getLabel()=="Off"){
+                    $('#btnCar').setVisible(false)
+                }
+                else if($('#SrS').getLabel()=="Off"){
+                    $('#btnSeminar').setVisible(false)
+                }
+                else if($('#MrS').getLabel()=="Off"){
+                    $('#btnMeet').setVisible(false)
+                }
+                else if($('#WrS').getLabel()=="Off"){
+                    $('#btnWedding').setVisible(false)
+                }
+                else if($('#CrS').getLabel()=="On"){
+                    $('#btnCar').setVisible(true)
+                }
+                else if($('#SrS').getLabel()=="On"){
+                    $('#btnSeminar').setVisible(true)
+                }
+                else if($('#MrS').getLabel()=="On"){
+                    $('#btnMeet').setVisible(true)
+                }
+                else if($('#WrS').getLabel()=="On"){
+                    $('#btnWedding').setVisible(true)
+                }
+
+
 
             })
     }
