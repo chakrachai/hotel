@@ -12,18 +12,17 @@ class CheckInHotelComposer extends GrailsComposer {
         String employeedata
         def datacustomer
         def customer
-
         if (searchData.datainput==null || searchData.datainput==""){
             Executions.sendRedirect("/index.zul")
-        }else{
-        searchData = DataSignIn.get(2)
-        alert(searchData.datainput)
-        employeedata = searchData.datainput
-        searchData.datainput = ""
-        searchData.save()
-        $('#employeeid')[0].text = employeedata
         }
-
+        else{
+            searchData = DataSignIn.get(2)
+            alert(searchData.datainput)
+            employeedata = searchData.datainput
+            searchData.datainput = ""
+            searchData.save()
+            $('#employeeid')[0].text = employeedata
+        }
 //=================================================checkdata==============================================================================
    	$('#searchCustomer').on('click',{
     		datacustomer = $('#customerId')[0].text
@@ -50,6 +49,7 @@ class CheckInHotelComposer extends GrailsComposer {
             employee:Employee.findByIdem(employeedata)
         ).save()
         $('#searchCustomer').setVisible(true)
+        alert("save")
     })
 //==================================================================checkinbutton===========================================================
         $('#outroom').on('click',{
@@ -59,7 +59,7 @@ class CheckInHotelComposer extends GrailsComposer {
             dayIn : $('#dayin')[0].text,
             dayOut : $('#dayout')[0].text,
             roomStatus: "ห้องชำรุด",
-            customermany:$('#customerMany').text,
+            customermany:$('#customerMany')[0].text,
             customer:MemberCustomer.findByMemberId(datacustomer),
             employee:Employee.findByIdem(employeedata)
         ).save()
@@ -78,6 +78,32 @@ class CheckInHotelComposer extends GrailsComposer {
             $('#customerId')[0].text =""
             $('#searchCustomer').setVisible(true)
         })
-//====================================================================clearbutton============================================================
+//====================================================================clearbutton============================================================   
+       
+        for (dataroom in Room.findAll()){                    
+            $('#roomList').append { 
+                listitem(value:dataroom){
+                    listcell{   
+                        label(value:dataroom.roomflore)
+                    }
+                    listcell{   
+                        label(value:dataroom.roomNo)
+                    }
+                    listcell{   
+                        label(value:MemberCustomer.findById(dataroom.id).fName)
+                    }
+                    listcell{   
+                        label(value:dataroom.dayIn)
+                    }
+                    listcell{   
+                        label(value:dataroom.dayOut)
+                    }
+                    listcell{   
+                        label(value:dataroom.roomStatus)
+                    }
+
+                }
+            }
+        }
     }
 }
