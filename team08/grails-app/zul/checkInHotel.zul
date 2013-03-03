@@ -73,9 +73,11 @@
             </combobox>
         
         <button label="Search"/>
+        <button label="Reload"/>
+        <button label="clear"/>
         <separator/>
         
-        <listbox id="demoList" height="250px">
+        <listbox id="roomList" height="250px">
             <listhead>
                 <listheader><label value="ชั้น"/></listheader>
                 <listheader><label value="ห้อง"/></listheader>
@@ -84,110 +86,6 @@
                 <listheader><label value="วันสุดท้ายที่เช่า"/></listheader>
                 <listheader><label value="สถานะห้อง"/></listheader>
             </listhead>
-            <listitem>
-                <listcell><label value="1"/></listcell>
-                <listcell><label value="101"/></listcell>
-                <listcell><label value="C 60604"/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="30 มกราคม 2556"/></listcell>
-                <listcell><label value="เช่า"/></listcell>
-            </listitem>
-            <listitem>
-                <listcell><label value="1"/></listcell>
-                <listcell><label value="102"/></listcell>
-                <listcell><label value="VIP 64042"/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="35 มกราคม 2556"/></listcell>
-                <listcell><label value="เช่า"/></listcell>
-            </listitem>
-            <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="103"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="104"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="105"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="106"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="107"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="108"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="109"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="1 "/></listcell>
-                <listcell><label value="110"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="2 "/></listcell>
-                <listcell><label value="201"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="2 "/></listcell>
-                <listcell><label value="202"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
-                <listitem>
-                <listcell><label value="2 "/></listcell>
-                <listcell><label value="203"/></listcell>
-                <listcell><label value=""/></listcell>
-                <listcell><label value="26 มกราคม 2556"/></listcell>
-                <listcell><label value="27 มกราคม 2556"/></listcell>
-                <listcell><label value="ซ่อมบำรุง"/></listcell>
-            </listitem>
         </listbox>        
         </groupbox>
     </window>
