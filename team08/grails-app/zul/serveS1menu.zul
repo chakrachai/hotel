@@ -22,22 +22,18 @@
             <hbox>    
                     <vbox width="250px">
                         <hbox>
-                        <label value="ID :"/>
-                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="idcus" value="id0000"/>
+                        <label value="เลขห้อง :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="roomnum" value="--------"/>
                         </hbox>
-                          <hbox>
+                        <hbox>
                         <label value="ชื่อ :"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
                         <label id="name" value="--------"/>
                         </hbox>
                     </vbox>
                     <vbox>
-                        <hbox>
-                        <label value="เลขห้อง :"/>
-                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="roomnum" value="--------"/>
-                        </hbox>
+                        <separator/><separator/>
                         <hbox>
                         <label value="นามสกุล :"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
@@ -65,40 +61,40 @@
                 <listheader label="Select" sort="auto"/>
             </listhead>
             <listitem>
-                <listcell label="1"/>
+                <listcell label="SV11"/>
                 <listcell label="Breakfast set"/>
                 <listcell label="500"/>
                 <listcell><checkbox id="sv11"/></listcell>
             </listitem>    
             <listitem>
          
-                <listcell label="2"/>
+                <listcell label="SV12"/>
                 <listcell label="Lunch Set"/>
                 <listcell label="750"/>
                 <listcell><checkbox id="sv12"/></listcell>
             </listitem>    
             <listitem>
           
-                <listcell label="3"/>
+                <listcell label="SV13"/>
                 <listcell label="Dinnet Set"/>
                 <listcell label="1000"/>
                 <listcell><checkbox id="sv13"/></listcell>
             </listitem>    
             <listitem>
           
-                <listcell label="4"/>
+                <listcell label="SV14"/>
                 <listcell label="Couple Set"/>
                 <listcell label="1500"/>
                 <listcell><checkbox id="sv14"/></listcell>
             </listitem>    
             <listitem>
-                <listcell label="5"/>
+                <listcell label="SV15"/>
                 <listcell label="Group Set"/>
                 <listcell label="3250"/>
                 <listcell><checkbox id="sv15"/></listcell>
             </listitem>    
             <listitem>
-                <listcell label="6"/>
+                <listcell label="SV16"/>
                 <listcell label="Platinum Set"/>
                 <listcell label="5000"/>
                 <listcell><checkbox id="sv16"/></listcell>
