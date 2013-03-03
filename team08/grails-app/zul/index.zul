@@ -11,8 +11,8 @@
         <style>
             body {background-color: #EBEBEB;}
             .bg{background-color: #FFFFFF}
-            .msize {color: red; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
-            .psize {color: green; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
+            .msize {color: red; font-size: 2em;font-align:"center"}
+            .psize {font-size: 1em;font-align:"center"}
             .cen {background-color: #990000; color: #ffffff; font-size: 1em}
         </style>
         <vbox>
@@ -21,13 +21,23 @@
         <hbox>
             <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>                      
         <groupbox width="250px" height ="90px">
-            <vbox  align = "center">
-            <hbox><label value="Username:"/><textbox id="userid"/></hbox>
-            <hbox><label value="Password: "/><textbox id="passwordid"/></hbox>
-            <hbox><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
+            <vbox id="showlogin" align = "center" visible="true">
+                <hbox id= "databox1"><label value="Username:"/><textbox id="userid"/></hbox>
+                <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid"/></hbox>
+                <hbox id= "databox3"><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
+            </vbox>
+            <vbox id="showmenu" align = "center" visible="false">
+                <label sclass = "psize" value= "กรุณาเลือกการทำรายการ"/>
+                <hbox>
+                    <button id= "btnroomfix" label="จองห้อง"/>
+                    <button id= "btnmoney" label="คิดเงิน"/>
+                    <button id= "btnroomevent" label="จองห้องจัดงาน"/>
+                </hbox>
+                <hbox>
+                    <button id= "btncustomer" label="ข้อมูลลูกค้า"/>
+                </hbox>
             </vbox>
         </groupbox>
     </hbox>
     </window>
-
 </zk>

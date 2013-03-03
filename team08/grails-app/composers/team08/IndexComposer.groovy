@@ -2,6 +2,7 @@ package team08
 import org.zkoss.zk.grails.composer.*
 import org.zkoss.zk.ui.Executions
 
+import org.*
 import org.zkoss.zk.ui.select.annotation.Wire
 import org.zkoss.zk.ui.select.annotation.Listen
 
@@ -29,10 +30,18 @@ class IndexComposer extends GrailsComposer {
 	        				def outdata = DataSignIn.findById("2")
 	        					outdata.datainput = $('#userid')[0].text
 	        					outdata.save()
+<<<<<<< HEAD
 	        				Executions.sendRedirect("/roomevent.zul")
 	        				alert("ยินดีต้อนรับ")
 	        			}
 	        			else{
+=======
+
+	        					$('#showlogin').setVisible(false)
+								$('#showmenu').setVisible(true)
+
+	        			}else{
+>>>>>>> iss-4224
 	        				alert("รหัสไม่ถูกต้อง")
 	        				$('#userid')[0].text = ""
 	        				$('#passwordid')[0].text = ""
@@ -47,12 +56,28 @@ class IndexComposer extends GrailsComposer {
 	    	}
 
 	    })
-			
+		
 
-		$('#btncancle').on('Click',{
-
-	        alert("cancle")
+		$('#btnroomfix').on('Click',{
+	    	Executions.sendRedirect("/checkInHotel.zul")
+	    	alert("ยินดีต้อนรับ")
 	    })
-        
+
+		$('#btnmoney').on('Click',{
+	    	Executions.sendRedirect("/checkInHotel.zul")
+	    	alert("ยินดีต้อนรับ")
+	    })
+
+		$('#btnroomevent').on('Click',{
+	    	Executions.sendRedirect("/checkInHotel.zul")
+	    	alert("ยินดีต้อนรับ")
+	    })
+
+	    $('#btncustomer').on('Click',{
+	    	Executions.sendRedirect("/checkInHotel.zul")
+	    	alert("ยินดีต้อนรับ")
+	    })
+		$('#btncancle').on('Click',{
+	    })  
     }
 }
