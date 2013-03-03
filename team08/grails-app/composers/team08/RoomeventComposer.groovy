@@ -1,14 +1,34 @@
 package team08
 
 import org.zkoss.zk.grails.composer.*
-
+import org.zkoss.zk.ui.Executions
 import org.zkoss.zk.ui.select.annotation.Wire
 import org.zkoss.zk.ui.select.annotation.Listen
 
 class RoomeventComposer extends GrailsComposer {
 
     def afterCompose = { window ->
+        def keepid
+        def searchData = DataSignIn.get(2)
+        alert(searchData.datainput)
+        def employeedata = searchData.datainput
+        if(searchData.datainput==null || searchData.datainput==""){
+        Executions.sendRedirect("/index.zul")
+        }else{
+        keepid = searchData.datainput
+        def employeere = Employee.findByIdem(keepid)
+        $('#idrela').setValue(employeere.idem)
+        $('#namerela').setValue(employeere.nameem+" "+employeere.lnameem)
+        $('#telerela').setValue(employeere.tel)
+        $('#strela').setValue(employeere.statusem)
+        $('#csrela').setValue(employeere.classem)
+        searchData.datainput = ""
+        searchData.save()
+        }
         String checkDate=""
+
+        
+        
 
      $('#btnsearchid').on('click',{
         def checkid = $('#txtscid').getText()
@@ -129,5 +149,18 @@ class RoomeventComposer extends GrailsComposer {
 
 
             })
+            
+            $('#btnCar').on('click',{
+                alert("save")
+                })
+            $('#btnSeminar').on('click',{
+                  alert("save")
+                })
+            $('#btnMeet').on('click',{
+                  alert("save")
+                })
+            $('#btnWedding').on('click',{
+                  alert("save")
+                })
     }
 }
