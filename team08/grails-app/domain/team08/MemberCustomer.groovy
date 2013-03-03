@@ -13,6 +13,7 @@ class MemberCustomer {
 	String emailAddress		//อีเมลล์ที่ติดต่อได้
 	String memberId			//รหัสลูกค้า
 	String memberType		//ประเภทลูกค้า[normal,VIP]
+	String telNo			// เบอร์โทร
 
 
     static constraints = {
