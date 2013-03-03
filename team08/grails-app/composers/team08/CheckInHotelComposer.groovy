@@ -28,7 +28,5 @@ class CheckInHotelComposer extends GrailsComposer {
         $('#btnsingout').on('click',{
             alert("Singout")
         })
-
-
     }
 }
