@@ -30,18 +30,10 @@ class IndexComposer extends GrailsComposer {
 	        				def outdata = DataSignIn.findById("2")
 	        					outdata.datainput = $('#userid')[0].text
 	        					outdata.save()
-<<<<<<< HEAD
-	        				Executions.sendRedirect("/roomevent.zul")
-	        				alert("ยินดีต้อนรับ")
-	        			}
-	        			else{
-=======
-
 	        					$('#showlogin').setVisible(false)
 								$('#showmenu').setVisible(true)
-
-	        			}else{
->>>>>>> iss-4224
+	        			}			
+	        			else{
 	        				alert("รหัสไม่ถูกต้อง")
 	        				$('#userid')[0].text = ""
 	        				$('#passwordid')[0].text = ""
