@@ -35,7 +35,7 @@
 
     <groupbox id="normal" open="false">
             <div align="center"><vbox><div height="100px" width="100%"/>
-            <panel  height="378px" width="680px" style="margin-bottom:3px" border="normal">
+            <panel  height="415px" width="680px" style="margin-bottom:3px" border="normal">
                     <panelchildren>
                         <div align="center"><hbox><image src="${z.resource(dir:'images', file:'regn.png')}"/></hbox></div><separator/><separator/><separator/>
                         <div align="center"><vbox>
@@ -44,7 +44,7 @@
                                 <label value = "ชื่อ "/>
                                 <label value = "*"/><textbox id="fname"/> 
                                 <label value = "ชื่อกลาง "/>
-                                <textbox id="manme"/>
+                                <textbox id="mname"/>
                                 <label value="นามสกุล "/>
                                 <label value = "*"/><textbox id="lname"/>
                             </hbox><separator/>
@@ -83,7 +83,7 @@
                             </hbox><separator/>
                             
                         </vbox></div>
-                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" /><button label="กลับหน้าหลลัก" width="150px" height="28px" /></div>
+                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" id="regnBtn"/><button label="กลับหน้าหลลัก" width="150px" height="28px" id="back"/></div>
                         
                         <div align="center"><vbox>
                             <vbox height="46px" width="100%"/>
@@ -99,9 +99,9 @@
 
     <groupbox id="vip" open="false">
             <div align="center"><vbox><div height="100px" width="100%"/>
-            <panel  height="378px" width="680px" style="margin-bottom:3px" border="normal">
+            <panel  height="415px" width="680px" style="margin-bottom:3px" border="normal">
                     <panelchildren>
-                        <div align="center"><hbox><image src="${z.resource(dir:'images', file:'regn.png')}"/></hbox></div><separator/><separator/><separator/>
+                        <div align="center"><hbox><image src="${z.resource(dir:'images', file:'regv.png')}"/></hbox></div><separator/><separator/><separator/>
                         <div align="center"><vbox>
                             
                             <hbox>
@@ -147,11 +147,11 @@
                             </hbox><separator/>
                             
                         </vbox></div>
-                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" /><button label="กลับหน้าหลลัก" width="150px" height="28px" /></div>
+                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" /><button label="กลับหน้าหลลัก" width="150px" height="28px" id="xback"/></div>
                         
                         <div align="center"><vbox>
                             <vbox height="46px" width="100%"/>
-                            <image src="${z.resource(dir:'images', file:'regnd.png')}"/>
+                            <image src="${z.resource(dir:'images', file:'regvd.png')}"/>
                         </vbox></div>
                     </panelchildren>
                     
