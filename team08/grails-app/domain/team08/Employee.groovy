@@ -16,6 +16,11 @@ class Employee {
 	String idppem			//รหัสประชาชนพนักงาน
     String ageem            //อายุ
     String passem           //รหัสพนักงาน
+    String nickname         //ชื่อเล่น
+    String birthday         //วันเกิด
+    String sexem            //เพศ
+    String nation           //สัญชาติ
+    String irreligious      //ศาสนา
 	static hasMany=[typeService:TypeService, monyService :MonyService , room:Room ,makeEvent:MakeEvent, timeWork:TimeWork]
     static constraints = {
     	nameem nullable:true
@@ -33,5 +38,11 @@ class Employee {
     	idppem nullable:true
         ageem nullable:true
         passem nullable:true
+        nickname nullable:true
+        birthday nullable:true
+        sexem nullable:true
+        nation nullable:true
+        irreligious nullable:true
+
     }
 }
