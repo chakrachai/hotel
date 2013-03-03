@@ -26,10 +26,7 @@
                 <textbox id="txtscid"/>
                <button id="btnsearchid" height="25px" width="70px">Search</button>
                 <separator/><separator/>
-               <label value="ค้นหา ชื่อ ลูกค้า"/>
-                <separator/>
-                <textbox id="txtscname"/>
-               <button id="btnsearchn" height="25px" width="70px">Search</button>
+         
                 </hbox>
                 <separator/><separator/>
             <hbox>    
