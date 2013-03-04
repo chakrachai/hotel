@@ -19,6 +19,20 @@ class BootStrap {
 		def e11 = new Employee(nameem:"Employee11",classem:"Doorman",idem:"E9462",statusem:"อยู่",lnameem:"LEmployee11",tel:"020000000",address:"Home",numaddress:"111",district:"Mairu",subdistrict:"lum",province:"Nakhonratchima",nprovince:"3000000",idppem:"1111111111",ageem:"30",passem:"12234",nickname:"game",birthday:"124124",sexem:"male",nation:"",irreligious:"พุทธ").save()
 		def e12 = new Employee(nameem:"Employee12",classem:"Housekeeper",idem:"E0564",statusem:"อยู่",lnameem:"LEmployee12",tel:"020000000",address:"Home",numaddress:"111",district:"Mairu",subdistrict:"lum",province:"Nakhonratchima",nprovince:"3000000",idppem:"1111111111",ageem:"30",passem:"12234",nickname:"game",birthday:"14124",sexem:"male",nation:"THAI",irreligious:"พุทธ").save()
 
+		def ee1 = new TimeWork(employee:e1,timein:"8.30",timeout:"-").save()
+		def ee2 = new TimeWork(employee:e2,timein:"9.30",timeout:"-").save()
+		def ee3 = new TimeWork(employee:e3,timein:"8.20",timeout:"-").save()
+		def ee4 = new TimeWork(employee:e4,timein:"8.25",timeout:"-").save()
+		def ee5 = new TimeWork(employee:e5,timein:"8.35",timeout:"-").save()
+		def ee6 = new TimeWork(employee:e6,timein:"9.35",timeout:"-").save()
+		def ee7 = new TimeWork(employee:e7,timein:"10.30",timeout:"-").save()
+		def ee8 = new TimeWork(employee:e8,timein:"13.30",timeout:"-").save()
+		def ee9 = new TimeWork(employee:e9,timein:"6.30",timeout:"-").save()
+		def ee10 = new TimeWork(employee:e10,timein:"7.30",timeout:"-").save()
+		def ee11 = new TimeWork(employee:e11,timein:"12.20",timeout:"-").save()
+		def ee12 = new TimeWork(employee:e12,timein:"11.10",timeout:"-").save()
+
+		
 		def re1 = new MakeEvent(employee:e1,customer:p1,typere:"Carnival",pricere:"250000",datere:"23/3/2556").save()
 		def data1 = new DataSignIn(id:"1",datainput:"").save()
 		def data2 = new DataSignIn(id:"2",datainput:"").save()
