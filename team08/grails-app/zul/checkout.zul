@@ -65,7 +65,6 @@
 
 						<listheader width="150px" align ="center"><label value="ห้อง"/></listheader>
 						<listheader width="650px" align ="center"><label value="รายการบริการ"/></listheader>
-						<listheader width="150px" align ="center"><label value="จำนวน"/></listheader>
 						<listheader width="150px" align ="center"><label value="ราคา"/></listheader>
 						<listheader align ="center" ><label value="ค่าบริการ"/></listheader>
 					</listhead>
