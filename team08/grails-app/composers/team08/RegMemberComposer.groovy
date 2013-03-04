@@ -97,7 +97,7 @@ class RegMemberComposer extends GrailsComposer {
                      telNo:ctelNo
                     ).save()
 
-                alert("ท่านได้สมัครสมาชิก VIP เรียบร้อยแล้ว")
+                alert("ท่านได้สมัครสมาชิกเรียบร้อยแล้ว")
                 $('#fname').setValue("")
                 $('#mname').setValue("")
                 $('#lname').setValue("")
