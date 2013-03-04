@@ -1,6 +1,7 @@
 package team08
 
 import org.zkoss.zk.grails.composer.*
+import org.zkoss.zk.ui.Executions
 
 import org.zkoss.zk.ui.select.annotation.Wire
 import org.zkoss.zk.ui.select.annotation.Listen
@@ -149,6 +150,14 @@ class EmployeeComposer extends GrailsComposer {
             $('#listmanager').setVisible(true)
             $('#managerpage1').setVisible(true)
             $('#history').setVisible(false)
+            
+
+            })
+
+
+        
+        $('#btnback').on('click',{
+            Executions.sendRedirect("/index.zul")
             
 
             })

@@ -35,6 +35,7 @@
                 </hbox>
                 <hbox>
                     <button id= "btncustomer" label="ข้อมูลลูกค้า"/>
+                    <button id= "btnemployee" label="ผู้จัดการ"/>
                 </hbox>
             </vbox>
         </groupbox>
