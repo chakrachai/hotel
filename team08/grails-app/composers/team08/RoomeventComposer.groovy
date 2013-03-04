@@ -92,41 +92,49 @@ class RoomeventComposer extends GrailsComposer {
                 }else{
                     if(scchecklist == "Carnival"){
                     $('#CrS').setLabel("On")
+                    $('#SrS').setLabel("Off")
+                    $('#WrS').setLabel("Off")
+                    $('#MrS').setLabel("Off")
                     }
                     else if(scchecklist == "Meeting"){
                     $('#MrS').setLabel("On")
+                     $('#CrS').setLabel("Off")
+                    $('#SrS').setLabel("Off")
+                    $('#WrS').setLabel("Off")
                     }
                     else if(scchecklist == "Wedding"){
                     $('#WrS').setLabel("On")
+                    $('#MrS').setLabel("Off")
+                     $('#CrS').setLabel("Off")
+                    $('#SrS').setLabel("Off")
                     }
                     else if(scchecklist == "Seminar"){
                     $('#SrS').setLabel("On")
+                    $('#WrS').setLabel("Off")
+                    $('#MrS').setLabel("Off")
+                     $('#CrS').setLabel("Off")
                     }
                 }
 
                 if($('#CrS').getLabel()=="Off"){
                     $('#btnCar').setVisible(false)
-                }
-                else if($('#SrS').getLabel()=="Off"){
-                    $('#btnSeminar').setVisible(false)
-                }
-                else if($('#MrS').getLabel()=="Off"){
-                    $('#btnMeet').setVisible(false)
-                }
-                else if($('#WrS').getLabel()=="Off"){
-                    $('#btnWedding').setVisible(false)
-                }
-                else if($('#CrS').getLabel()=="On"){
+                }else{
                     $('#btnCar').setVisible(true)
                 }
-                else if($('#SrS').getLabel()=="On"){
-                    $('#btnSeminar').setVisible(true)
+                if($('#SrS').getLabel()=="Off"){
+                    $('#btnSeminar').setVisible(false)
+                }else{
+                     $('#btnSeminar').setVisible(true)
                 }
-                else if($('#MrS').getLabel()=="On"){
+                if($('#MrS').getLabel()=="Off"){
+                    $('#btnMeet').setVisible(false)
+                }else{
                     $('#btnMeet').setVisible(true)
                 }
-                else if($('#WrS').getLabel()=="On"){
-                    $('#btnWedding').setVisible(true)
+                if($('#WrS').getLabel()=="Off"){
+                    $('#btnWedding').setVisible(false)
+                }else{
+                     $('#btnWedding').setVisible(true)
                 }
 
 
