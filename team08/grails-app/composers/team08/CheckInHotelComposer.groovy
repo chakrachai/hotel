@@ -57,7 +57,7 @@ class CheckInHotelComposer extends GrailsComposer {
             employee:Employee.findByIdem(employeedata)
         ).save()
         $('#searchCustomer').setVisible(true)
-        alert("save")
+        alert("save ห้องพักถูกใช้งาน")
             $('#room')[0].text =""
             $('#classRoom')[0].text =""
             $('#dayin')[0].text =""
@@ -68,6 +68,10 @@ class CheckInHotelComposer extends GrailsComposer {
             $('#customerMany')[0].text =""
             $('#customerId')[0].text =""
             $('#searchCustomer').setVisible(true)
+            $('#customerName').setDisabled(true)
+            $('#customerLastname').setDisabled(false)
+            $('#passport').setDisabled(false)
+            $('#customerId').setDisabled(false)
     if($('#roomList')!=null)
             $('#roomList > listitem').detach()
     for (dataroom in Room.findAll()){         
@@ -130,7 +134,10 @@ class CheckInHotelComposer extends GrailsComposer {
             $('#passport')[0].text =""
             $('#customerMany')[0].text =""
             $('#customerId')[0].text =""
-            alert ("ห้องชำรุด")
+            $('#customerLastname').setDisabled(false)
+            $('#passport').setDisabled(false)
+            $('#customerId').setDisabled(false)
+            alert ("Save ห้องชำรุด")
     
         for (dataroom in Room.findAll()){                   
             $('#roomList').append {
@@ -178,6 +185,9 @@ class CheckInHotelComposer extends GrailsComposer {
             $('#customerMany')[0].text =""
             $('#customerId')[0].text =""
             $('#searchCustomer').setVisible(true)
+            $('#customerLastname').setDisabled(false)
+            $('#passport').setDisabled(false)
+            $('#customerId').setDisabled(false)
         })
 //====================================================================clearbutton============================================================   
        $('#reloadbtn').on('click',{
