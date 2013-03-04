@@ -1,5 +1,4 @@
 package team08
-
 import org.zkoss.zk.grails.composer.*
 import org.zkoss.zk.ui.Executions
 import org.zkoss.zk.ui.select.annotation.Wire
@@ -19,10 +18,9 @@ class CheckInHotelComposer extends GrailsComposer {
         }
         else{
             searchData = DataSignIn.get(2)
-            alert(searchData.datainput)
+            alert("ยินดีต้อนรับ")
             employeedata = searchData.datainput
-            searchData.datainput = ""
-            searchData.save()
+            $('#employeeid').setDisabled(true)
             $('#employeeid')[0].text = employeedata
         }
 //=================================================checkdata==============================================================================
@@ -36,6 +34,10 @@ class CheckInHotelComposer extends GrailsComposer {
 				$('#customerLastname')[0].text=customer.lName    			
 				$('#passport')[0].text=customer.idCityzen
                 $('#searchCustomer').setVisible(false)
+                $('#customerName').setDisabled(true)
+                $('#customerLastname').setDisabled(true)
+                $('#passport').setDisabled(true)
+                $('#customerId').setDisabled(true)
     		}
     	})
 
@@ -323,7 +325,143 @@ class CheckInHotelComposer extends GrailsComposer {
         }
         })
         })
-
-
+//=============================================================================disabled="true"======clerRoom======================================================
+        $('#searchdatabtn').on('click',{
+            if($('#tsearch')[0].text+"" == null || $('#tsearch')[0].text+"" == ""){
+                alert("กรุณาตรวจสอบข้อมูล")
+            }else{
+                int i=0
+            if($('#searchstatus')[0].text+"" == "จาก"){
+                alert("กรุณาเลือกรูปแบบการค้นหา")
+            }else if($('#searchstatus')[0].text+"" == "ชั้น"){
+                if($('#roomList')!=null)
+                    $('#roomList > listitem').detach()
+                for (dataroom in Room.findAllByRoomflore($('#tsearch')[0].text+"")){                   
+                    $('#roomList').append {
+                        if(dataroom.customerId == null){
+                            customernamedata=employeedata
+                        }
+                        else{
+                            customernamedata = dataroom.customer.fName+""
+                        }
+                        if(dataroom.roomStatus!="ว่าง"){
+                            i++
+                            listitem(value:dataroom){
+                                listcell{   
+                                    label(value:dataroom.roomflore)
+                                }
+                                listcell{   
+                                    label(value:dataroom.roomNo)
+                                }
+                                listcell{   
+                                    label(value:customernamedata)
+                                }
+                                listcell{   
+                                    label(value:dataroom.dayIn)
+                                }
+                                listcell{   
+                                    label(value:dataroom.dayOut)
+                                }
+                                listcell{   
+                                    label(value:dataroom.roomStatus+"  ")
+                                }
+                        }
+                       }
+                    }
+                }
+                alert("พบข้อมูล "+i+" จำนวน")
+                i=0
+            }else if($('#searchstatus')[0].text+"" == "สถานะ"){
+               if($('#roomList')!=null)
+                    $('#roomList > listitem').detach()
+                for (dataroom in Room.findAllByRoomStatus($('#tsearch')[0].text+"")){                   
+                    $('#roomList').append {
+                        if(dataroom.customerId == null){
+                            customernamedata=employeedata
+                        }
+                        else{
+                            customernamedata = dataroom.customer.fName+""
+                        }
+                        if(dataroom.roomStatus!="ว่าง"){
+                            i++
+                            listitem(value:dataroom){
+                                listcell{   
+                                    label(value:dataroom.roomflore)
+                                }
+                                listcell{   
+                                    label(value:dataroom.roomNo)
+                                }
+                                listcell{   
+                                    label(value:customernamedata)
+                                }
+                                listcell{   
+                                    label(value:dataroom.dayIn)
+                                }
+                                listcell{   
+                                    label(value:dataroom.dayOut)
+                                }
+                                listcell{   
+                                    label(value:dataroom.roomStatus+"  ")
+                                }
+                        }
+                       }
+                    }
+                }
+                alert("พบข้อมูล "+i+" จำนวน")
+                i=0
+            }else if($('#searchstatus')[0].text+"" == "เลขห้อง"){
+               if($('#roomList')!=null)
+                    $('#roomList > listitem').detach()
+                for (dataroom in Room.findAllByRoomNo($('#tsearch')[0].text+"")){                   
+                    $('#roomList').append {
+                        if(dataroom.customerId == null){
+                            customernamedata=employeedata
+                        }
+                        else{
+                            customernamedata = dataroom.customer.fName+""
+                        }
+                        if(dataroom.roomStatus!="ว่าง"){
+                            i++
+                            listitem(value:dataroom){
+                                listcell{   
+                                    label(value:dataroom.roomflore)
+                                }
+                                listcell{   
+                                    label(value:dataroom.roomNo)
+                                }
+                                listcell{   
+                                    label(value:customernamedata)
+                                }
+                                listcell{   
+                                    label(value:dataroom.dayIn)
+                                }
+                                listcell{   
+                                    label(value:dataroom.dayOut)
+                                }
+                                listcell{   
+                                    label(value:dataroom.roomStatus+"  ")
+                                }
+                        }
+                       }
+                    }
+                }
+                alert("พบข้อมูล "+i+" จำนวน")
+                i=0
+            }else {
+                alert("Error...")
+            }
+            }
+        })
+//======================================================================================searchroom=================================================================
+        $('#clearsearchdatabtn').on('click',{
+            $('#searchstatus')[0].text = "จาก"
+            $('#tsearch')[0].text = ""
+        })
+//========================================================================================clearsearchroom==========================================================
+        $('#btnsingout').on('click',{
+            searchData.datainput = ""
+            searchData.save()
+            Executions.sendRedirect("/index.zul")
+        })
     }
 }
