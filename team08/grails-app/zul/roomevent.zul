@@ -153,36 +153,36 @@
             </listhead>
             <listitem>
                 <listcell label="Carnival Room"/>
-                <listcell id="CrS" label="On"/>
+                <listcell id="CrS" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnCar" height="30px" width="70px">Choise</button>
+                    <button id="btnCar" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem>    
             <listitem>
          
                 <listcell label="Seminar Room"/>
-                <listcell id="SrS" label="On"/>
+                <listcell id="SrS" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnSeminar" height="30px" width="70px">Choise</button>
+                    <button id="btnSeminar" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem>    
                
             <listitem>
                 <listcell label="Meeting Room"/>
-                <listcell id="MrS" label="On"/>
+                <listcell id="MrS" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnMeet" height="30px" width="70px">Choise</button>
+                    <button id="btnMeet" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem>    
             <listitem>
                 <listcell label="Wedding Room"/>
-                <listcell id="WrS" label="On"/>
+                <listcell id="WrS" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnWedding" height="30px" width="70px">Choise</button>
+                    <button id="btnWedding" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem> 
         </listbox>
