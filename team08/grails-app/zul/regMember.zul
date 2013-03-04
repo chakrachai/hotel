@@ -83,7 +83,7 @@
                             </hbox><separator/>
                             
                         </vbox></div>
-                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" id="regnBtn"/><button label="กลับหน้าหลลัก" width="150px" height="28px" id="back"/></div>
+                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" id="regnBtn"/><button label="กลับหน้าหลลัก" width="150px" height="28px" id="back"/><button label="ปิดหน้านี้" width="150px" height="28px" id="clsn"/></div>
                         
                         <div align="center"><vbox>
                             <vbox height="31px" width="100%"/>
@@ -147,7 +147,7 @@
                             </hbox><separator/>
                             
                         </vbox></div>
-                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" id="regvBtn"/><button label="กลับหน้าหลลัก" width="150px" height="28px" id="xback"/></div>
+                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" id="regvBtn"/><button label="กลับหน้าหลลัก" width="150px" height="28px" id="xback"/><button label="ปิดหน้านี้" width="150px" height="28px" id="clsv"/></div>
                         
                         <div align="center"><vbox>
                             <vbox height="31px" width="100%"/>

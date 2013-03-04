@@ -1,5 +1,5 @@
 package team08
-
+import org.zkoss.zk.ui.Executions
 import org.zkoss.zk.grails.composer.*
 
 import org.zkoss.zk.ui.select.annotation.Wire
@@ -45,6 +45,39 @@ class RegMemberComposer extends GrailsComposer {
             $('#normal').setOpen(false)
 
                 $('#xfname').setValue("")
+                $('#xmname').setValue("")
+                $('#xlname').setValue("")
+                $('#xsex').setText("")
+                $('#xborn').setText("")
+                $('#xage').setText("")
+                $('#xnationality').setText("")
+                $('#xidCityzen').setText("")
+                $('#xaddress').setText("")
+                $('#xemailAddress').setText("")
+                $('#xtelNo').setText("")
+        })
+
+
+        $('#clsn').on('Click',{
+            Executions.sendRedirect("/index.zul")
+            
+            $('#fname').setValue("")
+                $('#mname').setValue("")
+                $('#lname').setValue("")
+                $('#sex').setText("")
+                $('#born').setText("")
+                $('#age').setText("")
+                $('#nationality').setText("")
+                $('#idCityzen').setText("")
+                $('#address').setText("")
+                $('#emailAddress').setText("")
+                $('#telNo').setText("")
+        })
+
+        $('#clsv').on('Click',{
+            Executions.sendRedirect("/index.zul")
+            
+            $('#xfname').setValue("")
                 $('#xmname').setValue("")
                 $('#xlname').setValue("")
                 $('#xsex').setText("")
