@@ -38,7 +38,7 @@ class RegMemberComposer extends GrailsComposer {
             def cmname = $('#mname')[0].text
             def clname = $('#lname')[0].text
             def cgender = $('#sex')[0].text
-            def cborn = $('#born').value
+            def cborn = $('#born')[0].text
             def cage = $('#age')[0].text
             def cnationality = $('#nationality')[0].text
             def cidCityzen = $('#idCityzen')[0].text
@@ -46,7 +46,7 @@ class RegMemberComposer extends GrailsComposer {
             def cemailAddress = $('#emailAddress')[0].text
             def ctelNo = $('#telNo')[0].text
 
-            def cmemberId = "NORM"+cfname+cidCityzen
+            def cmemberId = "NORM"+cfname+"ALX05D"
             def cmemberType = "VIP CUSTOMER"
             def fin = MemberCustomer.findAll()
 
