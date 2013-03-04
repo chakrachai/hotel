@@ -46,7 +46,7 @@ class RegMemberComposer extends GrailsComposer {
             def cemailAddress = $('#emailAddress')[0].text
             def ctelNo = $('#telNo')[0].text
 
-            def cmemberId = "NORMAL"+cfname
+            def cmemberId = "NORM"+cfname+cidCityzen
             def cmemberType = "VIP CUSTOMER"
             def fin = MemberCustomer.findAll()
 
@@ -55,13 +55,15 @@ class RegMemberComposer extends GrailsComposer {
                 alert("กรุณากรอกให้ครบถ้วนและถูกต้อง")
 
                 for(i in fin){
-                    if(cidCityzen.equals(i.idCityzen)){
+                    def ix = cidCityzen-i.cidCityzen
+                    if(ix==""){
                         alert("รหัสประจำตัวประชาชนซํ้า")
                     }
 
             }            
             }
-            else {new MemberCustomer(
+            else {
+                new MemberCustomer(
                      fName:cfname,            
                      mName:cmname,           
                      lName:clname,            
