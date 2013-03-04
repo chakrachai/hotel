@@ -108,7 +108,7 @@
                                 <label value = "ชื่อ "/>
                                 <label value = "*"/><textbox id="xfname"/> 
                                 <label value = "ชื่อกลาง "/>
-                                <textbox id="xmanme"/>
+                                                    <textbox id="xmname"/>
                                 <label value="นามสกุล "/>
                                 <label value = "*"/><textbox id="xlname"/>
                             </hbox><separator/>
@@ -147,7 +147,7 @@
                             </hbox><separator/>
                             
                         </vbox></div>
-                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" /><button label="กลับหน้าหลลัก" width="150px" height="28px" id="xback"/></div>
+                        <div align="center"><button label="สมัครสมาชิกเดี๋ยวนี้" width="150px" height="28px" id="regvBtn"/><button label="กลับหน้าหลลัก" width="150px" height="28px" id="xback"/></div>
                         
                         <div align="center"><vbox>
                             <vbox height="31px" width="100%"/>

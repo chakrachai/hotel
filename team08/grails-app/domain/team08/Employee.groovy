@@ -21,7 +21,7 @@ class Employee {
     String sexem            //เพศ
     String nation           //สัญชาติ
     String irreligious      //ศาสนา
-	static hasMany=[typeService:TypeService, monyService :MonyService , room:Room ,makeEvent:MakeEvent, timeWork:TimeWork]
+	static hasMany=[monyService :MonyService , room:Room ,makeEvent:MakeEvent, timeWork:TimeWork]
     static constraints = {
     	nameem nullable:true
     	classem nullable:true
