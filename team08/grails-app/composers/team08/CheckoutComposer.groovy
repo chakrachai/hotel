@@ -10,20 +10,47 @@ class CheckoutComposer extends GrailsComposer {
     def afterCompose = { window ->
 		def b
 		def e
-		String c 		
+		String c 
+		int roommony = 15000
+		int	countmonny = 0	
         $('#search').on('click',{
 		c=$('#idc')[0].getText()		
 		b=MemberCustomer.findByMemberId(c)
-		e=Room.findByCustomer(b)
+		e=Room.findAllByCustomer(b)
         	
 			$('#name')[0].setValue(b.fName+" "+b.lName)
 			$('#email')[0].setValue(b.emailAddress)
 			$('#tel')[0].setValue(b.telNo)
-			$('#dateI').setValue(e.dayIn)
-			$('#dateO').setValue(e.dayOut)
-			
-						
+			int daycount = 0
+			for(loop in e){
+				$('#dateI').setValue(e[0].dayIn)
+				$('#dateO').setValue(loop.dayOut)
+			}						
         $('#idc').setText("")
+    $('#service').append{
+        for(loopin in Room.findAllByCustomer(b)){
+        	if(loopin.roomStatus=="ว่าง"){
+        countmonny = countmonny+roommony
+        		listitem(value:loopin.id){
+                    listcell{   
+                        label(value:loopin.roomNo)
+                	}
+                	listcell{   
+                        label(value:roommony+"")
+                	}
+                	listcell{   
+                        label(value:loopin.roomNo)
+                	}
+                	listcell{   
+                        label(value:loopin.roomNo)
+                	}
+            	}
+        	}
+
+        }
+        }
+        	$('#money')[0].text = countmonny+""	
+
 		})
 		
 		
@@ -31,6 +58,7 @@ class CheckoutComposer extends GrailsComposer {
 		
 		def cradit=$('#cradit').getText()
 		
+
 		
 		$('#btnSave').on('click',{
 			def savemoney = new MonyService(
@@ -41,9 +69,12 @@ class CheckoutComposer extends GrailsComposer {
 				priceroom: "ooi"
 			)
 			savemoney.save()
-			alert("save")	
+			for(loopin2 in e){
+				loopin2.delete()
+			}
+			alert("save")
+			$('#service > listitem').detach()	
 		})
-		
 		
 		$('#btnPrint').on('click','''
 			window.print();
@@ -53,12 +84,6 @@ class CheckoutComposer extends GrailsComposer {
 	    	Executions.sendRedirect("/index.zul")
 	    	alert("เสร็จเรียบร้อยคะ")
 	    })
-        
-		 	
-		
-			
-			
-		 
     }
 }
 
