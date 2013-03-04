@@ -69,6 +69,10 @@ class IndexComposer extends GrailsComposer {
 	    	Executions.sendRedirect("/regMember.zul")
 	    	alert("ยินดีต้อนรับ")
 	    })
+	    $('#btnemployee').on('Click',{
+	    	Executions.sendRedirect("/employee.zul")
+	    	alert("ยินดีต้อนรับ")
+	    })
 		$('#btncancle').on('Click',{
 	    })  
     }
