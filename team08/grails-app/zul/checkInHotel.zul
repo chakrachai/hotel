@@ -12,7 +12,7 @@
 <style>
             body {background-color: #EBEBEB;}
             .bg{background-color: #FFFFFF}
-            .msize {color: red; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
+            .msize {background-color: #ffff}
             .psize {color: green; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
             .cen {background-color: #990000; color: #ffffff; font-size: 1em}
  </style>
@@ -38,7 +38,7 @@
                     <label value="ข้อมูลลูกค้า"/>
                     <separator/>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสลูกค้า :"/><separator/><textbox id="customerId"/><button id="searchCustomer" label="ค้นหา"/></hbox>
-                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชื่อ :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="customerName"/></hbox>
+                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชื่อ :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="customerName" sclass="msize"/></hbox>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="นามสกุล :"/><separator/><separator/><textbox id="customerLastname"/></hbox>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="เลขบัตรประจำตัวประชาชน /หนังสือเดินทาง :"/><separator/><separator/><textbox id="passport"/></hbox>
                 </vbox>
@@ -66,15 +66,15 @@
         <separator/><separator/>
         <groupbox height="300px">
         <label value="สถานะห้อง"/><textbox id="tsearch"/>
-            <combobox value ="จาก" width= "100px">
+            <combobox id="searchstatus" value ="จาก" width= "100px">
                 <comboitem label="สถานะ"/>
                 <comboitem label="เลขห้อง"/>
                 <comboitem label="ชั้น"/>
             </combobox>
         
-        <button label="Search"/>
+        <button id="searchdatabtn" label="Search"/>
         <button id="reloadbtn" label="Reload"/>
-        <button label="clear"/>
+        <button id="clearsearchdatabtn" label="clear"/>
         <separator/>
         
         <listbox id="roomList" height="250px">
