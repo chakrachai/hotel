@@ -11,8 +11,10 @@
 
 <style>
             body {background-color: #EBEBEB;}
+            .z-textbox { color: blue; }
+            .z-textbox-disd, .z-textbox-disd * { background-color: #FFFFFF !important ; color: blue !important;}
             .bg{background-color: #FFFFFF}
-            .msize {background-color: #ffff}
+            .msize {background-color: #FFFFFF}
             .psize {color: green; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
             .cen {background-color: #990000; color: #ffffff; font-size: 1em}
  </style>
@@ -26,7 +28,7 @@
             <separator/>
                 <hbox>
                     <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-                    <label value="พนักงานผู้ใช้ : "/><textbox id= "employeeid" width = "45px"/><button id="btnsingout" label= "Singout"/>
+                    <label value="พนักงานผู้ใช้ : "/><textbox sclass="msize" id= "employeeid" width = "45px"/><button id="btnsingout" label= "Singout"/>
                 </hbox>
             <separator/>
 
@@ -38,7 +40,7 @@
                     <label value="ข้อมูลลูกค้า"/>
                     <separator/>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="รหัสลูกค้า :"/><separator/><textbox id="customerId"/><button id="searchCustomer" label="ค้นหา"/></hbox>
-                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชื่อ :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="customerName" sclass="msize"/></hbox>
+                    <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชื่อ :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="customerName"/></hbox>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="นามสกุล :"/><separator/><separator/><textbox id="customerLastname"/></hbox>
                     <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="เลขบัตรประจำตัวประชาชน /หนังสือเดินทาง :"/><separator/><separator/><textbox id="passport"/></hbox>
                 </vbox>
