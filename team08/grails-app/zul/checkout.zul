@@ -14,45 +14,66 @@
             <image src="${z.resource(dir:'images', file:'grails_logo.png')}"/>
 			Checkout
         </hbox>
+		<groupbox width ="100%" height="600px">
 		
-			<groupbox width="1024px" height= "120px">  
+			<groupbox width="100%" height= "120px">  
+			
+					<label 	value = "ID ลูกค้า : "  width="50px"/>
+					<textbox id="idc"/>
+					<button id="search" height="25px" width="70px">ค้นหา</button>
 			<hbox>
-				<vbox width ="300px">
-				<separator/><separator/>
-					<label value = "รหัสพนักงาน :  "/>
+					<vbox width ="400px">
+									
+					</vbox>
+				
+				<vbox width="80px">
+				<separator/>
+					<label value = "วันที่เข้าพัก: "/> 
 					<label value = "ชื่อลูกค้า :  "/>
 					<label value = "email:  "/>
-					<label value = "ประเภทห้อง:  "/>
-			 	</vbox>
-				
-				<vbox width="300px">
-				<separator/><separator/>
-					<label value = "วันที่เข้าพัก: "/>
-					<label value = "โทร:  "/>
-					<label value = "หมายเลขห้อง:  "/>
+								
 				</vbox>
 				
+				<vbox width="320px">
+				<separator/>
+				<label id="dateI" value = "dd/mm/yy"/>
+				<label id="name" value = " "/>
+				<label id="email" value=" "/>
+				</vbox>
+				
+				
 				<vbox width="300px">
-				<separator/><separator/>
-					
+				<separator/>
+					<hbox>
 					<label value = "วันที่คืนห้อง: "/>
+					<label id="dateO" value ="dd/mm/yy"/>
+					</hbox>
+					<hbox>
+					<label value = "โทร:  "/>
+					<label id="tel" value=" "/>
+					</hbox>
 				</vbox>
 			</hbox>
 			</groupbox>
+			
 
-			<groupbox width="1024px" height= "400px">  
+			<groupbox width="100%" height= "500px">  
 			<hbox>
+				
 				<listbox id="service" height="250px">
 					<listhead>
-						<listheader width="50px"><label value="ลำดับ"/></listheader>
-						<listheader width="80px"><label value="ห้อง"/></listheader>
-						<listheader width="500px"><label value="รายการบริการ"/></listheader>
-						<listheader width="100px"><label value="จำนวน"/></listheader>
-						<listheader width="100px"><label value="ราคา"/></listheader>
-						<listheader ><label value="ค่าบริการ"/></listheader>
+
+						<listheader width="150px" align ="center"><label value="ห้อง"/></listheader>
+						<listheader width="650px" align ="center"><label value="รายการบริการ"/></listheader>
+						<listheader width="150px" align ="center"><label value="จำนวน"/></listheader>
+						<listheader width="150px" align ="center"><label value="ราคา"/></listheader>
+						<listheader align ="center" ><label value="ค่าบริการ"/></listheader>
 					</listhead>
-				</listbox>
+
+				</listbox> 
+										
 			</hbox>
+			
 			
 			<hbox>                                      
 			<vbox width="80px">
@@ -71,29 +92,35 @@
 				
 				<vbox>
 					<separator/><separator/>
-					<label value = "ยอดชำระ : " style="color:blue;font-size:20px"/>
+					<label value = "ยอดชำระ : " style="color:back;font-size:20px"/>
 				</vbox>
 			</hbox>
 			
 			
 			
 			<hbox	align ="right">
-				<vbox width ="700px">
+			<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+			<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+				<vbox width ="900px">
 				</vbox>
 				<vbox>
-				<separator/><separator/>
+				<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+					<button id="btnSave">Save</button>
+				</vbox>
+				<vbox>
+				<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
 					<button id="btnPrint">Print</button>
 				</vbox>
 				
 				<vbox>
-				<separator/><separator/>
+				<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
 					<button id="btnExit">Exit</button>
 				</vbox>
 			</hbox>
 			
-			
 			</groupbox>
-    
+			
+		</groupbox>
     </window>
 
 </zk>
