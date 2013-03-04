@@ -25,6 +25,18 @@ class RegMemberComposer extends GrailsComposer {
             $('#vip').setOpen(false)
             $('#qua').setOpen(true)
             $('#normal').setOpen(false)
+
+                $('#fname').setValue("")
+                $('#mname').setValue("")
+                $('#lname').setValue("")
+                $('#sex').setText("")
+                $('#born').setText("")
+                $('#age').setText("")
+                $('#nationality').setText("")
+                $('#idCityzen').setText("")
+                $('#address').setText("")
+                $('#emailAddress').setText("")
+                $('#telNo').setText("")
         })
 
         $('#xback').on('click',{            
@@ -54,13 +66,7 @@ class RegMemberComposer extends GrailsComposer {
             if(cfname.size()==0||clname.size()==0||cgender.size()==0||cborn.size()==0||cage.size()==0||cnationality.size()==0||cidCityzen.size()==0||caddress.size()==0||cemailAddress.size()==0||ctelNo.size()==0||cidCityzen.size()!=13){
                 alert("กรุณากรอกให้ครบถ้วนและถูกต้อง")
 
-                for(i in fin){
-                    def ix = cidCityzen-i.cidCityzen
-                    if(ix==""){
-                        alert("รหัสประจำตัวประชาชนซํ้า")
-                    }
-
-            }            
+                           
             }
             else {
                 new MemberCustomer(
@@ -78,7 +84,19 @@ class RegMemberComposer extends GrailsComposer {
                      memberType:cmemberType,       
                      telNo:ctelNo
                     ).save()
-                alert("OK")
+
+                alert("ท่านได้สมัครสมาชิก VIP เรียบร้อยแล้ว")
+                $('#fname').setValue("")
+                $('#mname').setValue("")
+                $('#lname').setValue("")
+                $('#sex').setText("")
+                $('#born').setText("")
+                $('#age').setText("")
+                $('#nationality').setText("")
+                $('#idCityzen').setText("")
+                $('#address').setText("")
+                $('#emailAddress').setText("")
+                $('#telNo').setText("")
             }
 
         })
