@@ -86,6 +86,7 @@
         <groupbox height="250px" width="400px">
             <separator/>
             <label value="พนักงาน"/>
+            <button id="logoutre" label="LogOut"/>
             <separator/>
             <separator/>
             <separator/>

@@ -14,13 +14,32 @@ class RoomeventComposer extends GrailsComposer {
         def scchecklist
         def employeere
         def keepid
+        def keepid2 = DataSignIn.findById("3")
+
         def searchData = DataSignIn.get(2)
-        alert(searchData.datainput)
-        def employeedata = searchData.datainput
+      
+   
         if(searchData.datainput==null || searchData.datainput==""){
-        Executions.sendRedirect("/index.zul")
+            if(keepid2.datainput==null || keepid2.datainput==""){
+                alert(keepid2.datainput)
+                Executions.sendRedirect("/index.zul")
+
+                }else{
+                        keepid=keepid2.datainput
+                      employeere = Employee.findByIdem(keepid)
+                      $('#idrela').setValue(employeere.idem)
+                     $('#namerela').setValue(employeere.nameem+" "+employeere.lnameem)
+                      $('#telerela').setValue(employeere.tel)
+                     $('#strela').setValue(employeere.statusem)
+                      $('#csrela').setValue(employeere.classem)
+                      searchData.datainput = ""
+                      searchData.save()
+                }
+        
         }else{
         keepid = searchData.datainput
+        keepid2.datainput=keepid
+        keepid2.save()
          employeere = Employee.findByIdem(keepid)
         $('#idrela').setValue(employeere.idem)
         $('#namerela').setValue(employeere.nameem+" "+employeere.lnameem)
@@ -33,7 +52,11 @@ class RoomeventComposer extends GrailsComposer {
         String checkDate=""
 
         
-        
+      $('#logoutre').on('click',{
+        keepid2.datainput=""
+        keepid2.save()
+        Executions.sendRedirect("/index.zul")
+        })  
 
      $('#btnsearchid').on('click',{
         def checkid = $('#txtscid').getText()
