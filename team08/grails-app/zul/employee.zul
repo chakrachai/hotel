@@ -9,9 +9,6 @@
 
     <window apply="team08.EmployeeComposer">
 
-        <hbox id="managerpage" width="100%" >
-            <groupbox height="250px" width="100%" >
-                <vbox>
                     <listbox id="listmanager" width="1000px" height="250px">
                         <listhead>
                             <listheader label="รหัสพนักงาน" width="15%"/>
@@ -25,9 +22,9 @@
                         
                         
                     </listbox>            
-                </vbox>
-            </groupbox>
-            <groupbox height="210px" width="150px">
+                
+            
+            <groupbox id="managerpage1" height="210px" width="150px">
                 <separator/>
                 <label value="ผู้จัดการ"/>
                 <separator/>
@@ -36,16 +33,16 @@
                         <hbox>
                             <vbox>
                                 <button id="btnrefresh" height="25px" width="70px">Refresh</button>
-                                <button id="btnback" height="25px" width="70px">ย้อนกลับ</button>
-                                <button id="btnnext" height="25px" width="70px">ดูประวัติ</button>
-                                <button id="btndelete" height="25px" width="100px">ลบพนักงาน</button>
+                                <button id="btnback" height="25px" width="70px" >ย้อนกลับ</button>
+                                <button id="btnnext" height="25px" width="70px" disabled="true">ดูประวัติ</button>
+                                <button id="btndelete" height="25px" width="100px" disabled="true">ลบพนักงาน</button>
                                 <button id="btnplus" height="25px" width="100px">เพิ่มพนักงาน</button>
                             </vbox>
                         </hbox>
                     </vbox>
                 </groupbox>
             </groupbox>
-        </hbox>
+        
         
         <hbox id="normal" visible="false">
         <groupbox height="280px" >
@@ -116,8 +113,66 @@
         </groupbox>
        </hbox>
        <hbox id="history" visible="false">
-       <groupbox height="250px" >
-            <div align="center">
+       <groupbox height="210px" width="450px">
+
+
+                            <hbox>
+                                <label value = "ชื่อ : "/>
+                                <label id="fname1"/> 
+                                <label value = "นามสกุล : "/>
+                                <label id="lname1"/>
+                                <label value="ชื่อเล่น : "/>
+                                <label id="nickname1"/>
+                            </hbox><separator/>
+
+                            <hbox>
+                                <label value = "เพศ : "/>
+                                <label id="sex1"/>
+                                <label value = "วันเกิด : "/>
+                                <label id="born1"/>
+                                <label value = "อายุ : "/>
+                                <label id="age1" width="25px"/>
+                                <label value = "ปี"/>
+                                <label value = "ศาสนา : "/>
+                                <label id="irreligi1"/>
+                            </hbox><separator/>
+
+                            <hbox>
+                                <label value = "สัญชาติ : "/>
+                                <label id="nationality1"/>
+                                <label value = "รหัสประจำตัวประชาชน : "/>
+                                <label id="idCityzen1" width="210px"/>
+                                
+                                
+                                
+                            </hbox><separator/>
+                            <hbox>
+                                <label value = "ที่อยู่ : "/>
+                                <label id="addressh"/>
+                                <label value = "ตำบล : "/>
+                                <label id="addressh1" />
+                                <label value = "อำเภอ : "/>
+                                <label id="addressh2" />
+                            </hbox><separator/>
+
+                            <hbox>
+                                <label value = "จังหวัด : "/>
+                                <label id="addressh3"/>
+                                <label value = "รหัสจังหวัด : "/>
+                                <label id="addressh4" />
+                                <label value = "เบอร์โทร : "/>
+                                <label id="tel1" />
+                            </hbox><separator/>
+                            <hbox>
+                                <label value = "ตำแหน่ง : "/>
+                                <label id="class1"/>
+                                <label value = "รหัสพนักงาน : "/>
+                                <label id="idem1"/>
+                            </hbox><separator/>
+            
+
+
+            <div align="center" >
                            
                             <button id="btnback2" height="26px" width="100px">ย้อนกลับ</button></div>
                 
@@ -125,9 +180,12 @@
         </groupbox>
         </hbox>
         
-       
+        
+
         
         
+        
+            
 
     </window>
 
