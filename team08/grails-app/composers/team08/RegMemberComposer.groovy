@@ -56,7 +56,7 @@ class RegMemberComposer extends GrailsComposer {
 
                 for(i in fin){
                     if(cidCityzen.equals(i.idCityzen)){
-                        alert("sus")
+                        alert("รหัสประจำตัวประชาชนซํ้า")
                     }
 
             }            
