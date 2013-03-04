@@ -73,7 +73,7 @@
             </combobox>
         
         <button label="Search"/>
-        <button label="Reload"/>
+        <button id="reloadbtn" label="Reload"/>
         <button label="clear"/>
         <separator/>
         
