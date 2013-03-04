@@ -43,6 +43,18 @@ class RegMemberComposer extends GrailsComposer {
             $('#vip').setOpen(false)
             $('#qua').setOpen(true)
             $('#normal').setOpen(false)
+
+                $('#xfname').setValue("")
+                $('#xmname').setValue("")
+                $('#xlname').setValue("")
+                $('#xsex').setText("")
+                $('#xborn').setText("")
+                $('#xage').setText("")
+                $('#xnationality').setText("")
+                $('#xidCityzen').setText("")
+                $('#xaddress').setText("")
+                $('#xemailAddress').setText("")
+                $('#xtelNo').setText("")
         })
 
         $('#regnBtn').on('click',{            
@@ -59,7 +71,7 @@ class RegMemberComposer extends GrailsComposer {
             def ctelNo = $('#telNo')[0].text
 
             def cmemberId = "NORM"+cfname+"ALX05D"
-            def cmemberType = "VIP CUSTOMER"
+            def cmemberType = "NORMAL MEMBER"
             def fin = MemberCustomer.findAll()
 
 
@@ -97,6 +109,62 @@ class RegMemberComposer extends GrailsComposer {
                 $('#address').setText("")
                 $('#emailAddress').setText("")
                 $('#telNo').setText("")
+            }
+
+        })
+
+        $('#regvBtn').on('click',{            
+            def xcfname = $('#xfname')[0].text
+            def xcmname = $('#xmname')[0].text
+            def xclname = $('#xlname')[0].text
+            def xcgender = $('#xsex')[0].text
+            def xcborn = $('#xborn')[0].text
+            def xcage = $('#xage')[0].text
+            def xcnationality = $('#xnationality')[0].text
+            def xcidCityzen = $('#xidCityzen')[0].text
+            def xcaddress = $('#xaddress')[0].text
+            def xcemailAddress = $('#xemailAddress')[0].text
+            def xctelNo = $('#xtelNo')[0].text
+
+            def xcmemberId = "VIP"+xcfname+"VLX0OD"
+            def xcmemberType = "VIP MEMBER"
+            def xfin = MemberCustomer.findAll()
+
+
+            if(xcfname.size()==0||xclname.size()==0||xcgender.size()==0||xcborn.size()==0||xcage.size()==0||xcnationality.size()==0||xcidCityzen.size()==0||xcaddress.size()==0||xcemailAddress.size()==0||xctelNo.size()==0||xcidCityzen.size()!=13){
+                alert("กรุณากรอกให้ครบถ้วนและถูกต้อง")
+
+                           
+            }
+            else {
+                new MemberCustomer(
+                     fName:xcfname,            
+                     mName:xcmname,           
+                     lName:xclname,            
+                     gender:xcgender,          
+                     born:xcborn,             
+                     age:xcage,
+                     nationality:xcnationality,      
+                     idCityzen:xcidCityzen,       
+                     address:xcaddress,          
+                     emailAddress:xcemailAddress,     
+                     memberId:xcmemberId,         
+                     memberType:xcmemberType,       
+                     telNo:xctelNo
+                    ).save()
+
+                alert("ท่านได้สมัครสมาชิก VIP เรียบร้อยแล้ว")
+                $('#xfname').setValue("")
+                $('#xmname').setValue("")
+                $('#xlname').setValue("")
+                $('#xsex').setText("")
+                $('#xborn').setText("")
+                $('#xage').setText("")
+                $('#xnationality').setText("")
+                $('#xidCityzen').setText("")
+                $('#xaddress').setText("")
+                $('#xemailAddress').setText("")
+                $('#xtelNo').setText("")
             }
 
         })
