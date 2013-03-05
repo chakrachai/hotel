@@ -21,9 +21,10 @@ class CheckoutComposer extends GrailsComposer {
 			$('#name')[0].setValue(b.fName+" "+b.lName)
 			$('#email')[0].setValue(b.emailAddress)
 			$('#tel')[0].setValue(b.telNo)
+			
 			int daycount = 0
 			for(loop in e){
-				$('#dateI').setValue(e[0].dayIn)
+				$('#dateI').setValue(loop.dayIn)
 				$('#dateO').setValue(loop.dayOut)
 			}						
         $('#idc').setText("")
