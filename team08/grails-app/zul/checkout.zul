@@ -75,44 +75,39 @@
 			
 			
 			<hbox>                                      
-			<vbox width="80px">
+			<vbox width="200px">
+				<separator/><separator/><separator/>
+				<label value = "เงินสด:"  style="color:back;font-size:20px" />
 				<separator/>
-				<label value = "เงินสด:"/>
-				<separator/>
-				<label value = "หมายเลขบัตรเครดิต: "/>
+				<label value = "หมายเลขบัตรเครดิต: "  style="color:back;font-size:20px" />
 				</vbox>
 				
-				<vbox width="600px">
+				<vbox width="400px">
+				<separator/><separator/><separator/>
+				<textbox id="money" width="200" height="20px"/>
 				<separator/>
-				<textbox id="money"/>
-				<separator/>
-				<textbox id="cradit"/>
+				<textbox id="cradit" width="200px" height="20px"/>
 				</vbox>
-				
-				<vbox>
-					<separator/><separator/>
-					<label value = "ยอดชำระ : " style="color:back;font-size:20px"/>
-				</vbox>
+								
 			</hbox>
 			
 			
 			
 			<hbox	align ="right">
-			<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-			<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-				<vbox width ="900px">
+			<separator/><separator/>
+				<vbox width ="800px">
 				</vbox>
 				<vbox>
-				<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+				<separator/><separator/><separator/><separator/><separator/>
 					<button id="btnSave">Save</button>
 				</vbox>
 				<vbox>
-				<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+				<separator/><separator/><separator/><separator/><separator/>
 					<button id="btnPrint">Print</button>
 				</vbox>
 				
 				<vbox>
-				<separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+				<separator/><separator/><separator/><separator/><separator/>
 					<button id="btnExit">Exit</button>
 				</vbox>
 			</hbox>
