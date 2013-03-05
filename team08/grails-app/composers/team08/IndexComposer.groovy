@@ -38,6 +38,20 @@ class IndexComposer extends GrailsComposer {
 	        				$('#userid')[0].text = ""
 	        				$('#passwordid')[0].text = ""
 	        			}
+	        		}else if(employee_data.classem == "CEO"){
+	        			if($('#passwordid')[0].text == employee_data.passem){
+	        				def outdata = DataSignIn.findById("2")
+	        					outdata.datainput = $('#userid')[0].text
+	        					outdata.save()
+	        					Executions.sendRedirect("/employee.zul")
+	    						alert("ยินดีต้อนรับ")
+		        			}			
+	        			else{
+	        				alert("รหัสไม่ถูกต้อง")
+	        				$('#userid')[0].text = ""
+	        				$('#passwordid')[0].text = ""
+	        			}
+
 	        		}else {
 	        			alert("กรุณาตรวจสอบ้อมูล")
 	        			$('#userid')[0].text = ""
@@ -69,11 +83,9 @@ class IndexComposer extends GrailsComposer {
 	    	Executions.sendRedirect("/regMember.zul")
 	    	alert("ยินดีต้อนรับ")
 	    })
-	    $('#btnemployee').on('Click',{
-	    	Executions.sendRedirect("/employee.zul")
-	    	alert("ยินดีต้อนรับ")
-	    })
 		$('#btncancle').on('Click',{
+			$('#userid')[0].text = ""
+	       	$('#passwordid')[0].text = ""
 	    })  
     }
 }

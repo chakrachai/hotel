@@ -81,6 +81,9 @@ class CheckoutComposer extends GrailsComposer {
 		''')
 		
 		$('#btnExit').on('click',{
+			def searchData = DataSignIn.get(2)
+			searchData.datainput = ""
+            searchData.save()
 	    	Executions.sendRedirect("/index.zul")
 	    	alert("เสร็จเรียบร้อยคะ")
 	    })
