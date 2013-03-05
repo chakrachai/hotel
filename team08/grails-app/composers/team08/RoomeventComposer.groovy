@@ -67,7 +67,7 @@ class RoomeventComposer extends GrailsComposer {
             if(checkuserid == null){
             
             alert("ไม่เห็นเว้ยเห้ย")
-          
+            $('#txtscid').setText("")
         }else{
           
          
@@ -80,6 +80,7 @@ class RoomeventComposer extends GrailsComposer {
             $('#add').setValue(checkuserid.address)
             $('#country').setValue(checkuserid.nationality)
             $('#email').setValue(checkuserid.emailAddress)
+             $('#txtscid').setText("")
              }
             }
         
