@@ -22,11 +22,11 @@ class CheckoutComposer extends GrailsComposer {
 			$('#email')[0].setValue(b.emailAddress)
 			$('#tel')[0].setValue(b.telNo)
 			
-			int daycount = 0
-			for(loop in e){
-				$('#dateI').setValue(loop.dayIn)
-				$('#dateO').setValue(loop.dayOut)
-			}						
+			//int daycount = 0
+			//for(loop in e){
+				$('#dateI').setValue(e.dayIn)
+				$('#dateO').setValue(e.dayOut)
+			//}						
         $('#idc').setText("")
     $('#service').append{
         for(loopin in Room.findAllByCustomer(b)){
@@ -78,7 +78,8 @@ class CheckoutComposer extends GrailsComposer {
 		})
 		
 		$('#btnPrint').on('click','''
-			window.print();
+			window.print(alert("ปริ้นหน้านี้"));
+			
 		''')
 		
 		$('#btnExit').on('click',{
