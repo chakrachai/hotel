@@ -23,7 +23,7 @@
         <groupbox width="250px" height ="90px">
             <vbox id="showlogin" align = "center" visible="true">
                 <hbox id= "databox1"><label value="Username:"/><textbox id="userid"/></hbox>
-                <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid"/></hbox>
+                <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid" type="password"/></hbox>
                 <hbox id= "databox3"><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
             </vbox>
             <vbox id="showmenu" align = "center" visible="false">
@@ -35,7 +35,6 @@
                 </hbox>
                 <hbox>
                     <button id= "btncustomer" label="ข้อมูลลูกค้า"/>
-                    <button id= "btnemployee" label="ผู้จัดการ"/>
                 </hbox>
             </vbox>
         </groupbox>
