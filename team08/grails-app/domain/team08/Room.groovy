@@ -10,13 +10,7 @@ class Room {
 	String dayOut	//วันออก
 	String roomStatus	//สถานะห้อง
     static constraints = {
-		customer  nullable:true
-		employee  nullable:true
-		roomNo nullable:true
 		roomflore nullable:true
 		customermany nullable:true
-		dayIn nullable:true
-		dayOut nullable:true
-		roomStatus nullable:true
     }
 }
