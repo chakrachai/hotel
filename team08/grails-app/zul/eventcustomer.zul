@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+  <window apply="team08.RoomeventComposer" width="100%">
+    <image src="${z.resource(dir:'images', file:'grailshotel_logo.png')}"/>
+     
+     
+     <hbox width="100%">
+
+        <groupbox height="250px" width="950px">
+            <separator/>
+            <label value="ลูกค้า"/>
+            <separator/><separator/><separator/>
+            <groupbox height="180px"    >
+            <vbox>
+            <separator/>
+                <hbox>
+                <label value="ค้นหา Id ลูกค้า"/>
+                <separator/>
+                <textbox id="txtscid"/>
+               <button id="btnsearchid" height="25px" width="70px">Search</button>
+                <separator/><separator/>
+         
+                </hbox>
+                <separator/><separator/>
+            <hbox>    
+                    <vbox width="500px">
+                        <hbox>
+                        <label value="ID :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="idcus" value="------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="ชื่อ:"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="name" value="--------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="นามสกุล :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="lname" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="ชื่อกลาง/ชื่อเล่น :"/>
+                        <separator/>
+                        <label id="mname" value="---------"/>
+                        </hbox>
+                    </vbox>
+
+                    <vbox>
+                        <hbox>
+                        <label value="Telephone :"/>
+                        <separator/><separator/>
+                        <label id="tel" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="Address :"/>
+                        <separator/><separator/><separator/><separator/>
+                        <label id="add" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="ประเทศ :"/>
+                        <separator/><separator/><separator/><separator/><separator/>
+                        <label id="country" value="---------"/>
+                        </hbox>
+                          <hbox>
+                        <label value="E-mail :"/>
+                        <separator/><separator/><separator/><separator/><separator/><separator/>
+                        <label id="email" value="---------"/>
+                        </hbox>
+                    </vbox>
+
+               
+            </hbox>
+            </vbox>
+
+            </groupbox>
+   
+        </groupbox>
+        <groupbox height="250px" width="400px">
+            <separator/>
+            <label value="พนักงาน"/>
+            <button id="logoutre" label="LogOut"/>
+            <separator/>
+            <separator/>
+            <separator/>
+            <groupbox height="180px">
+            <vbox>
+                <hbox>
+                <label value="ID :"/>
+                <separator/>
+                <label id="idrela" value="id0000"/>
+                </hbox>
+                <hbox>
+                <label value="Name :"/>
+                <separator/>
+                <label id="namerela" value="XYZ"/>
+                </hbox>
+                <hbox>
+                <label value="TelephoneNumber :"/>
+                <separator/>
+                <label id="telerela" value="080728xxxx"/>
+                </hbox>
+                <hbox>
+                <label value="Status :"/>
+                <separator/>
+                <label id="strela" value="AbNormal"/>
+                </hbox>
+                <hbox>
+                <label value="Class :"/>
+                <separator/>
+                <label id="csrela" value="Cashier"/>
+                </hbox>
+
+            </vbox>
+            </groupbox>
+        </groupbox>
+    </hbox>
+    <separator/>
+    <groupbox height="25%" width="1350px">
+
+        <label value="เช็คสถานะห้อง"/>
+        <space/><space/><space/><space/><space/><space/><space/><space/><space/><space/>
+        <listbox>
+            <listitem>
+            <listcell>
+            <listbox id="listcheckroomre" mold="select" hflex="3" >
+                        <listitem label="None Select" selected="true" id="none"/>
+                        <listitem label="Carnival" id="listcarnival"/>
+                        <listitem label="Seminar" id="listseminar"/>
+                        <listitem label="Meeting" id="listmeeting"/>
+                        <listitem label="Wedding" id="listwedding"/>
+            </listbox>
+            </listcell>
+            </listitem>
+             </listbox>
+       
+        <datebox id="datebox" cols="12" format="short " mold="rounded" />
+        <space/><space/>
+        <button id="btnCheck" height="30px" width="70px">Check</button>
+  
+        <listbox id="listboxroom" width="1350px">
+            <listhead>
+                <listheader label="RoomType" sort="auto"/>
+                <listheader label="Status" sort="auto"/>
+                <listheader label="Price" sort="auto"/>
+                <listheader label="จอง" sort="auto"/>
+            </listhead>
+            <listitem>
+                <listcell label="Carnival Room"/>
+                <listcell id="CrS" label="Off"/>
+                <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnCar" height="30px" width="70px" visible="false">Choise</button>
+                </listcell>
+            </listitem>    
+            <listitem>
+         
+                <listcell label="Seminar Room"/>
+                <listcell id="SrS" label="Off"/>
+                <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnSeminar" height="30px" width="70px" visible="false">Choise</button>
+                </listcell>
+            </listitem>    
+               
+            <listitem>
+                <listcell label="Meeting Room"/>
+                <listcell id="MrS" label="Off"/>
+                <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnMeet" height="30px" width="70px" visible="false">Choise</button>
+                </listcell>
+            </listitem>    
+            <listitem>
+                <listcell label="Wedding Room"/>
+                <listcell id="WrS" label="Off"/>
+                <listcell label="20000000"/>
+                <listcell> 
+                    <button id="btnWedding" height="30px" width="70px" visible="false">Choise</button>
+                </listcell>
+            </listitem> 
+        </listbox>
+    </groupbox>
+
+    </window>
+
+</zk>
