@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="0" name="CheckInHotelComposerTests" package="team08" tests="1" time="0.005" timestamp="2013-03-14T16:27:18">
+      <properties />
+
+      <testcase classname="team08.CheckInHotelComposerTests" name="initializationError" time="0.003">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="1" name="CheckoutComposerTests" package="team08" tests="1" time="0.631" timestamp="2013-03-14T16:27:14">
+      <properties />
+
+      <testcase classname="team08.CheckoutComposerTests" name="initializationError" time="0.04">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="ialohaaha-Aspire-5750G" id="2" name="DataSignInTests" package="team08" tests="1" time="0.096" timestamp="2013-03-14T16:27:17">
+      <properties />
+
+      <testcase classname="team08.DataSignInTests" name="testSomething" time="0.096">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at team08.DataSignInTests.testSomething(DataSignInTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="3" name="EmployeeComposerTests" package="team08" tests="1" time="0.116" timestamp="2013-03-14T16:27:16">
+      <properties />
+
+      <testcase classname="team08.EmployeeComposerTests" name="initializationError" time="0.005">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="ialohaaha-Aspire-5750G" id="4" name="EmployeeTests" package="team08" tests="1" time="0.444" timestamp="2013-03-14T16:27:16">
+      <properties />
+
+      <testcase classname="team08.EmployeeTests" name="testSomething" time="0.294">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at team08.EmployeeTests.testSomething(EmployeeTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="5" name="IndexComposerTests" package="team08" tests="1" time="0.005" timestamp="2013-03-14T16:27:18">
+      <properties />
+
+      <testcase classname="team08.IndexComposerTests" name="initializationError" time="0.003">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="ialohaaha-Aspire-5750G" id="6" name="MakeEventTests" package="team08" tests="1" time="0.759" timestamp="2013-03-14T16:27:15">
+      <properties />
+
+      <testcase classname="team08.MakeEventTests" name="testSomething" time="0.756">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at team08.MakeEventTests.testSomething(MakeEventTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="ialohaaha-Aspire-5750G" id="7" name="MemberCustomerTests" package="team08" tests="1" time="0.179" timestamp="2013-03-14T16:27:16">
+      <properties />
+
+      <testcase classname="team08.MemberCustomerTests" name="testSomething" time="0.075">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at team08.MemberCustomerTests.testSomething(MemberCustomerTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="8" name="MonyServiceTests" package="team08" tests="1" time="0.146" timestamp="2013-03-14T16:27:15">
+      <properties />
+
+      <testcase classname="team08.MonyServiceTests" name="testSomething" time="0.044">
+          <error message="Cannot add Service class [class team08.MonyService]. It is not a Service!" type="org.codehaus.groovy.grails.exceptions.GrailsConfigurationException">org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Cannot add Service class [class team08.MonyService]. It is not a Service!
+	at grails.test.mixin.services.ServiceUnitTestMixin.mockService(ServiceUnitTestMixin.groovy:46)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="9" name="RegMemberComposerTests" package="team08" tests="1" time="0.004" timestamp="2013-03-14T16:27:18">
+      <properties />
+
+      <testcase classname="team08.RegMemberComposerTests" name="initializationError" time="0.003">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="ialohaaha-Aspire-5750G" id="10" name="RoomTests" package="team08" tests="1" time="0.243" timestamp="2013-03-14T16:27:17">
+      <properties />
+
+      <testcase classname="team08.RoomTests" name="testSomething" time="0.241">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at team08.RoomTests.testSomething(RoomTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="11" name="RoomeventComposerTests" package="team08" tests="1" time="0.006" timestamp="2013-03-14T16:27:16">
+      <properties />
+
+      <testcase classname="team08.RoomeventComposerTests" name="initializationError" time="0.005">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="12" name="ServeS0menuComposerTests" package="team08" tests="1" time="0.008" timestamp="2013-03-14T16:27:16">
+      <properties />
+
+      <testcase classname="team08.ServeS0menuComposerTests" name="initializationError" time="0.006">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="13" name="ServeS1menuComposerTests" package="team08" tests="1" time="0.113" timestamp="2013-03-14T16:27:17">
+      <properties />
+
+      <testcase classname="team08.ServeS1menuComposerTests" name="initializationError" time="0.006">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="14" name="ServeS2menuComposerTests" package="team08" tests="1" time="0.006" timestamp="2013-03-14T16:27:16">
+      <properties />
+
+      <testcase classname="team08.ServeS2menuComposerTests" name="initializationError" time="0.005">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="15" name="ServiceservletComposerTests" package="team08" tests="1" time="0.006" timestamp="2013-03-14T16:27:16">
+      <properties />
+
+      <testcase classname="team08.ServiceservletComposerTests" name="initializationError" time="0.005">
+          <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="ialohaaha-Aspire-5750G" id="16" name="TimeWorkTests" package="team08" tests="1" time="0.384" timestamp="2013-03-14T16:27:17">
+      <properties />
+
+      <testcase classname="team08.TimeWorkTests" name="testSomething" time="0.232">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at team08.TimeWorkTests.testSomething(TimeWorkTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" id="17" name="TypeServiceTests" package="team08" tests="1" time="0.278" timestamp="2013-03-14T16:27:15">
+      <properties />
+
+      <testcase classname="team08.TypeServiceTests" name="testSomething" time="0.009">
+          <error message="Cannot add Service class [class team08.TypeService]. It is not a Service!" type="org.codehaus.groovy.grails.exceptions.GrailsConfigurationException">org.codehaus.groovy.grails.exceptions.GrailsConfigurationException: Cannot add Service class [class team08.TypeService]. It is not a Service!
+	at grails.test.mixin.services.ServiceUnitTestMixin.mockService(ServiceUnitTestMixin.groovy:46)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

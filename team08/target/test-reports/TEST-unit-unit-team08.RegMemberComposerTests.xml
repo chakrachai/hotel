@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="ialohaaha-Aspire-5750G" name="team08.RegMemberComposerTests" tests="1" time="0.004" timestamp="2013-03-14T16:27:18">
+  <properties />
+  <testcase classname="team08.RegMemberComposerTests" name="initializationError" time="0.003">
+    <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+  </testcase>
+  <system-out><![CDATA[--Output from initializationError--
+]]></system-out>
+  <system-err><![CDATA[--Output from initializationError--
+]]></system-err>
+</testsuite>
