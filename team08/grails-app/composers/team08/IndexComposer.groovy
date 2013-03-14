@@ -87,5 +87,9 @@ class IndexComposer extends GrailsComposer {
 			$('#userid')[0].text = ""
 	       	$('#passwordid')[0].text = ""
 	    })  
+	    $('#btneventcustomer').on('Click',{
+	    	Executions.sendRedirect("/eventcustomer.zul")
+	    	alert("ยินดีต้อนรับ")
+	    })
     }
 }

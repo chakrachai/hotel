@@ -32,6 +32,7 @@
                     <button id= "btnroomfix" label="จองห้อง"/>
                     <button id= "btnmoney" label="คิดเงิน"/>
                     <button id= "btnroomevent" label="จองห้องจัดงาน"/>
+                    <button id= "btneventcustomer" label="จองห้องจัดงานลูกค้า"/>
                 </hbox>
                 <hbox>
                     <button id= "btncustomer" label="ข้อมูลลูกค้า"/>
