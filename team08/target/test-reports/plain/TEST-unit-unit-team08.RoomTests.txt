@@ -1,15 +1,22 @@
 Testsuite: team08.RoomTests
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.243 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.346 sec
 ------------- Standard Output ---------------
---Output from testSomething--
+--Output from testRoom--
+--Output from testCustomer--
+--Output from testEmployee--
+--Output from teststatus--
+--Output from testCustomermany--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
---Output from testSomething--
+--Output from testRoom--
+--Output from testCustomer--
+--Output from testEmployee--
+--Output from teststatus--
+--Output from testCustomermany--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0.241 sec
-	FAILED
-junit.framework.AssertionFailedError: Implement me
-junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at team08.RoomTests.testSomething(RoomTests.groovy:15)
-
+Testcase: testRoom took 1.004 sec
+Testcase: testCustomer took 0.044 sec
+Testcase: testEmployee took 0.066 sec
+Testcase: teststatus took 0.093 sec
+Testcase: testCustomermany took 0.092 sec

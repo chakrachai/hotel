@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="ialohaaha-Aspire-5750G" name="team08.RoomTests" tests="1" time="0.243" timestamp="2013-03-14T16:27:17">
+<testsuite errors="0" failures="0" hostname="ialohaaha-Aspire-5750G" name="team08.RoomTests" tests="5" time="1.346" timestamp="2013-03-15T16:43:35">
   <properties />
-  <testcase classname="team08.RoomTests" name="testSomething" time="0.241">
-    <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at team08.RoomTests.testSomething(RoomTests.groovy:15)
-</failure>
-  </testcase>
-  <system-out><![CDATA[--Output from testSomething--
+  <testcase classname="team08.RoomTests" name="testRoom" time="1.003" />
+  <testcase classname="team08.RoomTests" name="testCustomer" time="0.044" />
+  <testcase classname="team08.RoomTests" name="testEmployee" time="0.066" />
+  <testcase classname="team08.RoomTests" name="teststatus" time="0.092" />
+  <testcase classname="team08.RoomTests" name="testCustomermany" time="0.092" />
+  <system-out><![CDATA[--Output from testRoom--
+--Output from testCustomer--
+--Output from testEmployee--
+--Output from teststatus--
+--Output from testCustomermany--
 ]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
+  <system-err><![CDATA[--Output from testRoom--
+--Output from testCustomer--
+--Output from testEmployee--
+--Output from teststatus--
+--Output from testCustomermany--
 ]]></system-err>
 </testsuite>

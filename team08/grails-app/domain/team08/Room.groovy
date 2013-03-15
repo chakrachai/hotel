@@ -5,12 +5,13 @@ class Room {
 	Employee employee
 	String roomNo	//เลขห้อง
 	String roomflore //ชั้น
-	String customermany //จำนวนคน
+	int customermany //จำนวนคน
 	String dayIn	//วันเข้า
 	String dayOut	//วันออก
 	String roomStatus	//สถานะห้อง
     static constraints = {
-		roomflore nullable:true
-		customermany nullable:true
+    	customer nullable:true
+    	roomStatus inList:['ว่าง','ไม่ว่าง','ห้องชำรุด']
+    	customermany range:1..4
     }
 }
