@@ -91,5 +91,13 @@ class IndexComposer extends GrailsComposer {
 	    	Executions.sendRedirect("/eventcustomer.zul")
 	    	alert("ยินดีต้อนรับ")
 	    })
+	    $('#btndatein').on('Click',{
+	    	Executions.sendRedirect("/checkdate.zul")
+	    	alert("ลงเวลาเข้าแล้ว")
+	    })
+	    $('#btndateout').on('Click',{
+	    	Executions.sendRedirect("/checkdate.zul")
+	    	alert("ลงเวลาออกแล้ว")
+	    })
     }
 }
