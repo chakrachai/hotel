@@ -1,5 +1,0 @@
---Output from testRoom--
---Output from testCustomer--
---Output from testEmployee--
---Output from teststatus--
---Output from testCustomermany--
