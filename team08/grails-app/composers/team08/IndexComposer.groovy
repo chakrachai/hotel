@@ -52,7 +52,22 @@ class IndexComposer extends GrailsComposer {
 	        				$('#passwordid')[0].text = ""
 	        			}
 
-	        		}else {
+	        		}else if(employee_data.classem == "Housekeeper"){
+	        			if($('#passwordid')[0].text == employee_data.passem){
+	        				def outdata1 = DataSignIn.findById("2")
+	        					outdata1.datainput = $('#userid')[0].text
+	        					outdata1.save()
+	        					Executions.sendRedirect("/employee.zul")
+	    						alert("ยินดีต้อนรับ")
+		        			}			
+	        			else{
+	        				alert("รหัสไม่ถูกต้อง")
+	        				$('#userid')[0].text = ""
+	        				$('#passwordid')[0].text = ""
+	        			}
+
+	        		}
+	        		else {
 	        			alert("กรุณาตรวจสอบ้อมูล")
 	        			$('#userid')[0].text = ""
 	        			$('#passwordid')[0].text = ""
