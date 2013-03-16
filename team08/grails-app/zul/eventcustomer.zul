@@ -17,7 +17,7 @@
             <separator/>
             <label value="ลูกค้า"/>
              <space/><space/>
-            <button id="logoutre">LogOut</button>
+            <button id="logoutrec">LogOut</button>
             <separator/><separator/><separator/>
             <groupbox height="180px"    >
             <vbox>
@@ -34,17 +34,17 @@
                           <hbox>
                         <label value="ชื่อ:"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="name" value="--------"/>
+                        <label id="namec" value="--------"/>
                         </hbox>
                           <hbox>
                         <label value="นามสกุล :"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="lname" value="---------"/>
+                        <label id="lnamec" value="---------"/>
                         </hbox>
                           <hbox>
                         <label value="ชื่อกลาง/ชื่อเล่น :"/>
                         <separator/>
-                        <label id="mname" value="---------"/>
+                        <label id="mnamec" value="---------"/>
                         </hbox>
                     </vbox>
 
@@ -52,22 +52,22 @@
                         <hbox>
                         <label value="Telephone :"/>
                         <separator/><separator/>
-                        <label id="tel" value="---------"/>
+                        <label id="telc" value="---------"/>
                         </hbox>
                           <hbox>
                         <label value="Address :"/>
                         <separator/><separator/><separator/><separator/>
-                        <label id="add" value="---------"/>
+                        <label id="addc" value="---------"/>
                         </hbox>
                           <hbox>
                         <label value="ประเทศ :"/>
                         <separator/><separator/><separator/><separator/><separator/>
-                        <label id="country" value="---------"/>
+                        <label id="countryc" value="---------"/>
                         </hbox>
                           <hbox>
                         <label value="E-mail :"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="email" value="---------"/>
+                        <label id="emailc" value="---------"/>
                         </hbox>
                     </vbox>
 
@@ -88,26 +88,26 @@
         <listbox>
             <listitem>
             <listcell>
-            <listbox id="listcheckroomre" mold="select" hflex="3" >
-                        <listitem label="None Select" selected="true" id="none"/>
-                        <listitem label="Carnival" id="listcarnival"/>
-                        <listitem label="Seminar" id="listseminar"/>
-                        <listitem label="Meeting" id="listmeeting"/>
-                        <listitem label="Wedding" id="listwedding"/>
+            <listbox id="listcheckroomrec" mold="select" hflex="3" >
+                        <listitem label="None Select" selected="true" id="nonec"/>
+                        <listitem label="Carnival" id="listcarnivalc"/>
+                        <listitem label="Seminar" id="listseminarc"/>
+                        <listitem label="Meeting" id="listmeetingc"/>
+                        <listitem label="Wedding" id="listweddingc"/>
             </listbox>
             </listcell>
             </listitem>
              </listbox>
        
-        <datebox id="datebox" cols="12" format="short " mold="rounded" />
+        <datebox id="dateboxc" cols="12" format="short " mold="rounded" />
         <space/><space/>
-        <button id="btnCheck" height="30px" width="70px">Check</button>
+        <button id="btnCheckc" height="30px" width="70px">Check</button>
         <space/><space/>
-        <datebox id="dateboxsend" cols="12" format="short " mold="rounded" />
+        <datebox id="dateboxsendc" cols="12" format="short " mold="rounded" />
          <space/><space/>
-        <button id="btnSend" height="30px" width="100px">ยืนยันการจอง</button>
+        <button id="btnSendc" height="30px" width="100px">ยืนยันการจอง</button>
   
-        <listbox id="listboxroom" width="1350px">
+        <listbox id="listboxroomc" width="1350px">
             <listhead>
                 <listheader label="RoomType" sort="auto"/>
                 <listheader label="Status" sort="auto"/>
@@ -116,36 +116,36 @@
             </listhead>
             <listitem>
                 <listcell label="Carnival Room"/>
-                <listcell id="CrS" label="Off"/>
+                <listcell id="CrSc" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnCar" height="30px" width="70px" visible="false">Choise</button>
+                    <button id="btnCarc" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem>    
             <listitem>
          
                 <listcell label="Seminar Room"/>
-                <listcell id="SrS" label="Off"/>
+                <listcell id="SrSc" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnSeminar" height="30px" width="70px" visible="false">Choise</button>
+                    <button id="btnSeminarc" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem>    
                
             <listitem>
                 <listcell label="Meeting Room"/>
-                <listcell id="MrS" label="Off"/>
+                <listcell id="MrSc" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnMeet" height="30px" width="70px" visible="false">Choise</button>
+                    <button id="btnMeetc" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem>    
             <listitem>
                 <listcell label="Wedding Room"/>
-                <listcell id="WrS" label="Off"/>
+                <listcell id="WrSc" label="Off"/>
                 <listcell label="20000000"/>
                 <listcell> 
-                    <button id="btnWedding" height="30px" width="70px" visible="false">Choise</button>
+                    <button id="btnWeddingc" height="30px" width="70px" visible="false">Choise</button>
                 </listcell>
             </listitem> 
         </listbox>

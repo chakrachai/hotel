@@ -8,160 +8,163 @@ import org.zkoss.zk.ui.select.annotation.Listen
 class EventcustomerComposer extends GrailsComposer {
 
     def afterCompose = { window ->
-        def checkusern
-        def checkuserid
-        def scheckdate
-        def scchecklist
-        def keepid
-        def keepid2 = DataSignIn.findById("3")
-
-        def searchData = DataSignIn.get(2)
-
-
-
+        def checkuserc
+        def checkuseridc
+        def scheckdatec
+        def scchecklistc
+        def keepidc
+        def keepidc2 = DataSignIn.findById("3")
+        def searchDatac = DataSignIn.get(2)
+        def checksendc
+        def checkDatec
 
 
 
 
-          $('#logoutre').on('click',{
-        keepid2.datainput=""
-        keepid2.save()
+
+
+
+
+          $('#logoutrec').on('click',{
+        keepidc2.datainput=""
+        keepidc2.save()
         Executions.sendRedirect("/index.zul")
         })  
 
-             $('#btnCheck').on('click',{
-             scchecklist=$('#listcheckroomre').getSelectedItem().getLabel()
-            
-            checkDate=$('#datebox').getText()
-             scheckdate = MakeEventCustomer.findAllByTypere(scchecklist)
-            def rubkar
-            for(checkloop in scheckdate){
+             $('#btnCheckc').on('click',{
+                 scchecklistc=$('#listcheckroomrec').getSelectedItem().getLabel()
+             
+            checkDatec=$('#dateboxc').getText()
+             scheckdatec=MakeEventCustomer.findAllByTyperec(scchecklistc)
+            def rubkarc
+            for(checkloop in scheckdatec){
                 //alert(""+checkloop.datere)
-                if(checkDate==checkloop.datere){
-                rubkar=checkloop.datere
+                if(checkDatec==checkloop.daterec){
+                rubkarc=checkloop.daterec
             }
 
             }
-                if(checkDate==rubkar){
-                    if(scchecklist == "Carnival"){
-                    $('#CrS').setLabel("Off")
+                if(checkDatec==rubkarc){
+                    if(scchecklistc == "Carnival"){
+                    $('#CrSc').setLabel("Off")
                 
                     }
-                    else if(scchecklist == "Meeting"){
-                    $('#MrS').setLabel("Off")
+                    else if(scchecklistc == "Meeting"){
+                    $('#MrSc').setLabel("Off")
                     }
-                    else if(scchecklist == "Wedding"){
-                    $('#WrS').setLabel("Off")
+                    else if(scchecklistc == "Wedding"){
+                    $('#WrSc').setLabel("Off")
                     }
-                    else if(scchecklist == "Seminar"){
-                    $('#SrS').setLabel("Off")
+                    else if(scchecklistc == "Seminar"){
+                    $('#SrSc').setLabel("Off")
                     }
                 }else{
-                    if(scchecklist == "Carnival"){
-                    $('#CrS').setLabel("On")
-                    $('#SrS').setLabel("Off")
-                    $('#WrS').setLabel("Off")
-                    $('#MrS').setLabel("Off")
+                    if(scchecklistc == "Carnival"){
+                    $('#CrSc').setLabel("On")
+                    $('#SrSc').setLabel("Off")
+                    $('#WrSc').setLabel("Off")
+                    $('#MrSc').setLabel("Off")
                     }
-                    else if(scchecklist == "Meeting"){
-                    $('#MrS').setLabel("On")
-                     $('#CrS').setLabel("Off")
-                    $('#SrS').setLabel("Off")
-                    $('#WrS').setLabel("Off")
+                    else if(scchecklistc == "Meeting"){
+                    $('#MrSc').setLabel("On")
+                     $('#CrSc').setLabel("Off")
+                    $('#SrSc').setLabel("Off")
+                    $('#WrSc').setLabel("Off")
                     }
-                    else if(scchecklist == "Wedding"){
-                    $('#WrS').setLabel("On")
-                    $('#MrS').setLabel("Off")
-                     $('#CrS').setLabel("Off")
-                    $('#SrS').setLabel("Off")
+                    else if(scchecklistc == "Wedding"){
+                    $('#WrSc').setLabel("On")
+                    $('#MrSc').setLabel("Off")
+                     $('#CrSc').setLabel("Off")
+                    $('#SrSc').setLabel("Off")
                     }
-                    else if(scchecklist == "Seminar"){
-                    $('#SrS').setLabel("On")
-                    $('#WrS').setLabel("Off")
-                    $('#MrS').setLabel("Off")
-                     $('#CrS').setLabel("Off")
+                    else if(scchecklistc == "Seminar"){
+                    $('#SrSc').setLabel("On")
+                    $('#WrSc').setLabel("Off")
+                    $('#MrSc').setLabel("Off")
+                     $('#CrSc').setLabel("Off")
                     }
                 }
 
-                if($('#CrS').getLabel()=="Off"){
-                    $('#btnCar').setVisible(false)
+                if($('#CrSc').getLabel()=="Off"){
+                    $('#btnCarc').setVisible(false)
                 }else{
-                    $('#btnCar').setVisible(true)
+                    $('#btnCarc').setVisible(true)
                 }
-                if($('#SrS').getLabel()=="Off"){
-                    $('#btnSeminar').setVisible(false)
+                if($('#SrSc').getLabel()=="Off"){
+                    $('#btnSeminarc').setVisible(false)
                 }else{
-                     $('#btnSeminar').setVisible(true)
+                     $('#btnSeminarc').setVisible(true)
                 }
-                if($('#MrS').getLabel()=="Off"){
-                    $('#btnMeet').setVisible(false)
+                if($('#MrSc').getLabel()=="Off"){
+                    $('#btnMeetc').setVisible(false)
                 }else{
-                    $('#btnMeet').setVisible(true)
+                    $('#btnMeetc').setVisible(true)
                 }
-                if($('#WrS').getLabel()=="Off"){
-                    $('#btnWedding').setVisible(false)
+                if($('#WrSc').getLabel()=="Off"){
+                    $('#btnWeddingc').setVisible(false)
                 }else{
-                     $('#btnWedding').setVisible(true)
+                     $('#btnWeddingc').setVisible(true)
                 }
 
 
 
             }) 
 
-			$('#btnSend').on('click',{
-				checksend = $('#dateboxsend').getText()
+			$('#btnSendc').on('click',{
+				checksendc = $('#dateboxsendc').getText()
+                alert(checksendc)
 				})
 			
-			       $('#btnCar').on('click',{
-                 String typeCar = "Carnival"
-                String priceCar = "200000"
-                def mkevent = new MakeEventCustomer(
-                    customer : checkuserid,
-  					typere : typeCar,
-                    pricere : priceCar,
-                    datere : checkDate,
-                    dateresend : checksend
+			       $('#btnCarc').on('click',{
+                 String typeCarc = "Carnival"
+                String priceCarc = "200000"
+                def mkeventc = new MakeEventCustomer(
+                    customerc : checkuseridc,
+  					typerec : typeCarc,
+                    pricerec : priceCarc,
+                    daterec : checkDatec,
+                    dateresendc : checksendc
                     )
-                mkevent.save()
+                mkeventc.save()
                 alert("save")
                 })
-            $('#btnSeminar').on('click',{
-                  String typeCar = "Seminar"
-                String priceCar = "160000"
-                def mkevent = new MakeEventCustomer(
-                    customer : checkuserid,
-  					typere : typeCar,
-                    pricere : priceCar,
-                    datere : checkDate,
-                    dateresend : checksend
+            $('#btnSeminarc').on('click',{
+                  String typeCarc = "Seminar"
+                String priceCarc = "160000"
+                def mkeventc = new MakeEventCustomer(
+                    customerc : checkuseridc,
+  					typerec : typeCarc,
+                    pricerec : priceCarc,
+                    daterec : checkDatec,
+                    dateresendc : checksendc
                     )
-                mkevent.save()
+                mkeventc.save()
                   alert("save")
                 })
-            $('#btnMeet').on('click',{
-                  String typeCar = "Meeting"
-                String priceCar = "100000"
-                def mkevent = new MakeEventCustomer(
-                    customer : checkuserid,
-  					typere : typeCar,
-                    pricere : priceCar,
-                    datere : checkDate,
-                    dateresend : checksend
+            $('#btnMeetc').on('click',{
+                  String typeCarc = "Meeting"
+                String priceCarc = "100000"
+                def mkeventc = new MakeEventCustomer(
+                    customerc : checkuseridc,
+  					typerec : typeCarc,
+                    pricerec : priceCarc,
+                    daterec : checkDatec,
+                    dateresendc : checksendc
                     )
-                mkevent.save()
+                mkeventc.save()
                   alert("save")
                 })
-            $('#btnWedding').on('click',{
-                  String typeCar = "Wedding"
-                String priceCar = "280000"
-                def mkevent = new MakeEventCustomer(
-                    customer : checkuserid,
-  					typere : typeCar,
-                    pricere : priceCar,
-                    datere : checkDate,
-                    dateresend : checksend
+            $('#btnWeddingc').on('click',{
+                  String typeCarc = "Wedding"
+                String priceCarc = "280000"
+                def mkeventc = new MakeEventCustomer(
+                    customerc : checkuseridc,
+  					typerec : typeCarc,
+                    pricerec : priceCarc,
+                    daterec : checkDatec,
+                    dateresendc : checksendc
                     )
-                mkevent.save()
+                mkeventc.save()
                   alert("save")
                 })
     }

@@ -36,6 +36,7 @@ class BootStrap {
 
 		
 		def re1 = new MakeEvent(employee:e1,customer:p1,typere:"Carnival",pricere:"250000",datere:"23/3/2556").save()
+		def rec1 = new MakeEventCustomer(customerc:p1,typerec:"Carnival",pricerec:"250000",daterec:"23/3/2556",dateresendc:"20/3/2556").save()
 		def data1 = new DataSignIn(id:"1",datainput:"").save()
 		def data2 = new DataSignIn(id:"2",datainput:"").save()
 		def data3 = new DataSignIn(id:"3",datainput:"").save()
