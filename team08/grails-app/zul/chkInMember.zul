@@ -9,13 +9,40 @@
 
     <window apply="team08.ChkInMemberComposer">
 
-        <hbox align="center">
-            <image src="${z.resource(dir:'images', file:'zkpowered_s.png')}"/>
-            <image src="${z.resource(dir:'images', file:'grails_logo.png')}"/>
-        </hbox>
+        <groupbox id="" open="false" style="background:#000000">
+            <div align="center"><vbox><div height="20px" width="100%"/>
+            <panel   height="537px" width="700px" style="margin-bottom:3px" border="normal">
+                    <panelchildren>
+                       <div align="center">
+                        <vbox>
+                            <image src="${z.resource(dir:'images/DEX', file:'top.png')}"/>
+                                <hbox>
+                                 <image src="${z.resource(dir:'images/DEX', file:'left.png')}"/>
 
-        <vbox id="scaffoldingBox"/>
+                                 <div align="center" height="54px" width="503px" style="background:#FFFFFF"><vbox> <div align="center"><label value="ใส่รหัสบัตรประชาชน"/></div>
+                                    <hbox><textbox  width="350px" style="text-align: center" /><button height="23px" width="100px" label="ตรวจสอบ"/></hbox>
+                                </vbox></div>
 
+                                 <div align="right"><image src="${z.resource(dir:'images/DEX', file:'right.png')}"/></div>
+                            </hbox>
+                            <image src="${z.resource(dir:'images/DEX', file:'bottom.png')}"/>
+                        </vbox>
+                       </div>
+                    </panelchildren>
+                    
+            </panel><div height="127px" width="100%"/></vbox></div>
+        </groupbox>
+
+
+    <groupbox id="" open="true" style="background:#000000">
+            <div align="center"><vbox><div height="50px" width="100%"/>
+            <panel   height="537px" width="1100px" style="margin-bottom:3px" border="normal">
+                    <panelchildren>
+                       
+                    </panelchildren>
+                    
+            </panel><div height="127px" width="100%"/></vbox></div>
+        </groupbox>
     </window>
 
 </zk>
