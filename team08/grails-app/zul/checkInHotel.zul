@@ -13,10 +13,8 @@
             body {background-color: #EBEBEB;}
             .z-textbox { color: blue; }
             .z-textbox-disd, .z-textbox-disd * { background-color: #FFFFFF !important ; color: blue !important;}
-            .bg{background-color: #FFFFFF}
-            .msize {background-color: #FFFFFF}
-            .psize {color: green; font-size: 2em; font-family : "BlistcellalliaUPC";  font-align:"center"}
-            .cen {background-color: #990000; color: #ffffff; font-size: 1em}
+            .z-combobox-inp { color: blue; }
+            .z-combobox-pp * { background-color: #FFFFFF !important ; color: blue !important;}
  </style>
 
  <hbox align="center">
@@ -35,7 +33,7 @@
 
         <groupbox height="215px">
         <hbox>
-            <groupbox width="670px" height ="200px">
+            <groupbox width="650px" height ="200px">
                 <vbox>
                     <label value="ข้อมูลลูกค้า"/>
                     <separator/>
@@ -46,18 +44,50 @@
                 </vbox>
             </groupbox>
                 <separator/>
-            <groupbox width="670px" height ="200px">
+            <groupbox width="640px" height ="200px">
                 <vbox>
                     <label value="ข้อมูลการจองห้อง"/>
                     <separator/>
                     <hbox>
                         <vbox>
-                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ชั้นที่ :" /><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="classRoom"/></hbox>
-                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ห้อง :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><textbox id="room"/></hbox>
-                        
-                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="จำนวนผู้พัก :"/><separator/><textbox id="customerMany"/></hbox>
-                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="วันที่เข้าพัก :"/><separator/><textbox id="dayin"/></hbox>
-                            <hbox><separator/><separator/><separator/><separator/><separator/><separator/><label value="ถึงวันที่ :"/><separator/><separator/><separator/><separator/><textbox id="dayout"/></hbox>
+                            <hbox>
+                                <separator/><separator/><separator/><separator/><separator/><separator/><label value="ชั้นที่ :" /><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                                <combobox id="classRoom" value="ชั้นที่">
+                                    <comboitem label="1"/>
+                                    <comboitem label="2"/>
+                                    <comboitem label="3"/>
+                                    <comboitem label="4"/>
+                                    <comboitem label="5"/>
+                                    <comboitem label="6"/>
+                                </combobox>
+                            </hbox>
+                            <hbox>
+                                <separator/><separator/><separator/><separator/><separator/><separator/><label value="ห้อง :"/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
+                                <combobox id="room" value="ห้องที่">
+                                </combobox>
+                            </hbox>
+                            <hbox>
+                                <separator/><separator/><separator/><separator/><separator/><separator/>
+                                <label value="จำนวนผู้พัก :"/><separator/>
+                                <combobox id="customerMany" value="จำนวน">
+                                    <comboitem label="1"/>
+                                    <comboitem label="2"/>
+                                    <comboitem label="3"/>
+                                    <comboitem label="4"/>
+                                </combobox>
+                            </hbox>
+                            <hbox>
+                                <separator/><separator/><separator/><separator/><separator/><separator/><label value="วันที่เข้าพัก :"/><separator/>
+                                <combobox id="dayin" value="วัน" width="50px"></combobox>
+                                <combobox id="mountin" value="เดือน" width="90px"></combobox>
+                                <combobox id="yearin" value="ปี" width="60px"></combobox>
+                            </hbox>
+                            <hbox>
+                                <separator/><separator/><separator/><separator/><separator/><separator/><label value="ถึงวันที่ :"/><separator/><separator/><separator/><separator/>
+                                <combobox id="dayout" value="วัน" width="50px"></combobox>
+                                <combobox id="mountout" value="เดือน" width="90px"></combobox>
+                                <combobox id="yearout" value="ปี" width="60px"></combobox>
+                            </hbox>
                         </vbox>
                     </hbox>
                     <hbox><button id = "checkin" label="Checkin"/><button id = "outroom" label="แจ้งซ่อมห้อง"/><button id = "clearbtn" label="clear"/></hbox>
@@ -67,7 +97,7 @@
         </groupbox>
         <separator/><separator/>
         <groupbox height="300px">
-        <label value="สถานะห้อง"/><textbox id="tsearch"/>
+        <label value="ค้นหาข้อมูล"/><textbox id="tsearch"/>
             <combobox id="searchstatus" value ="จาก" width= "100px">
                 <comboitem label="สถานะ"/>
                 <comboitem label="เลขห้อง"/>
