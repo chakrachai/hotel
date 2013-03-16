@@ -66,6 +66,21 @@ class IndexComposer extends GrailsComposer {
 	        				$('#passwordid')[0].text = ""
 	        			}
 
+	        		}else if(employee_data.classem == "Head Housekeeper"||employee_data.classem == "serviceCustomer"||employee_data.classem == "Reception"||employee_data.classem == "Concierge"||employee_data.classem == "Hall Porter"||employee_data.classem == "Security"||employee_data.classem == "Doorman"||employee_data.classem == "Housekeeper"){
+	        			if($('#passwordid')[0].text == employee_data.passem){
+	        				def outdata = DataSignIn.findById("2")
+	        					outdata.datainput = $('#userid')[0].text
+	        					outdata.save()
+	        					$('#showlogin').setVisible(false)
+								$('#showmenu').setVisible(false)
+								$('#showmenunormal').setVisible(true)
+	        			}			
+	        			else{
+	        				alert("รหัสไม่ถูกต้อง")
+	        				$('#userid')[0].text = ""
+	        				$('#passwordid')[0].text = ""
+	        			}
+
 	        		}
 	        		else {
 	        			alert("กรุณาตรวจสอบ้อมูล")
@@ -127,6 +142,35 @@ class IndexComposer extends GrailsComposer {
             h1.save()
 	    	Executions.sendRedirect("/checkdate.zul")
 	    	alert("ลงเวลาออกแล้ว")
+	    })
+	    $('#btndatein1').on('Click',{
+	    	def finddata1 = $('#userid')[0].text	
+		    def employee_data1 = Employee.findByIdem(finddata1)
+		    def borrowday = new Date()
+		    def h = TimeWork.findByEmployee(employee_data1)
+			def g = borrowday.format("hh:mm a")
+			h.timein = g
+            h.save()
+	    	Executions.sendRedirect("/checkdate.zul")
+	    	alert("ลงเวลาเข้าแล้ว")
+	    })
+	    $('#btndateout1').on('Click',{
+	    	def finddata2 = $('#userid')[0].text	
+		    def employee_data2 = Employee.findByIdem(finddata2)
+		    def borrowday1 = new Date()
+		    def h1 = TimeWork.findByEmployee(employee_data2)
+			def g1 = borrowday1.format("hh:mm a")
+			h1.timeout = g1
+            h1.save()
+	    	Executions.sendRedirect("/checkdate.zul")
+	    	alert("ลงเวลาออกแล้ว")
+	    })
+	    $('#btnback').on('Click',{
+	    	$('#showlogin').setVisible(true)
+			$('#showmenu').setVisible(false)
+			$('#showmenunormal').setVisible(false)
+			$('#userid')[0].text = ""
+	        $('#passwordid')[0].text = ""
 	    })
     }
 }

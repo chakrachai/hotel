@@ -40,6 +40,14 @@
                     <button id= "btndateout" label="ลงเวลาออก"/>
                 </hbox>
             </vbox>
+            <vbox id="showmenunormal" align = "center" visible="false">
+                <label sclass = "psize" value= "กรุณาเลือกการทำรายการ"/>
+                <hbox>
+                    <button id= "btnback" label="ย้อนกลับ"/>
+                    <button id= "btndatein1" label="ลงเวลาเข้า"/>
+                    <button id= "btndateout1" label="ลงเวลาออก"/>
+                </hbox>
+            </vbox>
         </groupbox>
     </hbox>
     </window>
