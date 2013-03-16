@@ -20,7 +20,7 @@
         </vbox>
         <hbox>
             <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>                      
-        <groupbox width="250px" height ="90px">
+        <groupbox width="250px" height ="100px">
             <vbox id="showlogin" align = "center" visible="true">
                 <hbox id= "databox1"><label value="Username:"/><textbox id="userid"/></hbox>
                 <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid" type="password"/></hbox>
@@ -36,6 +36,8 @@
                 </hbox>
                 <hbox>
                     <button id= "btncustomer" label="ข้อมูลลูกค้า"/>
+                    <button id= "btndatein" label="ลงเวลาเข้า"/>
+                    <button id= "btndateout" label="ลงเวลาออก"/>
                 </hbox>
             </vbox>
         </groupbox>
