@@ -1,16 +1,16 @@
 package team08
 
 class MakeEventCustomer {
-	MemberCustomer customer
-	String typere
-	String pricere
-	String datere
-	String dateresend
+	MemberCustomer customerc
+	String typerec
+	String pricerec
+	String daterec
+	String dateresendc
     static constraints = {
-    	customer nullable:true
-        typere nullable:true
-    	pricere nullable:true
-    	datere nullable:true
-    	dateresend nullable:true
+    	customerc nullable:true
+        typerec nullable:true
+    	pricerec nullable:true
+    	daterec nullable:true
+    	dateresendc nullable:true
     }
 }
