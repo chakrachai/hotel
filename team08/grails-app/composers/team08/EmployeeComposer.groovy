@@ -9,6 +9,23 @@ import org.zkoss.zk.ui.select.annotation.Listen
 class EmployeeComposer extends GrailsComposer {
 
     def afterCompose = { window ->
+        $('#listmanager > listitem > listcell').detach()
+            def kk = Employee.findAll()
+            $('#listmanager').append {
+                for(c in kk) {
+                    def s = TimeWork.findByEmployee(c)
+                    listitem(value: c) {
+                        listcell(label: c.idem)
+                        listcell(label: c.nameem)
+                        listcell(label: c.lnameem)
+                        listcell(label: s.timein)
+                        listcell(label: s.timeout)
+                        listcell(label: c.statusem)
+                        listcell(label: c.classem)
+                    }
+                    
+                }
+            }
 
 
         $('#listmanager').on('select',{

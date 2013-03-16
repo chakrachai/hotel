@@ -9,12 +9,31 @@
 
     <window apply="team08.CheckdateComposer">
 
-        <hbox align="center">
-            <image src="${z.resource(dir:'images', file:'zkpowered_s.png')}"/>
-            <image src="${z.resource(dir:'images', file:'grails_logo.png')}"/>
-        </hbox>
-
-        <vbox id="scaffoldingBox"/>
+        <listbox id="listcheckmanager" width="1000px" height="350px">
+            <listhead>
+                <listheader label="รหัสพนักงาน" width="15%"/>
+                <listheader label="ชื่อ" width="20%" />
+                <listheader label="นามสกุล" width="20%"/>
+                <listheader label="เวลาเข้าทำงาน" width="180px"/>
+                <listheader label="เวลาออกทำงาน" width="180px"/>
+                <listheader label="ตำแหน่ง" width="10%"/>
+            </listhead>
+        </listbox>
+        <groupbox id="managerpage01" height="110px" width="150px">
+            <separator/>
+            <label value="พนักงาน"/>
+            <separator/>
+            <groupbox height="68px">
+                <vbox>
+                    <hbox>
+                        <vbox>
+                            <button id="btnrefresh" height="25px" width="70px">Refresh</button>
+                            <button id="btnback" height="25px" width="70px" >ย้อนกลับ</button>
+                        </vbox>
+                    </hbox>
+                </vbox>
+            </groupbox>
+        </groupbox>
 
     </window>
 
