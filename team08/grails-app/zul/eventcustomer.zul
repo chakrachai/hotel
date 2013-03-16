@@ -17,7 +17,7 @@
             <separator/>
             <label value="ลูกค้า"/>
              <space/><space/>
-            <button id="btnlogout">LogOut</button>
+            <button id="logoutre">LogOut</button>
             <separator/><separator/><separator/>
             <groupbox height="180px"    >
             <vbox>
