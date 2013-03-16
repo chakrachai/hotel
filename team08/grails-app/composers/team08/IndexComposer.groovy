@@ -92,10 +92,24 @@ class IndexComposer extends GrailsComposer {
 	    	alert("ยินดีต้อนรับ")
 	    })
 	    $('#btndatein').on('Click',{
+	    	def finddata1 = $('#userid')[0].text	
+		    def employee_data1 = Employee.findByIdem(finddata1)
+		    def borrowday = new Date()
+		    def h = TimeWork.findByEmployee(employee_data1)
+			def g = borrowday.format("hh:mm a")
+			h.timein = g
+            h.save()
 	    	Executions.sendRedirect("/checkdate.zul")
 	    	alert("ลงเวลาเข้าแล้ว")
 	    })
 	    $('#btndateout').on('Click',{
+	    	def finddata2 = $('#userid')[0].text	
+		    def employee_data2 = Employee.findByIdem(finddata2)
+		    def borrowday1 = new Date()
+		    def h1 = TimeWork.findByEmployee(employee_data2)
+			def g1 = borrowday1.format("hh:mm a")
+			h1.timeout = g1
+            h1.save()
 	    	Executions.sendRedirect("/checkdate.zul")
 	    	alert("ลงเวลาออกแล้ว")
 	    })
