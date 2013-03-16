@@ -16,6 +16,8 @@
         <groupbox height="250px" width="1350px">
             <separator/>
             <label value="ลูกค้า"/>
+             <space/><space/>
+            <button id="btnlogout">LogOut</button>
             <separator/><separator/><separator/>
             <groupbox height="180px"    >
             <vbox>
@@ -100,6 +102,10 @@
         <datebox id="datebox" cols="12" format="short " mold="rounded" />
         <space/><space/>
         <button id="btnCheck" height="30px" width="70px">Check</button>
+        <space/><space/>
+        <datebox id="dateboxsend" cols="12" format="short " mold="rounded" />
+         <space/><space/>
+        <button id="btnSend" height="30px" width="100px">ยืนยันการจอง</button>
   
         <listbox id="listboxroom" width="1350px">
             <listhead>
