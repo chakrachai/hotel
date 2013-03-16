@@ -8,6 +8,7 @@ class MakeEventCustomer {
 	String dateresend
     static constraints = {
     	customer nullable:true
+        typere nullable:true
     	pricere nullable:true
     	datere nullable:true
     	dateresend nullable:true
