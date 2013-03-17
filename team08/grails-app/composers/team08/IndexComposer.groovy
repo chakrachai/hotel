@@ -25,7 +25,7 @@ class IndexComposer extends GrailsComposer {
 		       			$('#userid')[0].text = ""
 		       			$('#passwordid')[0].text = ""
 	  				}else{
-	  				if(customer.memberType == "VIP"){
+	  				if(customer.memberType == "VIP MEMBER"){
 	        			if($('#passwordid')[0].text == customer.idCityzen){
 	        				def outdata = DataSignIn.findById("2")
 	        					outdata.datainput = $('#userid')[0].text
@@ -33,6 +33,9 @@ class IndexComposer extends GrailsComposer {
 	        					$('#showlogin').setVisible(false)
 	        					$('#customermenu').setVisible(true)
 								$('#showmenu').setVisible(true)
+	        					$('#employeemenu').setVisible(false)
+								$('#cashiermenu').setVisible(false)
+								$('#cashiermenu2').setVisible(false)
 	        			}			
 	        			else{
 	        				alert("รหัสไม่ถูกต้อง")
@@ -52,6 +55,7 @@ class IndexComposer extends GrailsComposer {
 								$('#cashiermenu').setVisible(true)
 								$('#cashiermenu2').setVisible(true)
 								$('#showmenu').setVisible(true)
+								$('#customermenu').setVisible(false)
 	        			}			
 	        			else{
 	        				alert("รหัสไม่ถูกต้อง")
@@ -81,6 +85,7 @@ class IndexComposer extends GrailsComposer {
 								$('#cashiermenu').setVisible(false)
 								$('#showmenu').setVisible(true)
 								$('#cashiermenu2').setVisible(false)
+								$('#customermenu').setVisible(false)
 	        					//$('#showlogin').setVisible(false)
 								//$('#showmenu').setVisible(false)
 								//$('#showmenunormal').setVisible(true)
@@ -127,10 +132,7 @@ class IndexComposer extends GrailsComposer {
 			$('#userid')[0].text = ""
 	       	$('#passwordid')[0].text = ""
 	    })  
-	    $('#btneventcustomer').on('Click',{
-	    	Executions.sendRedirect("/eventcustomer.zul")
-	    	alert("ยินดีต้อนรับ")
-	    })
+	   
 	    $('#btndatein').on('Click',{
 	    	def finddata1 = $('#userid')[0].text	
 		    def employee_data1 = Employee.findByIdem(finddata1)
@@ -159,6 +161,7 @@ class IndexComposer extends GrailsComposer {
 			$('#cashiermenu').setVisible(false)
 			$('#cashiermenu2').setVisible(false)
 			$('#showmenu').setVisible(true)
+			$('#customermenu').setVisible(false)
 	    })
 	    $('#btnback').on('Click',{
 	    	$('#showlogin').setVisible(true)
@@ -171,6 +174,13 @@ class IndexComposer extends GrailsComposer {
 	        outdata.datainput = $('#userid')[0].text
 	        outdata.save()
 	        Executions.sendRedirect("/roomReservation.zul")
+	    })
+	     $('#btneventcustomer').on('Click',{
+	     	def outdata = DataSignIn.findById("2")
+	        outdata.datainput = $('#userid')[0].text
+	        outdata.save()
+	    	Executions.sendRedirect("/eventcustomer.zul")
+	    	alert("ยินดีต้อนรับ")
 	    })
     }
 }
