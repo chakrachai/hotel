@@ -20,7 +20,7 @@
                                  <image src="${z.resource(dir:'images/DEX', file:'left.png')}"/>
 
                                  <div align="center" height="54px" width="503px" style="background:#FFFFFF"><vbox> <div align="center"><label value="ใส่รหัสบัตรประชาชน"/></div>
-                                    <hbox><textbox  width="350px" style="text-align: center" /><button id="chkx" height="23px" width="100px" label="ตรวจสอบ"/></hbox>
+                                    <hbox><textbox id="idx"  width="350px" style="text-align: center" /><button id="chkx" height="23px" width="100px" label="ตรวจสอบ"/></hbox>
                                 </vbox></div>
 
                                  <div align="right"><image src="${z.resource(dir:'images/DEX', file:'right.png')}"/></div>
