@@ -149,9 +149,9 @@ class EmployeeComposer extends GrailsComposer {
                     b.save()
 
             
-            
-            
-            def c = new TimeWork(employee:b,timein:"8.00",timeout:"-")
+            def borrowday = new Date()
+            def g = borrowday.format("hh:mm a")
+            def c = new TimeWork(employee:b,timein:g,timeout:"-")
             c.save()
 
 
