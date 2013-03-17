@@ -165,6 +165,7 @@ class EventcustomerComposer extends GrailsComposer {
                     )
                 mkeventc.save()
                 alert("save")
+                 alert("พิมพ์หน้านี้ เพื่อนำไปยืนยัน")
                 })
             $('#btnSeminarc').on('click',{
                   String typeCarc = "Seminar"
@@ -178,6 +179,7 @@ class EventcustomerComposer extends GrailsComposer {
                     )
                 mkeventc.save()
                   alert("save")
+                   alert("พิมพ์หน้านี้ เพื่อนำไปยืนยัน")
                 })
             $('#btnMeetc').on('click',{
                   String typeCarc = "Meeting"
@@ -191,6 +193,7 @@ class EventcustomerComposer extends GrailsComposer {
                     )
                 mkeventc.save()
                   alert("save")
+                   alert("พิมพ์หน้านี้ เพื่อนำไปยืนยัน")
                 })
             $('#btnWeddingc').on('click',{
                   String typeCarc = "Wedding"
@@ -204,6 +207,7 @@ class EventcustomerComposer extends GrailsComposer {
                     )
                 mkeventc.save()
                   alert("save")
+                  alert("พิมพ์หน้านี้ เพื่อนำไปยืนยัน")
                 })
     }
 }
