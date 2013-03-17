@@ -42,17 +42,17 @@
                             <div align="center"><separator/><label value="ข้อมูลสมาชิก" /></div>
                             <separator/>
                             <separator/>
-                            <div align="left"><label value="ชื่อ  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="นามสกุล  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="เพศ  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="วันเกิด  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="อายุ  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="สัญชาติ  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="ที่อยู่  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="ที่อยู่ Email  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="รหัสสมาชิก  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="เบอร์โทร  :  " /><label id="" value="" /></div><separator/>
-                            <div align="left"><label value="ประเภทสมาชิก  :  " /><label id="" value="" /></div><separator/>
+                            <div align="left"><label value="ชื่อ  :  " /><label id="nx" value="" /></div><separator/>
+                            <div align="left"><label value="นามสกุล  :  " /><label id="lx" value="" /></div><separator/>
+                            <div align="left"><label value="เพศ  :  " /><label id="sx" value="" /></div><separator/>
+                            <div align="left"><label value="วันเกิด  :  " /><label id="bx" value="" /></div><separator/>
+                            <div align="left"><label value="อายุ  :  " /><label id="ax" value="" /></div><separator/>
+                            <div align="left"><label value="สัญชาติ  :  " /><label id="nax" value="" /></div><separator/>
+                            <div align="left"><label value="ที่อยู่  :  " /><label id="adx" value="" /></div><separator/>
+                            <div align="left"><label value="ที่อยู่ Email  :  " /><label id="mx" value="" /></div><separator/>
+                            <div align="left"><label value="รหัสสมาชิก  :  " /><label id="ix" value="" /></div><separator/>
+                            <div align="left"><label value="เบอร์โทร  :  " /><label id="cx" value="" /></div><separator/>
+                            <div align="left"><label value="ประเภทสมาชิก  :  " /><label id="tx" value="" /></div><separator/>
                             <separator/>
                             <separator/>
                             <separator/>
@@ -66,19 +66,19 @@
                         <div align="center"><separator/>
                         <label value="สิ่งที่ลูกค้าจะได้รับ"/><separator/>
                         </div>
-                        <hbox><checkbox/><label value="ทั่วไป"/></hbox>
+                        <hbox><checkbox checked="true"/><label value="ทั่วไป"/></hbox>
                         <hbox><label value="แผนกต้อนรับส่วนหน้า 24 ชั่วโมง , หนังสือพิมพ์, สวนหย่อม, ลานระเบียง, ห้องปลอดบุหรี่, ห้องพัก/สิ่งอำนวยความสะดวกสำหรับผู้พิการ, หัองสำหรับครอบครัว, ลิฟต์, ตู้นิรภัย, บริการรับฝากสัมภาระ, เครื่องปรับอากาศ, เขตสูบบุหรี่, พื้นที่อาบแดด"/></hbox><separator/>
                         
-                        <hbox><checkbox/><label value="กิจกรรม"/></hbox>
+                        <hbox><checkbox checked="true"/><label value="กิจกรรม"/></hbox>
                         <hbox><label value="ศูนย์ออกกำลังกาย, ห้องเกม, สนามเด็กเล่น, สนุกเกอร์, สิ่งอำนวยความสะดวกสำหรับจัดบาร์บีคิว , สระว่ายน้ำกลางแจ้ง (เปิดตลอดปี)"/></hbox><separator/>
                         
-                        <hbox><checkbox/><label value="บริการ"/></hbox>
+                        <hbox><checkbox checked="true"/><label value="บริการ"/></hbox>
                         <hbox><label value="บริการรูมเซอร์วิส, รถรับส่งสนามบิน, ศูนย์บริการธุรกิจ, บริการรับเลี้ยงเด็กเล็ก, บริการซักรีด, บริการซักแห้ง, บริการรีดผ้า, แลกเปลี่ยนเงินตรา, เครื่องโทรสาร/เครื่องสำเนาเอกสาร, ตู้ถอนเงินสด/เอทีเอ็ม, บริการผู้ช่วยส่วนตัว, บริการรถรับส่ง (มีค่าธรรมเนียม)"/></hbox><separator/>
 
-                        <hbox><checkbox/><label value="อินเทอร์เน็ต"/></hbox>
+                        <hbox><checkbox checked="true" /><label value="อินเทอร์เน็ต"/></hbox>
                         <hbox><label value="อินเทอร์เน็ตไร้สาย ให้บริการทั่วโรงแรม และไม่มีค่าบริการ"/></hbox><separator/>
 
-                        <hbox><checkbox/><label value="สิทธิพิเศษ"/></hbox>
+                        <hbox><checkbox id="ck" checked="false"/><label value="สิทธิพิเศษ"/></hbox>
                         <hbox><label value="มีที่จอดรถส่วนบุคคลที่โรงแรม (ไม่จำเป็นต้องสำรองที่จอดรถ) ไม่มีค่าบริการ
                             ฟรี! สำหรับเด็กอายุต่ำกว่า 6 ปีจำนวน สูงสุด 2 ท่าน สามารถพักฟรี เมื่อใช้เตียงที่มีอยู่ในห้องพัก
 ฟรี! สำหรับเด็กอายุต่ำกว่า 2 ปีจำนวน สูงสุด 2 ท่าน สามารถพักฟรี เมื่อใช้เตียงเด็กอ่อน
