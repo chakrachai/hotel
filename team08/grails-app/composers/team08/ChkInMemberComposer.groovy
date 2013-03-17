@@ -9,5 +9,14 @@ class ChkInMemberComposer extends GrailsComposer {
 
     def afterCompose = { window ->
         // initialize components here
+        $('#chkx').on('click',{
+            $('#g1').setOpen(false)
+            $('#g2').setOpen(true)
+    	})
+    	$('#backx').on('click',{
+            $('#g2').setOpen(false)
+            $('#g1').setOpen(true)
+    	})
+    	
     }
 }
