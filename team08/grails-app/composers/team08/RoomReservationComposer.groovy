@@ -25,44 +25,49 @@ class RoomReservationComposer extends GrailsComposer {
             }else{
               sa = Integer.parseInt($('#customerMany')[0].text)
             }
-    		def roonreservation = new Room(
-            roomNo : $('#room')[0].text,
-            roomflore : $('#classRoom')[0].text,
-            dayIn : $('#dayin')[0].text+" "+$('#mountin')[0].text+" "+$('#yearin')[0].text,
-            dayOut : $('#dayout')[0].text+" "+$('#mountout')[0].text+" "+$('#yearout')[0].text,
-            roomStatus: "จอง",
-            customermany:sa,
-            customer:customer,
-            employee:null
-        ).save()
-    		alert("save")
-		    if($('#roomList')!=null)
-		        $('#roomList > listitem').detach()
-		    for (dataroom in Room.findAllByCustomer(customer)){         
-		        if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
-		            $('#roomList').append { 
-		                listitem(value:dataroom){
-			                listcell{   
-	                            label(value:dataroom.roomflore)
-	                        }
-	                        listcell{   
-	                            label(value:dataroom.roomNo)
-	                        }
-	                        listcell{   
-	                            label(value:dataroom.customermany+"")
-	                        }
-	                        listcell{   
-	                            label(value:dataroom.dayIn)
-	                        }
-	                        listcell{   
-	                            label(value:dataroom.dayOut)
-	                        }
+            if($('#room')[0].text =="ห้องที่" || $('#classRoom')[0].text =="ชั้นที่" || $('#dayin')[0].text =="วัน" || $('#dayout')[0].text =="วัน" || $('#mountin')[0].text =="เดือน" || $('#mountout')[0].text =="เดือน" || $('#yearin')[0].text =="ปี" || $('#yearout')[0].text =="ปี"){
+                alert("กรุณากรอกข้อมูล")
+            }
+            else{
+	    		def roonreservation = new Room(
+		            roomNo : $('#room')[0].text,
+		            roomflore : $('#classRoom')[0].text,
+		            dayIn : $('#dayin')[0].text+" "+$('#mountin')[0].text+" "+$('#yearin')[0].text,
+		            dayOut : $('#dayout')[0].text+" "+$('#mountout')[0].text+" "+$('#yearout')[0].text,
+		            roomStatus: "จอง",
+		            customermany:sa,
+		            customer:customer,
+		            employee:null
+	        	).save()
+	    		alert("save")
+			    if($('#roomList')!=null)
+			        $('#roomList > listitem').detach()
+			    for (dataroom in Room.findAllByCustomer(customer)){         
+			        if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
+			            $('#roomList').append { 
+			                listitem(value:dataroom){
+				                listcell{   
+		                            label(value:dataroom.roomflore)
+		                        }
+		                        listcell{   
+		                            label(value:dataroom.roomNo)
+		                        }
+		                        listcell{   
+		                            label(value:dataroom.customermany+"")
+		                        }
+		                        listcell{   
+		                            label(value:dataroom.dayIn)
+		                        }
+		                        listcell{   
+		                            label(value:dataroom.dayOut)
+		                        }
 
-		                }
-		            }
-		        }
+			                }
+			            }
+			        }
 
-		    }
+			    }
+			}
     	})
 //======================================================================reservation=======================
         $('#roomList').on('select',{
@@ -123,6 +128,7 @@ class RoomReservationComposer extends GrailsComposer {
             	roomselect.roomStatus = "ว่าง"
             	roomselect.save()
 				roomselect.delete()
+				//Thread.currentThread().sleep(0.3*1000) =====>>>>>>>delay
             for (dataroom in Room.findAllByCustomer(customer)){
 		        if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
 		            $('#roomList').append { 
@@ -151,6 +157,34 @@ class RoomReservationComposer extends GrailsComposer {
     })
 
 //============================================================================roomselect==========================================================
+	$('#reload').on('click',{
+		for (dataroom in Room.findAllByCustomer(customer)){         
+		    if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
+		        $('#roomList').append { 
+		    		listitem(value:dataroom){
+			        	listcell{   
+	                    	label(value:dataroom.roomflore)
+	                	}
+	                	listcell{   
+	                    	label(value:dataroom.roomNo)
+	                    }
+	                    listcell{   
+	                    	label(value:dataroom.customermany+"")
+	                    }
+	                    listcell{   
+	                    	label(value:dataroom.dayIn)
+	                    }
+	                    listcell{   
+	                        label(value:dataroom.dayOut)
+	                    }
+
+		            }
+		        }
+		    }
+
+	 	}
+	})
+//===============================================================================reload============================================
 		    for (dataroom in Room.findAllByCustomer(customer)){         
 		        if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
 		            $('#roomList').append { 

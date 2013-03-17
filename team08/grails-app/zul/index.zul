@@ -15,19 +15,17 @@
             .psize {font-size: 1em;font-align:"center"}
             .cen {background-color: #990000; color: #ffffff; font-size: 1em}
         </style>
-        <vbox>
-             <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>
-        </vbox>
-        <hbox>
-            <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>                      
-        <groupbox width="250px" height ="100px">
-            <vbox id="showlogin" align = "center" visible="true">
+             <separator height="250px" />
+        <hbox>    
+        <separator width="500px" />                
+        <groupbox width="250px" height="100px">
+            <vbox id="showlogin" align= "center" visible="true">
                 <hbox id= "databox1"><label value="Username:"/><textbox id="userid"/></hbox>
                 <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid" type="password"/></hbox>
                 <hbox id= "databox3"><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
             </vbox>
-            <vbox id="showmenu" align = "center" visible="false">
-                <label sclass = "psize" value= "กรุณาเลือกการทำรายการ"/>
+            <vbox id="showmenu" align= "center" visible="false">
+                <label sclass= "psize" value= "กรุณาเลือกการทำรายการ"/>
                 <hbox>
                     <button id= "btnroomfix" label="จองห้อง"/>
                     <button id= "btnmoney" label="คิดเงิน"/>
@@ -40,8 +38,8 @@
                     <button id= "btndateout" label="ลงเวลาออก"/>
                 </hbox>
             </vbox>
-            <vbox id="showmenunormal" align = "center" visible="false">
-                <label sclass = "psize" value= "กรุณาเลือกการทำรายการ"/>
+            <vbox id="showmenunormal" align= "center" visible="false">
+                <label sclass= "psize" value= "กรุณาเลือกการทำรายการ"/>
                 <hbox>
                     <button id= "btnback" label="ย้อนกลับ"/>
                     <button id= "btndatein1" label="ลงเวลาเข้า"/>

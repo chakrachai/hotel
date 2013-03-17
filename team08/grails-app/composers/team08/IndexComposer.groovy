@@ -18,7 +18,6 @@ class IndexComposer extends GrailsComposer {
 	    	}else{
 		    	def finddata = $('#userid')[0].text	
 		    	def employee_data = Employee.findByIdem(finddata)
-
 	  			if(employee_data == null){
 	       			alert("ไม่มีข้อมูล กรุณาตรวจสอบอีกครั้ง")
 	       			$('#userid')[0].text = ""
@@ -51,21 +50,6 @@ class IndexComposer extends GrailsComposer {
 	        				$('#userid')[0].text = ""
 	        				$('#passwordid')[0].text = ""
 	        			}
-
-	        		}else if(employee_data.classem == "Housekeeper"){
-	        			if($('#passwordid')[0].text == employee_data.passem){
-	        				def outdata1 = DataSignIn.findById("2")
-	        					outdata1.datainput = $('#userid')[0].text
-	        					outdata1.save()
-	        					Executions.sendRedirect("/employee.zul")
-	    						alert("ยินดีต้อนรับ")
-		        			}			
-	        			else{
-	        				alert("รหัสไม่ถูกต้อง")
-	        				$('#userid')[0].text = ""
-	        				$('#passwordid')[0].text = ""
-	        			}
-
 	        		}else if(employee_data.classem == "Head Housekeeper"||employee_data.classem == "serviceCustomer"||employee_data.classem == "Reception"||employee_data.classem == "Concierge"||employee_data.classem == "Hall Porter"||employee_data.classem == "Security"||employee_data.classem == "Doorman"||employee_data.classem == "Housekeeper"){
 	        			if($('#passwordid')[0].text == employee_data.passem){
 	        				def outdata = DataSignIn.findById("2")

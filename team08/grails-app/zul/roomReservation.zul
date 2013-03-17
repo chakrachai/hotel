@@ -99,7 +99,7 @@
                     </groupbox>
                     <separator/>
                     <groupbox>
-                        <label value="ห้องที่จองอยู่"/>
+                        <hbox><label value="ห้องที่จองอยู่"/><separator/><button label="Reload" id="reload"/></hbox>
                         <separator/>
                         <listbox id="roomList" height="160px">
                             <listhead>

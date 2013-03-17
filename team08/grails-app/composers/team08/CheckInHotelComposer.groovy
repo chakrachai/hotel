@@ -53,6 +53,9 @@ class CheckInHotelComposer extends GrailsComposer {
             }else{
               sa = Integer.parseInt($('#customerMany')[0].text)
             }
+            if($('#room')[0].text =="ห้องที่" || $('#classRoom')[0].text =="ชั้นที่" || $('#dayin')[0].text =="วัน" || $('#dayout')[0].text =="วัน" || $('#mountin')[0].text =="เดือน" || $('#mountout')[0].text =="เดือน" || $('#yearin')[0].text =="ปี" || $('#yearout')[0].text =="ปี"){
+                alert("กรุณากรอกข้อมูล")
+            }else{
             def checkindata = new Room(
             roomNo : $('#room')[0].text,
             roomflore : $('#classRoom')[0].text,
@@ -62,101 +65,39 @@ class CheckInHotelComposer extends GrailsComposer {
             customermany:sa,
             customer:MemberCustomer.findByMemberId(datacustomer),
             employee:Employee.findByIdem(employeedata)
-        ).save()
-        $('#searchCustomer').setVisible(true)
-        alert("save ห้องพักถูกใช้งาน")
-            $('#room')[0].text ="ห้องที่"
-            $('#classRoom')[0].text ="ชั้นที่"
-            $('#dayin')[0].text =""
-            $('#dayout')[0].text ="วัน"
-            $('#customerName')[0].text =""
-            $('#customerLastname')[0].text =""
-            $('#passport')[0].text =""
-            $('#customerMany')[0].text ="จำนวน"
-            $('#customerId')[0].text =""
+            ).save()
             $('#searchCustomer').setVisible(true)
-            $('#customerName').setDisabled(true)
-            $('#customerLastname').setDisabled(false)
-            $('#passport').setDisabled(false)
-            $('#customerId').setDisabled(false)
-    if($('#roomList')!=null)
-            $('#roomList > listitem').detach()
-    for (dataroom in Room.findAll()){         
-
-        if(dataroom.customerId == null){
-            customernamedata=employeedata
-        }else{
-            customernamedata = dataroom.customer.fName+""
-        }
-
-        if(dataroom.roomStatus!="ว่าง"){
-            $('#roomList').append { 
-                listitem(value:dataroom){
-                    listcell{   
-                        label(value:dataroom.roomflore)
-                    }
-                    listcell{   
-                        label(value:dataroom.roomNo)
-                    }
-                    listcell{   
-                        label(value:customernamedata)
-                    }
-                    listcell{   
-                        label(value:dataroom.dayIn)
-                    }
-                    listcell{   
-                        label(value:dataroom.dayOut)
-                    }
-                    listcell{   
-                        label(value:dataroom.roomStatus)
-                    }
-
-                }
-            }
-        }
-
-    }
-
-    }
-})
-//==================================================================checkinbutton===========================================================
-        $('#outroom').on('click',{
+            alert("save ห้องพักถูกใช้งาน")
+                $('#room')[0].text ="ห้องที่"
+                $('#classRoom')[0].text ="ชั้นที่"
+                $('#dayin')[0].text ="วัน"
+                $('#dayout')[0].text ="วัน"
+                $('#mountin')[0].text ="เดือน"
+                $('#mountout')[0].text ="เดือน"
+                $('#yearin')[0].text ="ปี"
+                $('#yearout')[0].text ="ปี"
+                $('#customerName')[0].text =""
+                $('#customerLastname')[0].text =""
+                $('#passport')[0].text =""
+                $('#customerMany')[0].text ="จำนวน"
+                $('#customerId')[0].text =""
+                $('#searchCustomer').setVisible(true)
+                $('#customerName').setDisabled(true)
+                $('#customerLastname').setDisabled(false)
+                $('#passport').setDisabled(false)
+                $('#customerId').setDisabled(false)
         if($('#roomList')!=null)
-            $('#roomList > listitem').detach()
-            def checkindata = new Room(
-            roomNo : $('#room')[0].text,
-            roomflore : $('#classRoom')[0].text,
-            dayIn : $('#dayin')[0].text+" "+$('#mountin')[0].text+" "+$('#yearin')[0].text,
-            dayOut : $('#dayout')[0].text+" "+$('#mountout')[0].text+" "+$('#yearout')[0].text,
-            roomStatus: "ห้องชำรุด",
-            customermany:1,
-            customer:null,
-            employee:Employee.findByIdem(employeedata)
-        ).save()
-        $('#searchCustomer').setVisible(true)
-            $('#room')[0].text ="ห้องที่"
-            $('#classRoom')[0].text ="ชั้นที่"
-            $('#dayin')[0].text =""
-            $('#dayout')[0].text ="วัน"
-            $('#customerName')[0].text =""
-            $('#customerLastname')[0].text =""
-            $('#passport')[0].text =""
-            $('#customerMany')[0].text ="จำนวน"
-            $('#customerId')[0].text =""
-            $('#customerLastname').setDisabled(false)
-            $('#passport').setDisabled(false)
-            $('#customerId').setDisabled(false)
-            alert ("Save ห้องชำรุด")
-    
-        for (dataroom in Room.findAll()){                   
-            $('#roomList').append {
-                if(dataroom.customerId == null){
-                    customernamedata=employeedata
-                }
-                else{
-                    customernamedata = dataroom.customer.fName+""
-                }
-                if(dataroom.roomStatus!="ว่าง"){
+                $('#roomList > listitem').detach()
+        for (dataroom in Room.findAll()){         
+
+            if(dataroom.customerId == null){
+                customernamedata=employeedata
+            }else{
+                customernamedata = dataroom.customer.fName+""
+            }
+
+            if(dataroom.roomStatus!="ว่าง"){
+                $('#roomList').append { 
                     listitem(value:dataroom){
                         listcell{   
                             label(value:dataroom.roomflore)
@@ -174,20 +115,102 @@ class CheckInHotelComposer extends GrailsComposer {
                             label(value:dataroom.dayOut)
                         }
                         listcell{   
-                            label(value:dataroom.roomStatus+"  ")
+                            label(value:dataroom.roomStatus)
                         }
 
                     }
                 }
-            }   
-        }     
+            }
+
+        } 
+    }
+
+
+    }
+})
+//==================================================================checkinbutton===========================================================
+        $('#outroom').on('click',{
+            if($('#room')[0].text =="ห้องที่" || $('#classRoom')[0].text =="ชั้นที่" || $('#dayin')[0].text =="วัน" || $('#dayout')[0].text =="วัน" || $('#mountin')[0].text =="เดือน" || $('#mountout')[0].text =="เดือน" || $('#yearin')[0].text =="ปี" || $('#yearout')[0].text =="ปี"){
+                alert("กรุณากรอกข้อมูล")
+            }
+            else{
+                if($('#roomList')!=null)
+                    $('#roomList > listitem').detach()
+                def checkindata = new Room(
+                roomNo : $('#room')[0].text,
+                roomflore : $('#classRoom')[0].text,
+                dayIn : $('#dayin')[0].text+" "+$('#mountin')[0].text+" "+$('#yearin')[0].text,
+                dayOut : $('#dayout')[0].text+" "+$('#mountout')[0].text+" "+$('#yearout')[0].text,
+                roomStatus: "ห้องชำรุด",
+                customermany:1,
+                customer:null,
+                employee:Employee.findByIdem(employeedata)
+            ).save()
+            $('#searchCustomer').setVisible(true)
+                $('#room')[0].text ="ห้องที่"
+                $('#classRoom')[0].text ="ชั้นที่"
+                $('#dayin')[0].text ="วัน"
+                $('#dayout')[0].text ="วัน"
+                $('#mountin')[0].text ="เดือน"
+                $('#mountout')[0].text ="เดือน"
+                $('#yearin')[0].text ="ปี"
+                $('#yearout')[0].text ="ปี"
+                $('#customerName')[0].text =""
+                $('#customerLastname')[0].text =""
+                $('#passport')[0].text =""
+                $('#customerMany')[0].text ="จำนวน"
+                $('#customerId')[0].text =""
+                $('#customerLastname').setDisabled(false)
+                $('#passport').setDisabled(false)
+                $('#customerId').setDisabled(false)
+                alert ("Save ห้องชำรุด")
+        
+            for (dataroom in Room.findAll()){                   
+                $('#roomList').append {
+                    if(dataroom.customerId == null){
+                        customernamedata=employeedata
+                    }
+                    else{
+                        customernamedata = dataroom.customer.fName+""
+                    }
+                    if(dataroom.roomStatus!="ว่าง"){
+                        listitem(value:dataroom){
+                            listcell{   
+                                label(value:dataroom.roomflore)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomNo)
+                            }
+                            listcell{   
+                                label(value:customernamedata)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayIn)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayOut)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomStatus+"  ")
+                            }
+
+                        }
+                    }
+                }   
+            }
+            }
+     
     })
 //=================================================================ปุ่มแจ้งซ้อม==============================================================
         $('#clearbtn').on('click',{
             $('#room')[0].text ="ห้องที่"
             $('#classRoom')[0].text ="ชั้นที่"
-            $('#dayin')[0].text =""
+            $('#dayin')[0].text ="วัน"
             $('#dayout')[0].text ="วัน"
+            $('#mountin')[0].text ="เดือน"
+            $('#mountout')[0].text ="เดือน"
+            $('#yearin')[0].text ="ปี"
+            $('#yearout')[0].text ="ปี"
             $('#customerName')[0].text =""
             $('#customerLastname')[0].text =""
             $('#passport')[0].text =""
@@ -256,28 +279,55 @@ class CheckInHotelComposer extends GrailsComposer {
 
                 if(dataroom.roomStatus!="ว่าง"){
                    if(roomselect.id == dataroom.id){
-                    listitem(value:dataroom){
-                        listcell{   
-                            label(value:dataroom.roomflore)
-                        }
-                        listcell{   
-                            label(value:dataroom.roomNo)
-                        }
-                        listcell{   
-                            label(value:customernamedata)
-                        }
-                        listcell{   
-                            label(value:dataroom.dayIn)
-                        }
-                        listcell{   
-                            label(value:dataroom.dayOut)
-                        }
-                        listcell{   
-                            label(value:dataroom.roomStatus+"  ")
-                            button(label:"กลับสู่สถานะว่าง")
-                        }
+                    if(roomselect.roomStatus=="จอง"){
+                        listitem(value:dataroom){
+                            listcell{   
+                                label(value:dataroom.roomflore)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomNo)
+                            }
+                            listcell{   
+                                label(value:customernamedata)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayIn)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayOut)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomStatus+"  ")
+                                button(label:"ยกเลิกจอง")
+                                button(label:"เข้าพัก")
+                            }
 
+                        }
+                    }else{
+                        listitem(value:dataroom){
+                            listcell{   
+                                label(value:dataroom.roomflore)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomNo)
+                            }
+                            listcell{   
+                                label(value:customernamedata)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayIn)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayOut)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomStatus+"  ")
+                                button(label:"กลับสู่สถานะว่าง")
+                            }
+
+                        }
                     }
+                    
                 }else{
                      listitem(value:dataroom){
                     listcell{   
@@ -344,7 +394,78 @@ class CheckInHotelComposer extends GrailsComposer {
             }
         }
         })
+//===========================================================================checkout=============================================================================
+        $('#roomList > listitem > listcell > button[label="ยกเลิกจอง"]').on('click',{
+        $('#roomList > listitem').detach()
+            alert("ยกเลิกจอง")
+                roomselect.roomStatus = "ว่าง"
+                roomselect.save()
+                roomselect.delete()
+                //Thread.currentThread().sleep(0.3*1000) =====>>>>>>>delay
+            for (dataroom in Room.findAll()){
+                if(dataroom.roomStatus!="ว่าง"){
+                    $('#roomList').append { 
+                        listitem(value:dataroom){
+                            listcell{   
+                                label(value:dataroom.roomflore)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomNo)
+                            }
+                            listcell{   
+                                label(value:customernamedata)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayIn)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayOut)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomStatus)
+                            }
+
+                        }
+                    }
+                }
+            }
         })
+//==========================================================================================cancleroom==============================
+        $('#roomList > listitem > listcell > button[label="เข้าพัก"]').on('click',{
+        $('#roomList > listitem').detach()
+            alert("เข้าพัก")
+                roomselect.roomStatus = "ใช้งาน"
+                roomselect.save()
+                //Thread.currentThread().sleep(0.3*1000) =====>>>>>>>delay
+            for (dataroom in Room.findAll()){
+                if(dataroom.roomStatus!="ว่าง"){
+                    $('#roomList').append { 
+                        listitem(value:dataroom){
+                            listcell{   
+                                label(value:dataroom.roomflore)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomNo)
+                            }
+                            listcell{   
+                                label(value:customernamedata)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayIn)
+                            }
+                            listcell{   
+                                label(value:dataroom.dayOut)
+                            }
+                            listcell{   
+                                label(value:dataroom.roomStatus)
+                            }
+
+                        }
+                    }
+                }
+            }
+        })
+    })
 //=============================================================================disabled="true"======clerRoom======================================================
         $('#searchdatabtn').on('click',{
             if($('#tsearch')[0].text+"" == null || $('#tsearch')[0].text+"" == ""){
@@ -484,6 +605,43 @@ class CheckInHotelComposer extends GrailsComposer {
             Executions.sendRedirect("/index.zul")
         })
 //=====================================================================================signout=============================================
+        if($('#roomList')!=null)
+                $('#roomList > listitem').detach()
+        for (dataroom in Room.findAll()){         
+            if(dataroom.customerId == null){
+                customernamedata=employeedata
+            }else{
+                customernamedata = dataroom.customer.fName+""
+            }
+
+            if(dataroom.roomStatus!="ว่าง"){
+                $('#roomList').append { 
+                    listitem(value:dataroom){
+                        listcell{   
+                            label(value:dataroom.roomflore)
+                        }
+                        listcell{   
+                            label(value:dataroom.roomNo)
+                        }
+                        listcell{   
+                            label(value:customernamedata)
+                        }
+                        listcell{   
+                            label(value:dataroom.dayIn)
+                        }
+                        listcell{   
+                            label(value:dataroom.dayOut)
+                        }
+                        listcell{   
+                            label(value:dataroom.roomStatus)
+                        }
+
+                    }
+                }
+            }
+
+        } 
+//==============================================================================loaddata======================================================
         $('#classRoom').on('select',{
                 $('#room').append{
                     for(int count=1;count<=30;count++)
