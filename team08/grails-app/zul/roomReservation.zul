@@ -25,17 +25,16 @@
                             <label value="ข้อมูลสมาชิก"/>
                             <separator/>
                             <hbox>
-                                <label value="รหัส: "/><textbox/>
-                                <label value="ชื่อ: "/><textbox/>
-                                <label value="นามสกุล: "/><textbox/>
-                                <label value="สัญชาติ: "/><textbox/>
+                                <label value="รหัส: "/><textbox id="customerid"/>
+                                <label value="ชื่อ: "/><textbox id="customername"/>
+                                <label value="นามสกุล: "/><textbox id="customerlname"/>
+                                <label value="สัญชาติ: "/><textbox id="customernation"/>
                             </hbox>
                             <hbox>                                
-                                <label value="e-mail: "/><textbox/>
-                                <label value="เบอร์โทรศัพท์ที่ติดต่อได้: "/><textbox/>
+                                <label value="e-mail: "/><textbox id="customeremail"/>
+                                <label value="เบอร์โทรศัพท์ที่ติดต่อได้: "/><textbox id="customerphone"/>
                                 <button label="singout"/>
                             </hbox>
-
                         </vbox>
                     </groupbox>
                     <separator/>
@@ -62,7 +61,6 @@
                                     <separator width="5px"/>
                                     <combobox id="room" value="ห้องที่" width="150px">
                                     </combobox>
-                                
                                     <separator width="30px"/>
                                     <label value="จำนวนผู้พัก :"/>
                                     <separator width="5px"/>
@@ -71,7 +69,7 @@
                                         <comboitem label="2"/>
                                         <comboitem label="3"/>
                                         <comboitem label="4"/>
-                                        </combobox>
+                                    </combobox>
                              </hbox>
                              <hbox>
                                     <separator width="30px"/>
