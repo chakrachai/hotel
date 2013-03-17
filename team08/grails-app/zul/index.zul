@@ -15,38 +15,36 @@
             .psize {font-size: 1em;font-align:"center"}
             .cen {background-color: #990000; color: #ffffff; font-size: 1em}
         </style>
-        <vbox>
-             <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>
-        </vbox>
-        <hbox>
-            <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>        <separator/>           <separator/>        <separator/>        <separator/>        <separator/>        <separator/>                      
-        <groupbox width="250px" height ="100px">
-            <vbox id="showlogin" align = "center" visible="true">
+             <separator height="230px"/>
+        <hbox>    
+        <separator width="350px"/>                
+        <groupbox width="470px" height="150px">
+            <vbox id="showlogin" align= "center" visible="true" width="470px">
+                <separator height="30px"/>
                 <hbox id= "databox1"><label value="Username:"/><textbox id="userid"/></hbox>
                 <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid" type="password"/></hbox>
                 <hbox id= "databox3"><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
             </vbox>
-            <vbox id="showmenu" align = "center" visible="false">
-                <label sclass = "psize" value= "กรุณาเลือกการทำรายการ"/>
-                <hbox>
-                    <button id= "btnroomfix" label="จองห้อง"/>
-                    <button id= "btnmoney" label="คิดเงิน"/>
-                    <button id= "btnroomevent" label="จองห้องจัดงาน"/>
-                    <button id= "btneventcustomer" label="จองห้องจัดงานลูกค้า"/>
+            <vbox id="showmenu" align= "center" visible="false">
+                <separator height="20px"/>
+                <label sclass= "psize" value= "กรุณาเลือกการทำรายการ"/>
+                <vbox>
+                    <hbox id="cashiermenu" visible="false">
+                        <button id= "btnroomfix" width="150px" label="จองห้อง"/>
+                        <button id= "btnmoney" width="150px" label="คิดเงิน"/>
+                        <button id= "btnroomevent" width="150px" label="จองห้องจัดงาน"/>
+                    </hbox>
+                    <hbox id="cashiermenu2" visible="false">
+                        <button id= "btneventcustomer" width="150px" label="จองห้องจัดงานลูกค้า"/>
+                        <button id= "btncustomer" width="150px" label="ข้อมูลลูกค้า"/>
+                        <button id= "btntime" width="150px" label="พนักงานลงเวลา"/>
+                    </hbox>
+                    <hbox id= "employeemenu" visible="false">
+                    <button id= "btndatein" width="150px" label="ลงเวลาเข้า"/>
+                    <button id= "btndateout" width="150px" label="ลงเวลาออก"/>
+                    <button id= "btnback" width="150px" label="ย้อนกลับ"/>
                 </hbox>
-                <hbox>
-                    <button id= "btncustomer" label="ข้อมูลลูกค้า"/>
-                    <button id= "btndatein" label="ลงเวลาเข้า"/>
-                    <button id= "btndateout" label="ลงเวลาออก"/>
-                </hbox>
-            </vbox>
-            <vbox id="showmenunormal" align = "center" visible="false">
-                <label sclass = "psize" value= "กรุณาเลือกการทำรายการ"/>
-                <hbox>
-                    <button id= "btnback" label="ย้อนกลับ"/>
-                    <button id= "btndatein1" label="ลงเวลาเข้า"/>
-                    <button id= "btndateout1" label="ลงเวลาออก"/>
-                </hbox>
+                </vbox>
             </vbox>
         </groupbox>
     </hbox>
