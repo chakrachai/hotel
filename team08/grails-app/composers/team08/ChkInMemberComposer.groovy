@@ -56,6 +56,10 @@ alert("กรุณากรอกเลขบัตรประจำตัว�
             $('#g2').setOpen(false)
             $('#g1').setOpen(true)
         })
+        
+        $('#into').on('click',{
+            Executions.sendRedirect("/index.zul")
+        })
     }
 }
 

@@ -56,7 +56,7 @@
                             <separator/>
                             <separator/>
                             <separator/>
-                            <div align="center"><button label="เข้าสู้หน้าจองห้องพัก" width="160px" height="33px"/></div>
+                            <div align="center"><button id="into" label="เข้าสู้หน้าจองห้องพัก" width="160px" height="33px"/></div>
                             <separator/>
                             <div align="center"><button id="backx" label="กลับสู่หนเาเช็คอินสมาชิก" width="160px" height="33px"/></div>
                         </div>
