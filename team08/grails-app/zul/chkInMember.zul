@@ -9,7 +9,7 @@
 
     <window apply="team08.ChkInMemberComposer">
 
-        <groupbox id="" open="false" style="background:#000000">
+        <groupbox id="g1" open="true" style="background:#000000">
             <div align="center"><vbox><div height="20px" width="100%"/>
             <panel   height="537px" width="700px" style="margin-bottom:3px" border="normal">
                     <panelchildren>
@@ -20,7 +20,7 @@
                                  <image src="${z.resource(dir:'images/DEX', file:'left.png')}"/>
 
                                  <div align="center" height="54px" width="503px" style="background:#FFFFFF"><vbox> <div align="center"><label value="ใส่รหัสบัตรประชาชน"/></div>
-                                    <hbox><textbox  width="350px" style="text-align: center" /><button height="23px" width="100px" label="ตรวจสอบ"/></hbox>
+                                    <hbox><textbox  width="350px" style="text-align: center" /><button id="chkx" height="23px" width="100px" label="ตรวจสอบ"/></hbox>
                                 </vbox></div>
 
                                  <div align="right"><image src="${z.resource(dir:'images/DEX', file:'right.png')}"/></div>
@@ -34,7 +34,7 @@
         </groupbox>
 
 
-    <groupbox id="" open="true" style="background:#000000">
+    <groupbox id="g2" open="false" style="background:#000000">
             <div align="center"><vbox><div height="50px" width="100%"/>
             <panel   height="537px" width="1095px" style="margin-bottom:3px" border="normal">
                     <panelchildren><image src="${z.resource(dir:'images/DEX', file:'bn.png')}"/>
@@ -58,7 +58,7 @@
                             <separator/>
                             <div align="center"><button label="เข้าสู้หน้าจองห้องพัก" width="160px" height="33px"/></div>
                             <separator/>
-                            <div align="center"><button label="กลับสู่หนเาเช็คอินสมาชิก" width="160px" height="33px"/></div>
+                            <div align="center"><button id="backx" label="กลับสู่หนเาเช็คอินสมาชิก" width="160px" height="33px"/></div>
                         </div>
                         <div height="100%" width="2px" style="background:#000000"/>
 
