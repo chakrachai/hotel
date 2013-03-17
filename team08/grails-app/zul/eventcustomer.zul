@@ -29,7 +29,7 @@
                         <hbox>
                         <label value="ID :"/>
                         <separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/><separator/>
-                        <label id="idcus" value="------"/>
+                        <label id="idcusc" value="------"/>
                         </hbox>
                           <hbox>
                         <label value="ชื่อ:"/>

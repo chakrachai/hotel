@@ -13,11 +13,49 @@ class EventcustomerComposer extends GrailsComposer {
         def scheckdatec
         def scchecklistc
         def keepidc
-        def keepidc2 = DataSignIn.findById("3")
+        def keepidc2 = DataSignIn.findById("5")
         def searchDatac = DataSignIn.get(2)
         def checksendc
         def checkDatec
 
+        if(searchDatac.datainput==null  || searchDatac.datainput==""){
+            if(keepidc2.datainput==null || keepidc2.datainput==""){
+                alert(keepidc2.datainput)
+                Executions.sendRedirect("/index.zul")
+            }else{
+                keepidc=keepidc2.datainput
+                checkuseridc = MemberCustomer.findByMemberId(keepidc)
+                    $('#idcusc').setValue(checkuseridc.memberId)
+                     $('#namec').setValue(checkuseridc.fName)
+                    $('#lnamec').setValue(checkuseridc.lName)
+                    $('#mnamec').setValue(checkuseridc.mName)
+                  $('#telc').setValue(checkuseridc.age)
+                 $('#addc').setValue(checkuseridc.address)
+                 $('#countryc').setValue(checkuseridc.nationality)
+                 $('#emailc').setValue(checkuseridc.emailAddress)
+            
+                  searchDatac.datainput = ""
+                  searchDatac.save()
+            }
+        }else{
+            keepidc = searchDatac.datainput
+            keepidc2.datainput = keepidc
+            keepidc2.save()
+            checkuseridc = MemberCustomer.findByMemberId(keepidc)
+                    $('#idcusc').setValue(checkuseridc.memberId)
+                     $('#namec').setValue(checkuseridc.fName)
+                    $('#lnamec').setValue(checkuseridc.lName)
+                    $('#mnamec').setValue(checkuseridc.mName)
+                  $('#telc').setValue(checkuseridc.age)
+                 $('#addc').setValue(checkuseridc.address)
+                 $('#countryc').setValue(checkuseridc.nationality)
+                 $('#emailc').setValue(checkuseridc.emailAddress)
+              
+                  searchDatac.datainput = ""
+                  searchDatac.save()
+
+        }
+        
 
 
 
@@ -33,14 +71,14 @@ class EventcustomerComposer extends GrailsComposer {
 
              $('#btnCheckc').on('click',{
                  scchecklistc=$('#listcheckroomrec').getSelectedItem().getLabel()
-             
+             alert(scchecklistc)
             checkDatec=$('#dateboxc').getText()
-             scheckdatec=MakeEventCustomer.findAllByTyperec(scchecklistc)
+             scheckdatec=MakeEvent.findAllByTypere(scchecklistc)
             def rubkarc
             for(checkloop in scheckdatec){
                 //alert(""+checkloop.datere)
-                if(checkDatec==checkloop.daterec){
-                rubkarc=checkloop.daterec
+                if(checkDatec==checkloop.datere){
+                rubkarc=checkloop.datere
             }
 
             }
@@ -110,17 +148,17 @@ class EventcustomerComposer extends GrailsComposer {
 
             }) 
 
-			$('#btnSendc').on('click',{
-				checksendc = $('#dateboxsendc').getText()
+            $('#btnSendc').on('click',{
+                checksendc = $('#dateboxsendc').getText()
                 alert(checksendc)
-				})
-			
-			       $('#btnCarc').on('click',{
+                })
+            
+                   $('#btnCarc').on('click',{
                  String typeCarc = "Carnival"
                 String priceCarc = "200000"
                 def mkeventc = new MakeEventCustomer(
                     customerc : checkuseridc,
-  					typerec : typeCarc,
+                    typerec : typeCarc,
                     pricerec : priceCarc,
                     daterec : checkDatec,
                     dateresendc : checksendc
@@ -133,7 +171,7 @@ class EventcustomerComposer extends GrailsComposer {
                 String priceCarc = "160000"
                 def mkeventc = new MakeEventCustomer(
                     customerc : checkuseridc,
-  					typerec : typeCarc,
+                    typerec : typeCarc,
                     pricerec : priceCarc,
                     daterec : checkDatec,
                     dateresendc : checksendc
@@ -146,7 +184,7 @@ class EventcustomerComposer extends GrailsComposer {
                 String priceCarc = "100000"
                 def mkeventc = new MakeEventCustomer(
                     customerc : checkuseridc,
-  					typerec : typeCarc,
+                    typerec : typeCarc,
                     pricerec : priceCarc,
                     daterec : checkDatec,
                     dateresendc : checksendc
@@ -159,7 +197,7 @@ class EventcustomerComposer extends GrailsComposer {
                 String priceCarc = "280000"
                 def mkeventc = new MakeEventCustomer(
                     customerc : checkuseridc,
-  					typerec : typeCarc,
+                    typerec : typeCarc,
                     pricerec : priceCarc,
                     daterec : checkDatec,
                     dateresendc : checksendc
