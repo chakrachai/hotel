@@ -33,6 +33,9 @@ class IndexComposer extends GrailsComposer {
 	        					$('#showlogin').setVisible(false)
 	        					$('#customermenu').setVisible(true)
 								$('#showmenu').setVisible(true)
+	        					$('#employeemenu').setVisible(false)
+								$('#cashiermenu').setVisible(false)
+								$('#cashiermenu2').setVisible(false)
 	        			}			
 	        			else{
 	        				alert("รหัสไม่ถูกต้อง")
@@ -52,6 +55,7 @@ class IndexComposer extends GrailsComposer {
 								$('#cashiermenu').setVisible(true)
 								$('#cashiermenu2').setVisible(true)
 								$('#showmenu').setVisible(true)
+								$('#customermenu').setVisible(false)
 	        			}			
 	        			else{
 	        				alert("รหัสไม่ถูกต้อง")
@@ -81,6 +85,7 @@ class IndexComposer extends GrailsComposer {
 								$('#cashiermenu').setVisible(false)
 								$('#showmenu').setVisible(true)
 								$('#cashiermenu2').setVisible(false)
+								$('#customermenu').setVisible(false)
 	        					//$('#showlogin').setVisible(false)
 								//$('#showmenu').setVisible(false)
 								//$('#showmenunormal').setVisible(true)
@@ -156,6 +161,7 @@ class IndexComposer extends GrailsComposer {
 			$('#cashiermenu').setVisible(false)
 			$('#cashiermenu2').setVisible(false)
 			$('#showmenu').setVisible(true)
+			$('#customermenu').setVisible(false)
 	    })
 	    $('#btnback').on('Click',{
 	    	$('#showlogin').setVisible(true)

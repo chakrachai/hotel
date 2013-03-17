@@ -25,7 +25,7 @@
                 <hbox id= "databox2"><label value="Password: "/><textbox id="passwordid" type="password"/></hbox>
                 <hbox id= "databox3"><button id= "btnsigin" label="Singin"/><button id= "btncancle" label="Cancle"/></hbox>
             </vbox>
-            <vbox id="showmenu" align= "center" visible="false">
+            <vbox id="showmenu" align= "center"  width="460px" visible="false">
                 <separator height="20px"/>
                 <label sclass= "psize" value= "กรุณาเลือกการทำรายการ"/>
                 <vbox>
@@ -35,7 +35,6 @@
                         <button id= "btnroomevent" width="150px" label="จองห้องจัดงาน"/>
                     </hbox>
                     <hbox id="cashiermenu2" visible="false">
-                        
                         <button id= "btncustomer" width="150px" label="ข้อมูลลูกค้า"/>
                         <button id= "btntime" width="150px" label="พนักงานลงเวลา"/>
                     </hbox>
@@ -44,16 +43,9 @@
                         <button id= "btndateout" width="150px" label="ลงเวลาออก"/>
                         <button id= "btnback" width="150px" label="ย้อนกลับ"/>
                     </hbox>
-                    <hbox id= "customermenu" visible="false">
-                        <vbox>
+                    <hbox id= "customermenu" align= "center" visible="false">
                         <button id= "btnreservation" width="150px" label="จองห้องเข้าพักล่วงหน้า"/>
                         <button id= "btneventcustomer" width="150px" label="จองห้องจัดงานลูกค้า"/>
-                        </vbox>
-                        <vbox>
-                        <button id= "btn1" width="150px" label="btn1"/>
-                        <button id= "btn2" width="150px" label="btn2"/>
-                        </vbox>
-                        
                     </hbox>
                 </vbox>
             </vbox>
