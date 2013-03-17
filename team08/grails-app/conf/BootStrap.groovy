@@ -4,7 +4,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-    	def p1 = new MemberCustomer(fName:"Customer1",mName:"",lName:"LCustomer1",gender:"M",born:"Thai",age:"35",nationality:"Thai",idCityzen:"1111111111111",address:"OnTheRoad",emailAddress:"aaa@a.com",memberId:"C1234",memberType:"VIP",telNo:"0000000").save()
+    	def p1 = new MemberCustomer(fName:"GiiZBrelliEN",mName:"Meteora",lName:"Hybrid",gender:"Mail",born:"2000/12/1",age:"19",nationality:"Thai",idCityzen:"1109900784877",address:"Nakhonratchima",emailAddress:"giizbrellien@gmail.com",memberId:"UltimateBoss",memberType:"VIP MEMBER",telNo:"0882329929").save()
 
 		def e1 = new Employee(nameem:"Employee 1",classem:"Cashier",idem:"E1234",statusem:"อยู่",lnameem:"LEmployee1",tel:"020000000",address:"Home",numaddress:"111",district:"Mairu",subdistrict:"lum",province:"Nakhonratchima",nprovince:"3000000",idppem:"1111111111",ageem:"30",passem:"12234",nickname:"game",birthday:"21234",sexem:"male",nation:"THAI",irreligious:"พุทธ").save()
 		def e2 = new Employee(nameem:"Employee 2",classem:"Head Housekeeper",idem:"E3422",statusem:"ไม่อยู่",lnameem:"LEmployee2",tel:"02005330",address:"Home",numaddress:"111",district:"Mairu",subdistrict:"lum",province:"Nakhonratchima",nprovince:"3000000",idppem:"1111111111",ageem:"30",passem:"12234",nickname:"game",birthday:"42134213",sexem:"male",nation:"CHINA",irreligious:"พุทธ").save()
