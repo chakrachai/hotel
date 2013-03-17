@@ -40,10 +40,15 @@
                         <button id= "btntime" width="150px" label="พนักงานลงเวลา"/>
                     </hbox>
                     <hbox id= "employeemenu" visible="false">
-                    <button id= "btndatein" width="150px" label="ลงเวลาเข้า"/>
-                    <button id= "btndateout" width="150px" label="ลงเวลาออก"/>
-                    <button id= "btnback" width="150px" label="ย้อนกลับ"/>
-                </hbox>
+                        <button id= "btndatein" width="150px" label="ลงเวลาเข้า"/>
+                        <button id= "btndateout" width="150px" label="ลงเวลาออก"/>
+                        <button id= "btnback" width="150px" label="ย้อนกลับ"/>
+                    </hbox>
+                    <hbox id= "customermenu" visible="false">
+                        <button id= "btnreservation" width="150px" label="จองห้องเข้าพักล่วงหน้า"/>
+                        <button id= "btn1" width="150px" label="btn1"/>
+                        <button id= "btn2" width="150px" label="btn2"/>
+                    </hbox>
                 </vbox>
             </vbox>
         </groupbox>

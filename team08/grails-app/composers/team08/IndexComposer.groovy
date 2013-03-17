@@ -19,11 +19,29 @@ class IndexComposer extends GrailsComposer {
 		    	def finddata = $('#userid')[0].text	
 		    	def employee_data = Employee.findByIdem(finddata)
 	  			if(employee_data == null){
-	       			alert("ไม่มีข้อมูล กรุณาตรวจสอบอีกครั้ง")
-	       			$('#userid')[0].text = ""
-	       			$('#passwordid')[0].text = ""
+	  				def customer = MemberCustomer.findByMemberId(finddata)
+	  				if(customer == null){
+		       			alert("ไม่มีข้อมูล กรุณาตรวจสอบอีกครั้ง")
+		       			$('#userid')[0].text = ""
+		       			$('#passwordid')[0].text = ""
+	  				}else{
+	  				if(customer.memberType == "VIP"){
+	        			if($('#passwordid')[0].text == customer.idCityzen){
+	        				def outdata = DataSignIn.findById("2")
+	        					outdata.datainput = $('#userid')[0].text
+	        					outdata.save()
+	        					$('#showlogin').setVisible(false)
+	        					$('#customermenu').setVisible(true)
+								$('#showmenu').setVisible(true)
+	        			}			
+	        			else{
+	        				alert("รหัสไม่ถูกต้อง")
+	        				$('#userid')[0].text = ""
+	        				$('#passwordid')[0].text = ""
+	        			}
+	  				}
 	       		}
-	        	else{
+	        	}else{
 	        		if(employee_data.classem == "Cashier"){
 	        			if($('#passwordid')[0].text == employee_data.passem){
 	        				def outdata = DataSignIn.findById("2")
@@ -147,6 +165,12 @@ class IndexComposer extends GrailsComposer {
 			$('#showmenu').setVisible(false)
 			$('#userid')[0].text = ""
 	        $('#passwordid')[0].text = ""
+	    })
+	    $('#btnreservation').on('Click',{
+	        def outdata = DataSignIn.findById("2")
+	        outdata.datainput = $('#userid')[0].text
+	        outdata.save()
+	        Executions.sendRedirect("/roomReservation.zul")
 	    })
     }
 }
