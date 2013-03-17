@@ -92,7 +92,7 @@
                                     <combobox id="yearout" value="ปี" width="60px">
                                     </combobox>
                                     <separator/>
-                                    <button label="จองห้อง"/>
+                                    <button label="จองห้อง" id= "reservation"/>
                                 </hbox>
                             </vbox>
                         </hbox>
