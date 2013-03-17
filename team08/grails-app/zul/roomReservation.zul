@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="team08.RoomReservationComposer">
+        <style>
+            body {background-color: #EBEBEB;}
+            .z-textbox { color: blue; }
+            .z-textbox-disd, .z-textbox-disd * { background-color: #FFFFFF !important ; color: blue !important;}
+            .z-combobox-inp { color: blue; }
+            .z-combobox-pp * { background-color: #FFFFFF !important ; color: blue !important;}
+        </style>
+        <separator height="100px"/>
+        <hbox>
+            <separator width="180px"/>
+            <vbox>
+                <groupbox width="900px" height ="405px">
+                    <groupbox>
+                        <vbox>
+                            <label value="ข้อมูลสมาชิก"/>
+                            <separator/>
+                            <hbox>
+                                <label value="รหัส: "/><textbox/>
+                                <label value="ชื่อ: "/><textbox/>
+                                <label value="นามสกุล: "/><textbox/>
+                                <label value="สัญชาติ: "/><textbox/>
+                            </hbox>
+                            <hbox>                                
+                                <label value="e-mail: "/><textbox/>
+                                <label value="เบอร์โทรศัพท์ที่ติดต่อได้: "/><textbox/>
+                                <button label="singout"/>
+                            </hbox>
+
+                        </vbox>
+                    </groupbox>
+                    <separator/>
+                    <groupbox>
+                        <label value="ข้อมูลการจองห้อง"/>
+                        <separator/>
+                        <separator/>
+                         <hbox>
+                            <vbox width="900px">
+                                <hbox>
+                                    <separator width="30px"/>
+                                    <label value="ชั้นที่ :" />
+                                    <separator width="5px"/>
+                                    <combobox id="classRoom" value="ชั้นที่" width="150px">
+                                        <comboitem label="1"/>
+                                        <comboitem label="2"/>
+                                        <comboitem label="3"/>
+                                        <comboitem label="4"/>
+                                        <comboitem label="5"/>
+                                        <comboitem label="6"/>
+                                    </combobox>
+                                    <separator width="30px"/>
+                                    <label value="ห้อง :"/>
+                                    <separator width="5px"/>
+                                    <combobox id="room" value="ห้องที่" width="150px">
+                                    </combobox>
+                                
+                                    <separator width="30px"/>
+                                    <label value="จำนวนผู้พัก :"/>
+                                    <separator width="5px"/>
+                                    <combobox id="customerMany" value="จำนวน" width="150px">
+                                        <comboitem label="1"/>
+                                        <comboitem label="2"/>
+                                        <comboitem label="3"/>
+                                        <comboitem label="4"/>
+                                        </combobox>
+                             </hbox>
+                             <hbox>
+                                    <separator width="30px"/>
+                                    <label value="วันที่ต้องการจอง :"/>
+                                    <separator width="6px"/>
+                                    <combobox id="dayin" value="วัน" width="50px">
+                                    </combobox>
+                                    <combobox id="mountin" value="เดือน" width="90px">
+                                    </combobox>
+                                    <combobox id="yearin" value="ปี" width="60px">
+                                    </combobox>
+                               
+                                    <separator width="30px"/>
+                                    <label value="ถึงวันที่ :"/>
+                                    <separator width="30px"/>
+                                    <combobox id="dayout" value="วัน" width="50px">
+                                    </combobox>
+                                    <combobox id="mountout" value="เดือน" width="90px">
+                                    </combobox>
+                                    <combobox id="yearout" value="ปี" width="60px">
+                                    </combobox>
+                                    <separator/>
+                                    <button label="จองห้อง"/>
+                                </hbox>
+                            </vbox>
+                        </hbox>
+                    </groupbox>
+                    <separator/>
+                    <groupbox>
+                        <label value="ห้องที่จองอยู่"/>
+                        <separator/>
+                        <listbox id="roomList" height="160px">
+                            <listhead>
+                                <listheader><label value="ชั้น"/></listheader>
+                                <listheader><label value="ห้อง"/></listheader>
+                                <listheader><label value="จำนวนผู้เข้าพัก"/></listheader>
+                                <listheader><label value="วันที่เช่า"/></listheader>
+                                <listheader><label value="วันสุดท้ายที่เช่า"/></listheader>
+                            </listhead>
+                        </listbox>   
+                    </groupbox>
+                </groupbox>
+            </vbox>
+        </hbox>
+    </window>
+
+</zk>
