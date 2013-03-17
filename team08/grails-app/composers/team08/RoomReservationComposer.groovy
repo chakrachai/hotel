@@ -39,24 +39,24 @@ class RoomReservationComposer extends GrailsComposer {
 		    if($('#roomList')!=null)
 		        $('#roomList > listitem').detach()
 		    for (dataroom in Room.findAllByCustomer(customer)){         
-		        if(dataroom.roomStatus!="ว่าง"){
+		        if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
 		            $('#roomList').append { 
 		                listitem(value:dataroom){
-		                    listcell{   
-		                        label(value:dataroom.roomflore)
-		                    }
-		                    listcell{   
-		                        label(value:dataroom.roomNo)
-		                    }
-		                    listcell{   
-		                        label(value:dataroom.dayIn)
-		                    }
-		                    listcell{   
-		                        label(value:dataroom.dayOut)
-		                    }
-		                    listcell{   
-		                        label(value:dataroom.roomStatus)
-		                    }
+			                listcell{   
+	                            label(value:dataroom.roomflore)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.roomNo)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.customermany+"")
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayIn)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayOut)
+	                        }
 
 		                }
 		            }
@@ -64,7 +64,119 @@ class RoomReservationComposer extends GrailsComposer {
 
 		    }
     	})
+//======================================================================reservation=======================
+        $('#roomList').on('select',{
+            def roomselect = $(it).getSelectedItem().getValue()
+            $('#roomList > listitem').detach()
 
+        for (dataroom in Room.findAllByCustomer(customer)){                   
+                if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
+                $('#roomList').append {
+                   if(roomselect.id == dataroom.id){
+                    	listitem(value:dataroom){
+			                listcell{   
+	                            label(value:dataroom.roomflore)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.roomNo)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.customermany+"")
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayIn)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayOut)
+	                            button(label:"ยกเลิกการจอง")
+	                        }
+
+		                }
+                }else{
+                    listitem(value:dataroom){
+			                listcell{   
+	                            label(value:dataroom.roomflore)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.roomNo)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.customermany+"")
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayIn)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayOut)
+	                        }
+
+		            }
+             
+               }
+            }
+            }
+        }
+//============================================================================roomselect==========================================================
+        $('#roomList > listitem > listcell > button[label="ยกเลิกการจอง"]').on('click',{
+			$('hbox > vbox > groupbox > groupbox > #roomList > listitem').detach()
+			alert("ยกเลิกจอง")
+            	roomselect.roomStatus = "ว่าง"
+            	roomselect.save()
+				roomselect.delete()
+            for (dataroom in Room.findAllByCustomer(customer)){
+		        if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
+		            $('#roomList').append { 
+		                listitem(value:dataroom){
+			                listcell{   
+	                            label(value:dataroom.roomflore)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.roomNo)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.customermany+"")
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayIn)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayOut)
+	                        }
+
+		                }
+		            }
+		        }
+			}
+        })
+    })
+
+//============================================================================roomselect==========================================================
+		    for (dataroom in Room.findAllByCustomer(customer)){         
+		        if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
+		            $('#roomList').append { 
+		                listitem(value:dataroom){
+			               	listcell{   
+	                            label(value:dataroom.roomflore)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.roomNo)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.customermany+"")
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayIn)
+	                        }
+	                        listcell{   
+	                            label(value:dataroom.dayOut)
+	                        }
+
+		                }
+		            }
+		        }
+
+		    }
+//==========================================================================showlist==================================
         $('#classRoom').on('select',{
                 $('#room').append{
                     for(int count=1;count<=30;count++)
