@@ -33,7 +33,7 @@
                             <hbox>                                
                                 <label value="e-mail: "/><textbox id="customeremail"/>
                                 <label value="เบอร์โทรศัพท์ที่ติดต่อได้: "/><textbox id="customerphone"/>
-                                <button label="singout"/>
+                                <button id="btnsingout" label="singout"/>
                             </hbox>
                         </vbox>
                     </groupbox>

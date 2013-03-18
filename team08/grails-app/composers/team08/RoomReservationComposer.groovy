@@ -1,16 +1,58 @@
 package team08
 
 import org.zkoss.zk.grails.composer.*
-
+import org.zkoss.zk.ui.Executions
 import org.zkoss.zk.ui.select.annotation.Wire
 import org.zkoss.zk.ui.select.annotation.Listen
 
 class RoomReservationComposer extends GrailsComposer {
-
+    def customerdata
+    def searchData2
     def afterCompose = { window ->
-    	int sa
 
-    	def customer = MemberCustomer.findById("1")
+        if (DataSignIn.get(2).datainput==null || DataSignIn.get(2).datainput==""){
+            if(DataSignIn.get(7).datainput==null || DataSignIn.get(7).datainput==""){
+                Executions.sendRedirect("/index.zul")   
+            }else{
+                 searchData2 = DataSignIn.get(7)
+                if (DataSignIn.get(2).datainput!=null && DataSignIn.get(2).datainput!=""){
+                    searchData2.datainput = DataSignIn.get(2).datainput
+                    searchData2.save()
+                }
+                def searchData = DataSignIn.get(2)
+                searchData.datainput=""
+                searchData.save()
+                //customerdata = searchData2.datainput
+            }
+        }
+        else{
+            searchData2 = DataSignIn.get(7)
+            if (DataSignIn.get(2).datainput!=null && DataSignIn.get(2).datainput!=""){
+                searchData2.datainput = DataSignIn.get(2).datainput
+                searchData2.save()
+            }
+            def searchData = DataSignIn.get(2)
+            searchData.datainput=""
+            searchData.save()
+            customerdata = searchData2.datainput
+            if(searchData2.datainput==null || searchData2.datainput==""){
+                Executions.sendRedirect("/index.zul")
+               // alert("null")
+            }else{
+                if(MemberCustomer.findByMemberId(searchData2.datainput).memberType!="VIP MEMBER"){
+                    Executions.sendRedirect("/index.zul")
+                }
+            }
+            //searchData = DataSignIn.get(2)
+        }
+//========================================================================checksignin==============================
+    	int sa
+    if(searchData2==null){
+               Executions.sendRedirect("/index.zul")
+    }
+    else{
+        customerdata = searchData2.datainput
+    	def customer = MemberCustomer.findByMemberId(customerdata)
     	//alert(customer.memberId)
     	$('#customerid')[0].text = customer.memberId
     	$('#customername')[0].text  = customer.fName
@@ -18,7 +60,7 @@ class RoomReservationComposer extends GrailsComposer {
     	$('#customernation')[0].text = customer.nationality
     	$('#customeremail')[0].text = customer.emailAddress
     	$('#customerphone')[0].text = customer.telNo
-
+//==========================================================================showCustomer=============================
     	$('#reservation').on('click',{
     		if($('#customerMany')[0].text=="จำนวน"){
                 sa =1
@@ -69,7 +111,7 @@ class RoomReservationComposer extends GrailsComposer {
 			    }
 			}
     	})
-//======================================================================reservation=======================
+//======================================================================savereservation=======================
         $('#roomList').on('select',{
             def roomselect = $(it).getSelectedItem().getValue()
             $('#roomList > listitem').detach()
@@ -156,7 +198,7 @@ class RoomReservationComposer extends GrailsComposer {
         })
     })
 
-//============================================================================roomselect==========================================================
+//============================================================================roomcancle==========================================================
 	$('#reload').on('click',{
 		for (dataroom in Room.findAllByCustomer(customer)){         
 		    if(dataroom.roomStatus!="ว่าง" && dataroom.roomStatus!="ใช้งาน"){
@@ -221,7 +263,13 @@ class RoomReservationComposer extends GrailsComposer {
                     }
              }
         })
-//=====================================================================================selectClassfore===========================
+//=========================================================================clearroomlist===========================
+        $('#btnsingout').on('click',{
+            searchData2.datainput = ""
+            searchData2.save()
+            Executions.sendRedirect("/index.zul")
+        })
+//==========================================================================signout========================================
 	$('#dayout').append{
             for(int count=1;count<=31;count++){
                 comboitem(label:""+count)
@@ -454,5 +502,6 @@ class RoomReservationComposer extends GrailsComposer {
             }
         })
 //==================================================================================timein===========================
+        }
     }
 }
