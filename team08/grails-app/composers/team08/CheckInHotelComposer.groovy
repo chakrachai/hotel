@@ -8,23 +8,50 @@ class CheckInHotelComposer extends GrailsComposer {
 
     def afterCompose = { window ->
 
-        def searchData = DataSignIn.get(2)
-        String employeedata
+        def employeedata
         def datacustomer
         def customer
         def customernamedata =""
         int sa
+        def searchData2
         //def borrowday = new Date()borrowday.format("dd MMMM yyyy") 
-        if (searchData.datainput==null || searchData.datainput==""){
-            Executions.sendRedirect("/index.zul")
+        if (DataSignIn.get(2).datainput==null || DataSignIn.get(2).datainput==""){
+            if(DataSignIn.get(6).datainput==null || DataSignIn.get(6).datainput==""){
+            Executions.sendRedirect("/index.zul")   
+            }else{
+                 searchData2 = DataSignIn.get(6)
+                if (DataSignIn.get(2).datainput!=null && DataSignIn.get(2).datainput!=""){
+                    searchData2.datainput = DataSignIn.get(2).datainput
+                    searchData2.save()
+                }
+                def searchData = DataSignIn.get(2)
+                searchData.datainput=""
+                searchData.save()
+            }
         }
         else{
-            searchData = DataSignIn.get(2)
+            searchData2 = DataSignIn.get(6)
+            if (DataSignIn.get(2).datainput!=null || DataSignIn.get(2).datainput!=""){
+                searchData2.datainput = DataSignIn.get(2).datainput
+                searchData2.save()
+            }
+            def searchData = DataSignIn.get(2)
+            searchData.datainput=""
+            searchData.save()
+            if(searchData2.datainput==null || searchData2.datainput==""){
+                Executions.sendRedirect("/index.zul")
+               // alert("null")
+            }else{
+                if(Employee.findByIdem(searchData2.datainput).classem!="Cashier"){
+                    Executions.sendRedirect("/index.zul")
+                }
+            }
+            //searchData = DataSignIn.get(2)
+        }
             alert("ยินดีต้อนรับ")
-            employeedata = searchData.datainput
+            employeedata = searchData2.datainput
             $('#employeeid').setDisabled(true)
             $('#employeeid')[0].text = employeedata
-        }
 //=================================================checkdata==============================================================================
     $('#searchCustomer').on('click',{
             datacustomer = $('#customerId')[0].text
@@ -600,8 +627,8 @@ class CheckInHotelComposer extends GrailsComposer {
         })
 //========================================================================================clearsearchroom==========================================================
         $('#btnsingout').on('click',{
-            searchData.datainput = ""
-            searchData.save()
+            searchData2.datainput = ""
+            searchData2.save()
             Executions.sendRedirect("/index.zul")
         })
 //=====================================================================================signout=============================================

@@ -38,12 +38,15 @@ class BootStrap {
 		
 		def re1 = new MakeEvent(employee:e1,customer:p1,typere:"Carnival",pricere:"250000",datere:"23/3/2556").save()
 		def rec1 = new MakeEventCustomer(customerc:p1,typerec:"Carnival",pricerec:"250000",daterec:"23/3/2556",dateresendc:"20/3/2556").save()
+		
 		def data1 = new DataSignIn(id:"1",datainput:"").save()
 		def data2 = new DataSignIn(id:"2",datainput:"").save()
 		def data3 = new DataSignIn(id:"3",datainput:"").save()
 		def data4 = new DataSignIn(id:"4",datainput:"").save()
 		def data5 = new DataSignIn(id:"5",datainput:"").save()
 		def data6 = new DataSignIn(id:"6",datainput:"").save()
+		def data7 = new DataSignIn(id:"7",datainput:"").save()
+		def data8 = new DataSignIn(id:"8",datainput:"").save()
     }
     def destroy = {
     }
