@@ -1,0 +1,19 @@
+Testsuite: team08.MemberCustomerTests
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 3.46 sec
+------------- Standard Output ---------------
+--Output from testIdCityzenNotNull--
+--Output from testMember--
+--Output from testUnique--
+--Output from testIdCityzenNummericOnlyAnd13--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIdCityzenNotNull--
+--Output from testMember--
+--Output from testUnique--
+--Output from testIdCityzenNummericOnlyAnd13--
+------------- ---------------- ---------------
+
+Testcase: testIdCityzenNotNull took 1.32 sec
+Testcase: testMember took 1.914 sec
+Testcase: testUnique took 0.103 sec
+Testcase: testIdCityzenNummericOnlyAnd13 took 0.067 sec
