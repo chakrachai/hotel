@@ -37,13 +37,13 @@ class CheckoutComposer extends GrailsComposer {
                         label(value:loopin.roomNo)
                 	}
                 	listcell{   
+                        label(value:"ค่าบริการ")
+                	}
+                	listcell{   
                         label(value:roommony+"")
                 	}
                 	listcell{   
-                        label(value:loopin.roomNo)
-                	}
-                	listcell{   
-                        label(value:loopin.roomNo)
+                        label(value:roommony+"")
                 	}
             	}
         	}
@@ -51,6 +51,7 @@ class CheckoutComposer extends GrailsComposer {
         }
         }
         	$('#money')[0].text = countmonny+""	
+        	$('#payment')[0].setValue(countmonny+"")
 
 		})
 		
