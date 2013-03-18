@@ -21,7 +21,7 @@
 					<label 	value = "ID ลูกค้า : "  width="50px"/>
 					<textbox id="idc"/>
 					<button id="search" height="25px" width="70px">ค้นหา</button>
-			<hbox>
+		<hbox>
 				<vbox>
 					<separator/>
 					<label value="รหัสพนักงาน : "/>
@@ -96,16 +96,25 @@
 
 				<vbox width="200px">
 					<separator/><separator/>
+					<label value = "ส่วนลด : " style="color:back;font-size:15px"/>
+					<separator/><separator/>
 					<label value = "ยอดชำระ : " style="color:back;font-size:20px"/>
+
 				</vbox>
 				<vbox width="150px">
 					<separator/><separator/>
-						<label id="payment" value = " " style="color:back;font-size:20px"/>
+					<label id="discount" value = " " style="color:back;font-size:15px"/>
+					<separator/><separator/><separator/>
+					<label id="payment" value = " " style="color:back;font-size:20px"/>
 				</vbox>
 				<vbox>
 					<separator/><separator/>
-						<label id="bath" value = "฿" style="color:back;font-size:20px"/>
+						<label value = "฿" style="color:back;font-size:15px"/>
+					<separator/><separator/>
+						<label value = "฿" style="color:back;font-size:20px"/>
 				</vbox>
+
+
 								
 			</hbox>
 			
