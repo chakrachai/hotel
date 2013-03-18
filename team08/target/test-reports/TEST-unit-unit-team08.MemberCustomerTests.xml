@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="NueNG_UlTiMaTE" name="team08.MemberCustomerTests" tests="4" time="3.46" timestamp="2556-03-18T08:50:36">
+  <properties />
+  <testcase classname="team08.MemberCustomerTests" name="testIdCityzenNotNull" time="1.32" />
+  <testcase classname="team08.MemberCustomerTests" name="testMember" time="1.914" />
+  <testcase classname="team08.MemberCustomerTests" name="testUnique" time="0.103" />
+  <testcase classname="team08.MemberCustomerTests" name="testIdCityzenNummericOnlyAnd13" time="0.067" />
+  <system-out><![CDATA[--Output from testIdCityzenNotNull--
+--Output from testMember--
+--Output from testUnique--
+--Output from testIdCityzenNummericOnlyAnd13--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIdCityzenNotNull--
+--Output from testMember--
+--Output from testUnique--
+--Output from testIdCityzenNummericOnlyAnd13--
+]]></system-err>
+</testsuite>
