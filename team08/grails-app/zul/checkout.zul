@@ -22,9 +22,14 @@
 					<textbox id="idc"/>
 					<button id="search" height="25px" width="70px">ค้นหา</button>
 			<hbox>
-					<vbox width ="400px">
-									
-					</vbox>
+				<vbox>
+					<separator/>
+					<label value="รหัสพนักงาน : "/>
+				</vbox>
+				<vbox width ="400px">
+				<separator/>
+					<label id="idE" value=" "/>
+				</vbox>
 				
 				<vbox width="80px">
 				<separator/>
@@ -36,7 +41,7 @@
 				
 				<vbox width="320px">
 				<separator/>
-				<label id="dateI" value = "dd/mm/yy"/>
+				<label id="dateI" value = " "/>
 				<label id="name" value = " "/>
 				<label id="email" value=" "/>
 				</vbox>
@@ -46,7 +51,7 @@
 				<separator/>
 					<hbox>
 					<label value = "วันที่คืนห้อง: "/>
-					<label id="dateO" value ="dd/mm/yy"/>
+					<label id="dateO" value =" "/>
 					</hbox>
 					<hbox>
 					<label value = "โทร:  "/>
@@ -60,7 +65,7 @@
 			<groupbox width="100%" height= "500px">  
 			<hbox>
 				
-				<listbox id="service" height="250px">
+				<listbox id="service" height="200px">
 					<listhead>
 
 						<listheader width="150px" align ="center"><label value="ห้อง"/></listheader>
@@ -82,11 +87,24 @@
 				<label value = "หมายเลขบัตรเครดิต: "  style="color:back;font-size:20px" />
 				</vbox>
 				
-				<vbox width="400px">
+				<vbox width="450px">
 				<separator/><separator/><separator/>
 				<textbox id="money" width="200" height="20px"/>
 				<separator/>
 				<textbox id="cradit" width="200px" height="20px"/>
+				</vbox>
+
+				<vbox width="200px">
+					<separator/><separator/>
+					<label value = "ยอดชำระ : " style="color:back;font-size:20px"/>
+				</vbox>
+				<vbox width="150px">
+					<separator/><separator/>
+						<label id="payment" value = " " style="color:back;font-size:20px"/>
+				</vbox>
+				<vbox>
+					<separator/><separator/>
+						<label id="bath" value = "฿" style="color:back;font-size:20px"/>
 				</vbox>
 								
 			</hbox>
@@ -99,11 +117,11 @@
 				</vbox>
 				<vbox>
 				<separator/><separator/><separator/><separator/><separator/>
-					<button id="btnSave">Save</button>
+					<button id="btnPrint">Print</button>
 				</vbox>
 				<vbox>
 				<separator/><separator/><separator/><separator/><separator/>
-					<button id="btnPrint">Print</button>
+					<button id="btnSave">Save</button>
 				</vbox>
 				
 				<vbox>
