@@ -27,17 +27,19 @@ class CheckInHotelComposer extends GrailsComposer {
                 def searchData = DataSignIn.get(2)
                 searchData.datainput=""
                 searchData.save()
+                //employeedata = searchData2.datainput
             }
         }
         else{
             searchData2 = DataSignIn.get(6)
-            if (DataSignIn.get(2).datainput!=null || DataSignIn.get(2).datainput!=""){
+            if (DataSignIn.get(2).datainput!=null && DataSignIn.get(2).datainput!=""){
                 searchData2.datainput = DataSignIn.get(2).datainput
                 searchData2.save()
             }
             def searchData = DataSignIn.get(2)
             searchData.datainput=""
             searchData.save()
+            employeedata = searchData2.datainput
             if(searchData2.datainput==null || searchData2.datainput==""){
                 Executions.sendRedirect("/index.zul")
                // alert("null")
@@ -46,10 +48,14 @@ class CheckInHotelComposer extends GrailsComposer {
                     Executions.sendRedirect("/index.zul")
                 }
             }
-            //searchData = DataSignIn.get(2)
         }
-            alert("ยินดีต้อนรับ")
-            employeedata = searchData2.datainput
+           // searchData = DataSignIn.get(6).datainput
+           if(searchData2==null){
+               Executions.sendRedirect("/index.zul")
+           }
+           else{
+                employeedata = searchData2.datainput
+            //alert(employeedata)
             $('#employeeid').setDisabled(true)
             $('#employeeid')[0].text = employeedata
 //=================================================checkdata==============================================================================
@@ -911,5 +917,7 @@ class CheckInHotelComposer extends GrailsComposer {
                 alert("Error")
             }
         })
+           }
+            
     }
 }
